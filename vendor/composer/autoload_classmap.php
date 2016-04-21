@@ -243,7 +243,6 @@ return array(
     'SimpleUrl' => $vendorDir . '/simpletest/simpletest/url.php',
     'SimpleUserAgent' => $vendorDir . '/simpletest/simpletest/user_agent.php',
     'SimpleWidget' => $vendorDir . '/simpletest/simpletest/tag.php',
-    'Sparrow' => $vendorDir . '/unlight/sparrow/sparrow.php',
     'TestCaseWithParseError' => $vendorDir . '/simpletest/simpletest/test/test_with_parse_error.php',
     'TestDisplayClass' => $vendorDir . '/simpletest/simpletest/test/visual_test.php',
     'TestDoxReporter' => $vendorDir . '/simpletest/simpletest/extensions/testdox.php',

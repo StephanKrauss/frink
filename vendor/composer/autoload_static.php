@@ -291,7 +291,6 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         'SimpleUrl' => __DIR__ . '/..' . '/simpletest/simpletest/url.php',
         'SimpleUserAgent' => __DIR__ . '/..' . '/simpletest/simpletest/user_agent.php',
         'SimpleWidget' => __DIR__ . '/..' . '/simpletest/simpletest/tag.php',
-        'Sparrow' => __DIR__ . '/..' . '/unlight/sparrow/sparrow.php',
         'TestCaseWithParseError' => __DIR__ . '/..' . '/simpletest/simpletest/test/test_with_parse_error.php',
         'TestDisplayClass' => __DIR__ . '/..' . '/simpletest/simpletest/test/visual_test.php',
         'TestDoxReporter' => __DIR__ . '/..' . '/simpletest/simpletest/extensions/testdox.php',

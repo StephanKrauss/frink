@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "43879a6dd6297046d05b7cf6faef0eb1",
-    "content-hash": "1eb91d5afe2d771890afd6b138699560",
+    "hash": "2773e78d37cb95c2cc1c70f6a30b2d72",
+    "content-hash": "3bc9df80630b18b202914e2ad502d384",
     "packages": [
         {
             "name": "bdelespierre/underscore",
@@ -321,37 +321,12 @@
                 "templating"
             ],
             "time": "2015-06-06 23:31:24"
-        },
-        {
-            "name": "unlight/sparrow",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unlight/sparrow.git",
-                "reference": "effed04743281d6c84a6fa0d6a264123444d2cae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unlight/sparrow/zipball/effed04743281d6c84a6fa0d6a264123444d2cae",
-                "reference": "effed04743281d6c84a6fa0d6a264123444d2cae",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "sparrow.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Sparrow is a fluent SQL builder.",
-            "time": "2013-10-20 20:53:59"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "unlight/sparrow": 20,
         "bdelespierre/underscore": 20
     },
     "prefer-stable": false,

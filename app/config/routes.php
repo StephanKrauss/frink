@@ -6,9 +6,7 @@ session_start();
 // Aufruf Baustein 'login' , Erststart
 \Flight::route('/', function()
 {
-    // $request = Flight::request();
-
-    // ermitteln Konfiguration
+    // Konfiguration
     standardStart();
 
     // Controller
@@ -17,6 +15,26 @@ session_start();
 
     // Startroutinen des Controller
     startController($controller, 'index');
+});
+
+// Aufruf Baustein, mit Anzeigesprache
+\Flight::route('/@controller(/@action)(/@wert/@inhalt)',function($controller, $action, $wert, $inhalt)
+{
+    if($action == null)
+        $action = 'index';
+
+    // Konfiguration
+    standardStart();
+
+    // ermitteln der übergebenen Parameter
+    $data = ermittelnDaten();
+
+    // Controller
+    $controllerString = "controller\\$controller";
+    $controller = new $controllerString($controller, $action);
+    
+    // Startroutinen des Controller
+    startController($controller, $action, $data);
 });
 
 // Mapping
@@ -45,8 +63,6 @@ session_start();
 */
 function standardStart()
 {
-    $request = \Flight::request();
-
     // spezielle Konfiguration , Bsp.: 'salt'
     include_once('../app/config/config.php');
     \Flight::set('config', $config);
@@ -64,21 +80,45 @@ function standardStart()
 * @param $controller
 * @param $action
 */
-function startController($controller, $action = 'index')
+function startController($controller, $action = 'index', $data = null)
 {
     $controller->setDatenbank();
-    // $controller->setRequest();
-    // $controller->setConfig();
+    $controller->setTwig();
+
+    $request = \Flight::request();
+    $controller->setRequest($request);
+
+    if( (is_array($data)) and (count($data) > 0) )
+        $controller->setData($data);
+
     $controller->$action();
 }
 
 function ermittelnDaten()
 {
     $request = \Flight::request();
+    $data = array();
 
     if($request->method == 'POST'){
-        \Flight::set('data',$_POST);
+        $data = $_POST;
     }
 
-    return;
+    if($request->method == 'GET'){
+        $url = $request->url;
+        $url = ltrim($url,'/');
+        $url = rtrim($url, '/');
+
+        $splitUrl = explode('/',$url);
+
+        if(isset($splitUrl[0]))
+            unset($splitUrl[0]);
+        if(isset($splitUrl[1]))
+            unset($splitUrl[1]);
+
+        $splitUrl = array_merge($splitUrl);
+        if(count($splitUrl) > 0)
+            $data[$splitUrl[0]] = $splitUrl[1];
+    }
+
+    return $data;
 }

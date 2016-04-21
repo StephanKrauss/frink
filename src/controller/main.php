@@ -26,6 +26,10 @@ class main
     /** @var $twig  */
     protected $twig = null;
 
+    protected $data = array();
+
+    protected $request = null;
+
     /**
      * main constructor.
      * 
@@ -49,7 +53,7 @@ class main
             $this->sparrow = new \models\Sparrow();
             $this->sparrow->setDb($this->zugangswerteDatenbankMySQL);
 
-            return;
+            return $this;
         }
         catch(\Exception $e){
             throw $e;
@@ -58,11 +62,38 @@ class main
 
     public function setTwig(){
         try{
-            $this->twig = new Twig
+            // Template
+            $this->twig = \Flight::twig();
+            $this->templateName = $this->templateName.'.html';
+
+            return $this;
         }
         catch (\Exception $e){
             throw $e;
         }
     }
 
+    public function setRequest($request){
+        try{
+            $this->request = $request;
+
+            return $this;
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    public function setData(array $data)
+    {
+        try{
+            if( (is_array($data)) and (count($data) > 0) )
+                $this->data = $data;
+
+            return $this;
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
 }

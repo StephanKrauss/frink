@@ -59,32 +59,6 @@
         ]
     },
     {
-        "name": "unlight/sparrow",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/unlight/sparrow.git",
-            "reference": "effed04743281d6c84a6fa0d6a264123444d2cae"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/unlight/sparrow/zipball/effed04743281d6c84a6fa0d6a264123444d2cae",
-            "reference": "effed04743281d6c84a6fa0d6a264123444d2cae",
-            "shasum": ""
-        },
-        "time": "2013-10-20 20:53:59",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "classmap": [
-                "sparrow.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "Sparrow is a fluent SQL builder."
-    },
-    {
         "name": "mikecao/flight",
         "version": "v1.2.20",
         "version_normalized": "1.2.20.0",
