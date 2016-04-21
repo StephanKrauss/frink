@@ -1,0 +1,16 @@
+{
+  "require": {
+  "twig/twig": "1.18.2",
+  "unlight/sparrow": "dev-master",
+  "predis/predis": "1.0.*",
+  "mikecao/flight": "1.2.20",
+  "bdelespierre/underscore": "dev-master",
+  "pimple/pimple": "~3.0",
+  "simpletest/simpletest": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
