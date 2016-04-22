@@ -9,4 +9,5 @@ return array(
     'Underscore' => array($vendorDir . '/bdelespierre/underscore/src'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
+    'Parsedown' => array($vendorDir . '/erusev/parsedown'),
 );

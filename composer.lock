@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2773e78d37cb95c2cc1c70f6a30b2d72",
-    "content-hash": "3bc9df80630b18b202914e2ad502d384",
+    "hash": "99519a7741bf4e1e28c65a60d11d7c9f",
+    "content-hash": "8473501b25cfb4f4a140da61701a01c0",
     "packages": [
         {
             "name": "bdelespierre/underscore",
@@ -52,6 +52,86 @@
                 "utility"
             ],
             "time": "2016-01-12 19:44:50"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-10-04 16:44:32"
+        },
+        {
+            "name": "gabordemooij/redbean",
+            "version": "v4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gabordemooij/redbean.git",
+                "reference": "f1f572ddac226d047d730444927794321ee9aca6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/f1f572ddac226d047d730444927794321ee9aca6",
+                "reference": "f1f572ddac226d047d730444927794321ee9aca6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RedBeanPHP\\": "RedBeanPHP"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "New BSD and GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Gabor de Mooij",
+                    "email": "gabor@redbeanphp.com",
+                    "homepage": "http://redbeanphp.com"
+                }
+            ],
+            "description": "RedBeanPHP ORM",
+            "homepage": "http://redbeanphp.com/",
+            "keywords": [
+                "orm"
+            ],
+            "time": "2015-12-28 19:46:34"
         },
         {
             "name": "mikecao/flight",

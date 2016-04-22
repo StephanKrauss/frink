@@ -325,5 +325,89 @@
             "testing",
             "unit-test"
         ]
+    },
+    {
+        "name": "gabordemooij/redbean",
+        "version": "v4.3.1",
+        "version_normalized": "4.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/gabordemooij/redbean.git",
+            "reference": "f1f572ddac226d047d730444927794321ee9aca6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/f1f572ddac226d047d730444927794321ee9aca6",
+            "reference": "f1f572ddac226d047d730444927794321ee9aca6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.4"
+        },
+        "time": "2015-12-28 19:46:34",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "RedBeanPHP\\": "RedBeanPHP"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "New BSD and GPLv2"
+        ],
+        "authors": [
+            {
+                "name": "Gabor de Mooij",
+                "email": "gabor@redbeanphp.com",
+                "homepage": "http://redbeanphp.com"
+            }
+        ],
+        "description": "RedBeanPHP ORM",
+        "homepage": "http://redbeanphp.com/",
+        "keywords": [
+            "orm"
+        ]
+    },
+    {
+        "name": "erusev/parsedown",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/erusev/parsedown.git",
+            "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/erusev/parsedown/zipball/3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+            "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+            "shasum": ""
+        },
+        "time": "2015-10-04 16:44:32",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Parsedown": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Emanuil Rusev",
+                "email": "hello@erusev.com",
+                "homepage": "http://erusev.com"
+            }
+        ],
+        "description": "Parser for Markdown.",
+        "homepage": "http://parsedown.org",
+        "keywords": [
+            "markdown",
+            "parser"
+        ]
     }
 ]
