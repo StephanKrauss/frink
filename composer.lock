@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "99519a7741bf4e1e28c65a60d11d7c9f",
-    "content-hash": "8473501b25cfb4f4a140da61701a01c0",
+    "hash": "d1c3181080c2f4027e65b81bfb46ef3f",
+    "content-hash": "d90b768e72f34640efd3a4860cb0cb13",
     "packages": [
         {
             "name": "bdelespierre/underscore",
