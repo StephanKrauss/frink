@@ -1,3 +1,9 @@
 # frink
 
-Only a test
+A minimal component php framework for rapid backend development.
+
+Credits:
+
+Flight:
+Twig:
+Sparrow:
