@@ -40,7 +40,7 @@ class main
     {
         $this->controllerName = $controllerName;
         $this->actionName = $actionName;
-        $this->templateName = $controllerName;
+        $this->templateName = $controllerName.".html";
     }
 
     /**
@@ -52,30 +52,6 @@ class main
             $this->zugangswerteDatenbankMySQL = \Flight::get('datenbankZugangswerte');
             $this->sparrow = new \models\Sparrow();
             $this->sparrow->setDb($this->zugangswerteDatenbankMySQL);
-
-            return $this;
-        }
-        catch(\Exception $e){
-            throw $e;
-        }
-    }
-
-    public function setTwig(){
-        try{
-            // Template
-            $this->twig = \Flight::twig();
-            $this->templateName = $this->templateName.'.html';
-
-            return $this;
-        }
-        catch (\Exception $e){
-            throw $e;
-        }
-    }
-
-    public function setRequest($request){
-        try{
-            $this->request = $request;
 
             return $this;
         }

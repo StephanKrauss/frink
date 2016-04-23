@@ -9,6 +9,9 @@ session_start();
     // Konfiguration
     standardStart();
 
+    // Twig
+    startTwig();
+
     // Controller
     include_once('../src/Controller/start.php');
     $controller = new \controller\start('start', 'index');
@@ -18,13 +21,16 @@ session_start();
 });
 
 // Aufruf Baustein, mit Anzeigesprache
-\Flight::route('/@controller(/@action)(/@wert/@inhalt)',function($controller, $action, $wert, $inhalt)
+\Flight::route('/@controller/@action(/*)',function($controller, $action)
 {
     if($action == null)
         $action = 'index';
 
     // Konfiguration
     standardStart();
+
+    // Twig
+    startTwig();
 
     // ermitteln der übergebenen Parameter
     $data = ermittelnDaten();
@@ -40,16 +46,16 @@ session_start();
 // Mapping
 \Flight::map('notFound', function() {
     // \Flight::render('404', array());
-    Flight::redirect('/login/index');
+    Flight::redirect('/start/index');
 });
 
 // Error Controller
 \Flight::map('error', function(\Exception $e)
 {
     // Controller
-    include_once('../src/Controller/error.php');
+    include_once('../src/controller/error.php');
 
-    $controller = new \Controller\error('error', 'index');
+    $controller = new \controller\error('error', 'index');
     $controller->setError($e);
     $controller->index();
 });
@@ -64,8 +70,8 @@ session_start();
 function standardStart()
 {
     // spezielle Konfiguration , Bsp.: 'salt'
-    include_once('../app/config/config.php');
-    \Flight::set('config', $config);
+    // include_once('../app/config/config.php');
+    // \Flight::set('config', $config);
 
     // Datenbank Zugangswerte
     include_once('../app/config/datenbank.php');
@@ -83,15 +89,34 @@ function standardStart()
 function startController($controller, $action = 'index', $data = null)
 {
     $controller->setDatenbank();
-    $controller->setTwig();
-
-    $request = \Flight::request();
-    $controller->setRequest($request);
 
     if( (is_array($data)) and (count($data) > 0) )
         $controller->setData($data);
 
     $controller->$action();
+}
+
+/**
+ * Twig Template Engine
+ */
+function startTwig()
+{
+    $viewPath = __DIR__.'\..\..\public\tpl\\';
+    $viewPath = realpath($viewPath);
+
+    $loader = new Twig_Loader_Filesystem($viewPath);
+
+    $twigConfig = array(
+        // 'cache' => './cache/twig/',
+        // 'cache' => false,
+        'debug' => true,
+    );
+
+    Flight::register('view', 'Twig_Environment', array($loader, $twigConfig), function ($twig) {
+        $twig->addExtension(new Twig_Extension_Debug()); // Add the debug extension
+    });
+
+    return;
 }
 
 function ermittelnDaten()
@@ -116,8 +141,23 @@ function ermittelnDaten()
             unset($splitUrl[1]);
 
         $splitUrl = array_merge($splitUrl);
-        if(count($splitUrl) > 0)
-            $data[$splitUrl[0]] = $splitUrl[1];
+
+        $j=1;
+        if(count($splitUrl) >= 2){
+
+            $key = null;
+            for($i = 0; $i < count($splitUrl); $i++){
+                if($j % 2 == 0){
+                    $data[$key] = $splitUrl[$i];
+                    $key = null;
+                }
+                else{
+                    $key = $splitUrl[$i];
+                }
+
+                $j++;
+            }
+        }
     }
 
     return $data;

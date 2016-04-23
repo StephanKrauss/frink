@@ -1,10 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Stephan.Krauss
- * Date: 21.04.2016
- * Time: 16:40
- */
+* Bal Blub
+*
+* @author Stephan Krauß , 21.34.2016
+* @copyright Stephan Krauss
+*
+* @subpackage controller | model | tool | trait
+*/
 
 namespace controller;
 
@@ -25,12 +27,10 @@ class bla extends main
     {
         try{
             $output = array(
-                'bausteine' => 'start'
+                'bausteine' => 'bla / index'
             );
 
-            $test = 123;
-            // $template = $this->twig->loadTemplate($this->templateName);
-            // echo $template->render($output);
+            \Flight::view()->display($this->templateName, $output);
         }
         catch(\Exception $e){
             throw $e;
@@ -44,12 +44,10 @@ class bla extends main
     {
         try{
             $output = array(
-                'bausteine' => 'start'
+                'bausteine' => 'bla / blub'
             );
 
-            $test = 123;
-            // $template = $this->twig->loadTemplate($this->templateName);
-            // echo $template->render($output);
+            \Flight::view()->display($this->templateName, $output);
         }
         catch(\Exception $e){
             throw $e;
