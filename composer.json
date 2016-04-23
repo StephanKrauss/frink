@@ -1,4 +1,16 @@
 {
+  "name": "StephanKrauss/frink",
+  "description": "Microframework for rapid development backend systems",
+  "license": "MIT",
+  "version": "0.1",
+  "keywords": ["flight", "twig","sparrow"],
+  "authors": [
+    {
+      "name": "Stephan Krauss",
+      "email": "info@stephankrauss.de",
+      "homepage": "http://www.stephankrauss.de"
+    }
+  ],
   "require": {
   "twig/twig": "1.18.2",
   "predis/predis": "1.0.*",
