@@ -5,21 +5,21 @@
   "version": "0.1",
   "keywords": ["flight", "twig","sparrow"],
   "authors": [
-    {
-      "name": "Stephan Krauss",
-      "email": "info@stephankrauss.de",
-      "homepage": "http://www.stephankrauss.de"
-    }
+        {
+            "name": "Stephan Krauss",
+            "email": "info@stephankrauss.de",
+            "homepage": "http://www.stephankrauss.de"
+        }
   ],
   "require": {
-  "twig/twig": "1.18.2",
-  "predis/predis": "1.0.*",
-  "mikecao/flight": "1.2.20",
-  "bdelespierre/underscore": "dev-master",
-  "pimple/pimple": "~3.0",
-  "simpletest/simpletest": "^1.1",
-  "gabordemooij/redbean": "4.3.1",
-  "erusev/parsedown": "1.6.0"
+      "twig/twig": "1.18.2",
+      "predis/predis": "1.0.*",
+      "mikecao/flight": "1.2.20",
+      "bdelespierre/underscore": "dev-master",
+      "pimple/pimple": "~3.0",
+      "simpletest/simpletest": "^1.1",
+      "erusev/parsedown": "1.6.0",
+      "doctrine/orm": "~2.5.4"
   },
   "autoload": {
     "psr-4": {

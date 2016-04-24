@@ -44,7 +44,8 @@ class bla extends main
     {
         try{
             $output = array(
-                'bausteine' => 'bla / blub'
+                'masterTemplate' => 'main.html',
+                'templateSuperuser' => 'bla_superuser.html'
             );
 
             \Flight::view()->display($this->templateName, $output);

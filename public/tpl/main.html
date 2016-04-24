@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}FlightPHP Twig Template{% endblock %}</title>
+
+    <link rel="stylesheet" href="/static/dist/css/app.min.css"/>
+</head>
+<body>
+<h1>Master Template allgemein</h1>
+
+<!-- Block Superuser -->
+{% embed templateSuperuser %}{% endembed %}
+
+</body>
+</html>
