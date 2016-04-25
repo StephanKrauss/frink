@@ -29,8 +29,8 @@ class start extends main
             );
 
             $test = 123;
-            // $template = $this->twig->loadTemplate($this->templateName);
-            // echo $template->render($output);
+
+            echo 'Start';
         }
         catch(\Exception $e){
             throw $e;
