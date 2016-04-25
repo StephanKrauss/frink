@@ -9,4 +9,4 @@ Credits:
 + <s>Sparrow:</s>  
 + Doctrine:
 + Underscore:
-+ Redis:  
++ <s>Redis:</s>
