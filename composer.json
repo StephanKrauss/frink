@@ -15,7 +15,7 @@
       "twig/twig": "1.18.2",
       "predis/predis": "1.0.*",
       "mikecao/flight": "1.2.20",
-      "bdelespierre/underscore": "dev-master",
+      "im0rtality/underscore": "*",
       "pimple/pimple": "~3.0",
       "simpletest/simpletest": "^1.1",
       "erusev/parsedown": "1.6.0",
