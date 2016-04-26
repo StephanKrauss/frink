@@ -62,6 +62,38 @@ class main
             // NotNoSQL
             $this->notNoSql = new \tools\notNoSql($pdo);
 
+            // Test NotNoSql
+            $programme100 = array(
+                '100' => array(
+                    'name' => array(
+                        'deutsch' => 'deutscher Name 100',
+                        'englisch' => 'englischer Name 100'
+                    ),
+                    'beschreibung' => array(
+                        'deutsch' => 'Beschreibung deutsch 100',
+                        'englisch' => 'Beschreibung englich 100'
+                    )
+                )
+            );
+
+            $programme200 = array(
+                '200' => array(
+                    'name' => array(
+                        'deutsch' => 'deutscher Name 200',
+                        'englisch' => 'englischer Name 200'
+                    ),
+                    'beschreibung' => array(
+                        'deutsch' => 'Beschreibung deutsch 200',
+                        'englisch' => 'Beschreibung englich 200'
+                    )
+                )
+            );
+
+            $this->notNoSql->put('bla.12345.programme.100', $programme100);
+            $this->notNoSql->put('bla.12345.programme.200', $programme200);
+
+            $test = $this->notNoSql->get('bla.12345.programme.100');
+
             return $this;
         }
         catch(\Exception $e){

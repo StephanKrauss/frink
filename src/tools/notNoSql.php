@@ -179,10 +179,11 @@ class notNoSql{
      * @param	string
      * @return	mixed	Decoded json value
      */
-    private function selectStatement($table, $key) {
-        $result = $this->db->query(
-            'SELECT `value` FROM `' . $table . '` WHERE `key` = "' . $this->escape($key) . '"'
-        )->fetchColumn();
+    private function selectStatement($table, $key)
+    {
+        $buildQuery = 'SELECT `value` FROM `' . $table . '` WHERE `key` = "' . $this->escape($key) . '"';
+
+        $result = $this->db->query($buildQuery)->fetchColumn();
 
         if ($result === false) {
             // No such key can mean different things, so instead of returning null we let the recipient deal with it.
@@ -246,3 +247,5 @@ class notNoSql{
     }
 
 }
+
+class NotNoSQLException extends \Exception{}
