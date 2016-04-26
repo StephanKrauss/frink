@@ -28,7 +28,7 @@
  * @date 26.04.2016
  */
 
-namespace tools;
+namespace models;
 
 class notNoSql{
 

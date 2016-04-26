@@ -8,7 +8,7 @@
 
 $zugangswerte = array(
     'hostname' => '127.0.0.1',
-    'database' => 'test2',
+    'database' => 'test',
     'username' => 'root',
-    'password' => 'root'
+    'password' => ''
 );

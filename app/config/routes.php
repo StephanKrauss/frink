@@ -7,7 +7,10 @@ session_start();
 \Flight::route('/', function()
 {
     // Konfiguration
-    standardStart();
+    readConfig();
+
+    // Datenbanken
+    connectDatabase();
 
     // Twig
     startTwig();
@@ -27,13 +30,16 @@ session_start();
         $action = 'index';
 
     // Konfiguration
-    standardStart();
+    readConfig();
+
+    // Datenbanken
+    connectDatabase();
 
     // Twig
     startTwig();
 
     // ermitteln der übergebenen Parameter
-    $data = ermittelnDaten();
+    $data = ermittelnStartParams();
 
     // Controller
     $controllerString = "controller\\$controller";
@@ -43,13 +49,13 @@ session_start();
     startController($controller, $action, $data);
 });
 
-// Mapping
+// Mapping 'not found'
 \Flight::map('notFound', function() {
     // \Flight::render('404', array());
     Flight::redirect('/start/index');
 });
 
-// Error Controller
+// Mapping 'Error Controller'
 \Flight::map('error', function(\Exception $e)
 {
     // Controller
@@ -67,7 +73,7 @@ session_start();
 *
 * @return array
 */
-function standardStart()
+function readConfig()
 {
     // spezielle Konfiguration , Bsp.: 'salt'
     // include_once('../app/config/config.php');
@@ -80,6 +86,26 @@ function standardStart()
     return;
 }
 
+function connectDatabase()
+{
+    $zugangswerte = \Flight::get('datenbankZugangswerte');
+
+    // erstellen PDO
+    $pdo = new \PDO("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'],$zugangswerte['username'],$zugangswerte['password']);
+    \Flight::set('pdo',$pdo);
+
+    // Sparrow
+    $sparrow = new \models\Sparrow();
+    $sparrow->setDb($pdo);
+    \Flight::set('sparrow', $sparrow);
+
+    // NotNoSQL
+    $notNoSql = new \models\notNoSql($pdo);
+    \Flight::set('notnosql',$notNoSql);
+
+    return;
+}
+
 /**
 * Start des Controller und der Action
 *
@@ -88,8 +114,6 @@ function standardStart()
 */
 function startController($controller, $action = 'index', $data = null)
 {
-    $controller->setDatenbank();
-
     if( (is_array($data)) and (count($data) > 0) )
         $controller->setData($data);
 
@@ -119,13 +143,18 @@ function startTwig()
     return;
 }
 
-function ermittelnDaten()
+/**
+ * ermitteln Startparameter
+ *
+ * @return array
+ */
+function ermittelnStartParams()
 {
     $request = \Flight::request();
-    $data = array();
+    $params = array();
 
     if($request->method == 'POST'){
-        $data = $_POST;
+        $params = $_POST;
     }
 
     if($request->method == 'GET'){
@@ -148,7 +177,7 @@ function ermittelnDaten()
             $key = null;
             for($i = 0; $i < count($splitUrl); $i++){
                 if($j % 2 == 0){
-                    $data[$key] = $splitUrl[$i];
+                    $params[$key] = $splitUrl[$i];
                     $key = null;
                 }
                 else{
@@ -160,5 +189,7 @@ function ermittelnDaten()
         }
     }
 
-    return $data;
+    \Flight::set('params', $params);
+
+    return;
 }
