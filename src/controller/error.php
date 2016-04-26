@@ -26,4 +26,9 @@ class error extends main
             throw $e;
         }
     }
+
+    public function setError($e){
+        echo "Error: <br>";
+        var_dump($e);
+    }
 }

@@ -55,7 +55,7 @@ session_start();
     // Controller
     include_once('../src/controller/error.php');
 
-    $controller = new \controller\error('error', 'index');
+    $controller = new \controller\error('index', 'setError');
     $controller->setError($e);
     $controller->index();
 });
