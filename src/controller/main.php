@@ -18,10 +18,11 @@ class main
     protected $actionName = null;
     protected $templateName = null;
 
-    protected $zugangswerteDatenbankMySQL = array();
-
     /** @var $sparrow \models\Sparrow  */
     protected $sparrow = null;
+
+    /** @var $notNoSql  */
+    protected $notNoSql = null;
 
     /** @var $twig  */
     protected $twig = null;
@@ -49,9 +50,17 @@ class main
     public function setDatenbank()
     {
         try{
-            $this->zugangswerteDatenbankMySQL = \Flight::get('datenbankZugangswerte');
+            $zugangswerteDatenbankMySQL = \Flight::get('datenbankZugangswerte');
+
+            // erstellen PDO
+            $pdo = new \PDO("mysql:host=".$zugangswerteDatenbankMySQL['hostname'].";dbname=".$zugangswerteDatenbankMySQL['database'],$zugangswerteDatenbankMySQL['username'],$zugangswerteDatenbankMySQL['password']);
+
+            // Sparrow
             $this->sparrow = new \models\Sparrow();
-            $this->sparrow->setDb($this->zugangswerteDatenbankMySQL);
+            $this->sparrow->setDb($pdo);
+
+            // NotNoSQL
+            $this->notNoSql = new \tools\notNoSql($pdo);
 
             return $this;
         }

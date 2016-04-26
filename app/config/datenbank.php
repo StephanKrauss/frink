@@ -7,9 +7,8 @@
  */
 
 $zugangswerte = array(
-    'type' => 'mysqli',
-    'hostname' => 'localhost',
-    'database' => 'test',
+    'hostname' => '127.0.0.1',
+    'database' => 'test2',
     'username' => 'root',
-    'password' => ''
+    'password' => 'root'
 );
