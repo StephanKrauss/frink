@@ -28,9 +28,12 @@ class start extends main
                 'bausteine' => 'start'
             );
 
-            $test = 123;
+            $outputTemplate = array(
+               'masterTemplate' => 'main.html',
+               'templateSuperuser' => 'bla_superuser.html'
+           );
 
-            echo 'Start';
+           \Flight::view()->display($this->templateName, $outputTemplate);
         }
         catch(\Exception $e){
             throw $e;

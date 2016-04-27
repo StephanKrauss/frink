@@ -2,15 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}FlightPHP Twig Template{% endblock %}</title>
-
-    <link rel="stylesheet" href="/static/dist/css/app.min.css"/>
+    <title>Flight PHP - Twig - MySQL - Redis, Admin System </title>
 </head>
-<body>
-<h1>Master Template allgemein</h1>
-
-<!-- Block Superuser -->
-{% embed templateSuperuser %}{% endembed %}
-
-</body>
+    <body>
+        <!-- Content des Baustein -->
+        <h1 align="center" style="color: red">Master Template</h1>
+        <div id="centent">{% block content %}{% endblock %}</div>
+    </body>
 </html>
