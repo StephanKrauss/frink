@@ -10,3 +10,4 @@ Credits:
 + <s>Doctrine:</s> doctrine/doctrine2 ( Doctrine Project )
 + Underscore: Im0rtality/Underscore ( free )
 + <s>Predis:</s> nrk/predis ( free )
++ Redisko: vodolaz095/REDISKO ( ISC )

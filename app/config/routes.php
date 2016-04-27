@@ -79,9 +79,12 @@ function readConfig()
     // include_once('../app/config/config.php');
     // \Flight::set('config', $config);
 
-    // Datenbank Zugangswerte
+    // Datenbank Zugangswerte MySQL
     include_once('../app/config/datenbank.php');
     \Flight::set('datenbankZugangswerte', $zugangswerte);
+
+    // Datenbank NoSQL Redis
+    include_once('../app/config/redis.php');
 
     return;
 }
@@ -102,6 +105,11 @@ function connectDatabase()
     // NotNoSQL
     $notNoSql = new \models\notNoSql($pdo);
     \Flight::set('notnosql',$notNoSql);
+
+    // Redis
+    /** $rediskoInstance \models\redisko */
+    // $rediskoStatus = \models\redisko::s();
+    // \models\redisko::set('zahl', 100);
 
     return;
 }
