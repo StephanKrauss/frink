@@ -10,7 +10,7 @@
 + Underscore: Im0rtality/Underscore ( free )
 + <s>Predis:</s> nrk/predis ( free )
 
-### eredigt: 
+### erledigt: 
 
 + Vers. 0.1
     + routing
