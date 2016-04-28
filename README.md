@@ -9,20 +9,19 @@
 + <s>Doctrine:</s> doctrine/doctrine2 ( Doctrine Project )
 + Underscore: Im0rtality/Underscore ( free )
 + <s>Predis:</s> nrk/predis ( free )
-+ Redisko: vodolaz095/REDISKO ( ISC )
 
-### eredigt: 
+### erledigt: 
 
 + Vers. 0.1
     + routing
     + einbau MySQL
     + einbau Twig Templat Engine
     
++ Vers. 0.2
+    + einbau NoSQL Redis Client , Predis 
+    
 ### zu erledigen:
     
-+ Vers. 0.2
-    + einbau NoSQL Redis
-
 + Vers. 0.3
     + entwickeln error controller und Fehlerverhalten festlegen
     
