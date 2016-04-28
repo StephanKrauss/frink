@@ -23,6 +23,8 @@ class main
     protected $sparrow = null;
     /** @var $notNoSql \models\notNoSql */
     protected $notNoSql = null;
+    /** $redis \Predis\Client */
+    protected $predis = null;
 
     /**
      * main constructor.
@@ -43,6 +45,7 @@ class main
         // Datenbanken
         $this->notNoSql = \Flight::get('notnosql');
         $this->sparrow = \Flight::get('sparrow');
+        $this->predis = \Flight::get('predis');
     }
 
     public function setData(array $data)

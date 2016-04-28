@@ -131,4 +131,27 @@ class bla extends main
             throw $e;
         }
     }
+
+    /**
+     * Laden des Parent Template und Subtemplate des Baustein.
+     * Funktionsmodell MySQL / Sparrow Datenbank
+     */
+    public function testRedis()
+    {
+        try{
+            $testParams = $this->params;
+
+            $this->predis->set('zahl2',2);
+
+            $outputTemplate = array(
+                'masterTemplate' => 'main.html',
+                'templateSuperuser' => 'bla_superuser.html'
+            );
+
+            \Flight::view()->display($this->templateName, $outputTemplate);
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
 }

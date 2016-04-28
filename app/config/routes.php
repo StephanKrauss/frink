@@ -83,8 +83,9 @@ function readConfig()
     include_once('../app/config/datenbank.php');
     \Flight::set('datenbankZugangswerte', $zugangswerte);
 
-    // Datenbank NoSQL Redis
+    // Datenbank NoSQL, Redis
     include_once('../app/config/redis.php');
+    \Flight::set('datenbankRedis',$zugangRedis);
 
     return;
 }
@@ -107,9 +108,9 @@ function connectDatabase()
     \Flight::set('notnosql',$notNoSql);
 
     // Redis
-    /** $rediskoInstance \models\redisko */
-    // $rediskoStatus = \models\redisko::s();
-    // \models\redisko::set('zahl', 100);
+    $zugangRedis = \Flight::get('datenbankRedis');
+    $clientPredis = new \Predis\Client($zugangRedis);
+    \Flight::set('predis',$clientPredis);
 
     return;
 }
