@@ -4,9 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d7448d2f8766169eed760e1617b15a62",
-    "content-hash": "6e0b991a6e48dd1e548160c041e326a3",
+    "hash": "e638ae4d4f1c2a010c28f2182da85dff",
+    "content-hash": "7e2c3d7a919056f89c983cc41be0aa04",
     "packages": [
+        {
+            "name": "bafs/testify",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BafS/Testify.php.git",
+                "reference": "52dda3459096976689d255d44250c6f8f30e62a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BafS/Testify.php/zipball/52dda3459096976689d255d44250c6f8f30e62a0",
+                "reference": "52dda3459096976689d255d44250c6f8f30e62a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Testify\\": "lib/Testify/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "Testify makes writing unit tests fun again. It has an elegant syntax and keeps things simple",
+            "keywords": [
+                "framework",
+                "testing",
+                "unit"
+            ],
+            "time": "2016-03-14 11:52:02"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -732,52 +767,6 @@
             "time": "2016-02-29 08:38:10"
         },
         {
-            "name": "pimple/pimple",
-            "version": "v3.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a30f7d6e57565a2e1a316e1baf2a483f788b258a",
-                "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Pimple": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Pimple, a simple Dependency Injection Container",
-            "homepage": "http://pimple.sensiolabs.org",
-            "keywords": [
-                "container",
-                "dependency injection"
-            ],
-            "time": "2015-09-11 15:10:35"
-        },
-        {
             "name": "predis/predis",
             "version": "v1.0.3",
             "source": {
@@ -826,79 +815,6 @@
                 "redis"
             ],
             "time": "2015-07-30 18:34:15"
-        },
-        {
-            "name": "simpletest/simpletest",
-            "version": "v1.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/simpletest/simpletest.git",
-                "reference": "2f8c466c114bdb9c11028a0c3e6d1380ae6a18dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/simpletest/simpletest/zipball/2f8c466c114bdb9c11028a0c3e6d1380ae6a18dc",
-                "reference": "2f8c466c114bdb9c11028a0c3e6d1380ae6a18dc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.0.5"
-            },
-            "replace": {
-                "lastcraft/simpletest": "self.version",
-                "vierbergenlars/simpletest": "self.version"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "."
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Lars Vierbergen",
-                    "email": "vierbergenlars@gmail.com"
-                },
-                {
-                    "name": "Lachlan Donald",
-                    "email": "lachlan@ljd.cc"
-                },
-                {
-                    "name": "Marcus Baker",
-                    "email": "marcus@lastcraft.com",
-                    "role": "Original project lead"
-                },
-                {
-                    "name": "Jason Sweat",
-                    "role": "Original developer"
-                },
-                {
-                    "name": "Travis Swicegood",
-                    "role": "Original developer"
-                },
-                {
-                    "name": "Perrick Penet",
-                    "role": "Original developer"
-                },
-                {
-                    "name": "Edward Z. Yang",
-                    "role": "Original developer"
-                }
-            ],
-            "description": "Unit testing, mock objects and web testing framework for PHP built around test cases.",
-            "homepage": "http://simpletest.org/",
-            "keywords": [
-                "SimpleTest",
-                "code-coverage",
-                "selenium",
-                "testing",
-                "unit-test"
-            ],
-            "time": "2015-09-21 18:19:52"
         },
         {
             "name": "symfony/console",
@@ -1080,7 +996,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "bafs/testify": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
