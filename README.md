@@ -1,5 +1,7 @@
 # minimalistisches componentenbasiertes Framework
-  ( für die schnelle Entwicklung von Administrationssystemen )
+( für die schnelle Entwicklung von Administrationssystemen )
+
+## Professor John Nerdelbaum Frink, Jr.
 
 ### Credits:
 
@@ -10,7 +12,7 @@
 + Underscore: Im0rtality/Underscore ( free )
 + Predis: nrk/predis ( free )
 + Testify: marco-fiset/Testify ( free )
-+ BooBoo: BafS/booboo ( MIT )
++ Firelogger: binaryage/firelogger ( ??? )
 
 
 ### erledigt: 
@@ -29,7 +31,8 @@
     + entwickeln Error Controller und Fehlerverhalten festlegen
     	+ registrieren
     	+ korrigieren
-    	+ blockieren   
+    	+ blockieren
+    + darstellen der Fehler im 'Developer - Modus' mittels Firefox / Firelogger
 
 + Vers. 0.4:
 	+ Unit Test 
