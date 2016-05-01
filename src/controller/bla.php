@@ -28,11 +28,27 @@ class bla extends main
     public function index()
     {
         try{
-            $output = array(
-                'bausteine' => 'bla / index'
+            $outputTemplate = array(
+                'masterTemplate' => 'main.html',
+                'templateSuperuser' => 'bla_superuser.html'
             );
 
-            \Flight::view()->display($this->templateName, $output);
+            \Flight::view()->display($this->templateName, $outputTemplate);
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    /**
+     * Auswertung 'phpinfo();'
+     */
+    public function info()
+    {
+        try{
+            phpinfo();
+
+            exit();
         }
         catch(\Exception $e){
             throw $e;

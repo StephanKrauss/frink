@@ -42,8 +42,11 @@
     $controllerString = "controller\\$controller";
     $controller = new $controllerString($controller, $action);
     
-    // Startroutinen des Controller
-    startController($controller, $action, $data);
+    // Start Action des Controller
+    if(method_exists($controller, $action))
+        startController($controller, $action, $data);
+    else
+        throw new \tools\frinkError('Action im Controller nicht vorhanden', 3);
 });
 
 // Mapping 'not found'
@@ -160,7 +163,8 @@ function ermittelnStartParams()
     $params = array();
 
     if($request->method == 'POST'){
-        $params = $_POST;
+        // $params = $_POST;
+        $params = $request->data;
     }
 
     if($request->method == 'GET'){
