@@ -1,8 +1,5 @@
 <?php
 
-// Start Session
-session_start();
-
 // Aufruf Baustein 'login' , Erststart
 \Flight::route('/', function()
 {

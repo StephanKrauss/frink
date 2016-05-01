@@ -10,6 +10,8 @@
 
 namespace controller;
 
+use \tools as tools;
+
 /**
  * darstellen der leeren Seite des Template
  *
@@ -149,6 +151,18 @@ class bla extends main
             );
 
             \Flight::view()->display($this->templateName, $outputTemplate);
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    public function testError()
+    {
+        try{
+            $testParams = $this->params;
+
+            throw new tools\frinkError('Fehlerbeschreibung', 3);
         }
         catch(\Exception $e){
             throw $e;
