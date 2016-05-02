@@ -21,6 +21,8 @@ class myCalc
     /** @var int  */
     public $summe = 0;
 
+    protected $werte = array();
+
     public function __construct($anfangswert){
         $this->summe = $anfangswert;
     }
@@ -33,5 +35,24 @@ class myCalc
 
     public function getSumme(){
         return $this->summe;
+    }
+
+    public function __get($key)
+    {
+        return $this->werte[$key];
+    }
+
+    public function __set($name, $value)
+    {
+        $this->werte[$name] = $value;
+    }
+
+    public function __call($name, $arguments)
+    {
+        return 'unbekannte Methode';
+    }
+
+    public static function __callStatic($name, $arguments){
+        return $arguments[0];
     }
 }

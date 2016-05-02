@@ -1,0 +1,12 @@
+{% extends masterTemplate %}
+
+{% block content %}
+    <h2 align="center" style="color: green;">Parent Template 'Basics'</h2>
+
+    {% embed "bla_superuser.html" %}{% endembed %}
+
+    {{ testClosure }} <br>
+    {{ wert2 }}
+
+
+{% endblock %}
