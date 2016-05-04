@@ -38,21 +38,29 @@
     // ermitteln der übergebenen Parameter
     $data = ermittelnStartParams();
 
-    // Controller
-    $controllerString = "controller\\$controller";
-    $controller = new $controllerString($controller, $action);
-    
-    // Start Action des Controller
-    if(method_exists($controller, $action))
-        startController($controller, $action, $data);
-    else
-        throw new \tools\frinkError('Action im Controller nicht vorhanden', 3);
-});
 
-// Mapping 'not found'
-\Flight::map('notFound', function() {
-    // \Flight::render('404', array());
-    Flight::redirect('/start/index');
+    // Start Action des Controller
+    try{
+        // Kontrolle Controller
+        $controllerPath = realpath(__DIR__ . '../../../src/controller/'.$controller.'.php');
+
+        if(empty($controllerPath))
+            throw new \tools\frinkError('Controller unbekannt', 3);
+
+        // Controller
+        $controllerString = "controller\\$controller";
+
+        $controller = new $controllerString($controller, $action);
+
+        // Kontrolle Aktion
+        if(!method_exists($controller, $action))
+            throw new \tools\frinkError('Action unbekannt', 3);
+
+        startController($controller, $action, $data);
+    }
+    catch(\Exception $e){
+        throw $e;
+    }
 });
 
 // Mapping 'Error Controller'

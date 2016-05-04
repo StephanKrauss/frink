@@ -1,6 +1,7 @@
 <?php
 
 namespace controller;
+use tools\frinkError;
 
 /**
  * Erweiterung des Controller um Standard Methoden
@@ -59,5 +60,10 @@ class main
         catch(\Exception $e){
             throw $e;
         }
+    }
+
+    public function __call($actionName, $params)
+    {
+        throw new \tools\frinkError('unbekannt Action', 3);
     }
 }

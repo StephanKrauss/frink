@@ -117,6 +117,29 @@ class basics extends main
             throw $e;
         }
     }
-    
+
+    public function testArray()
+    {
+        try{
+            $test = array(
+                'bla' => array(
+                    'wert1' => 'aaa',
+                    'wert2' => 111,
+                    3 => 'wert 333'
+                )
+            );
+
+            $outputTemplate = array(
+                'masterTemplate' => 'main.html',
+                'templateSuperuser' => 'bla_superuser.html',
+                'test' => $test
+            );
+
+            \Flight::view()->display($this->templateName, $outputTemplate);
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
     
 }
