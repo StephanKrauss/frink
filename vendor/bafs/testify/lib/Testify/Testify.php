@@ -34,6 +34,9 @@ class Testify {
     
     private $customReporter = null;
 
+    public $flagShowReport = false;
+    public $fileName = null;
+
     /**
      * As html report need google api(font), while not available in China, this is an option to surrend to gfw(great fire wall)
      *
@@ -160,7 +163,8 @@ class Testify {
             call_user_func_array($this->after, $arr);
         }
 
-        $this->report();
+        if($this->flagShowReport)
+            $this->report();
 
         return $this;
     }
@@ -445,5 +449,17 @@ class Testify {
     public function __invoke()
     {
         return $this->run();
+    }
+
+    /**
+     * gibt den Stack der Test zurück
+     *
+     * @return array
+     */
+    public function getAuswertung()
+    {
+        $response = array($this->fileName, $this->stack);
+
+        return $response;
     }
 }

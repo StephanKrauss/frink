@@ -66,4 +66,17 @@ class main
     {
         throw new \tools\frinkError('unbekannt Action', 3);
     }
+
+    public function sendLoggerMessage($message)
+    {
+        // eintragen / versenden der Message
+        $test = 123;
+
+        // Verwendung firelog zur Darstellung der Message im 'develop' - Modus
+
+        // Registrierung der Message in Tabelle / Mail
+
+
+        return;
+    }
 }

@@ -5,7 +5,7 @@ require '../vendor/autoload.php';
 use Testify\Testify;
 use models\model;
 
-// Verarbeitung protected Methoden
+// Test, protected Methoden
 class test extends \models\model{
 	public function mult($wert1, $wert2){
 		return parent::mult($wert1, $wert2);
@@ -14,6 +14,17 @@ class test extends \models\model{
 
 /** @var $testify \Testify\Testify */
 $testify = new Testify("Test einer Klasse");
+
+
+
+$testify->before(function($testify)
+{
+	// anzeigen Report
+	$testify->flagShowReport = true;
+
+	$fileName = basename(__FILE__);
+	$testify->fileName = $fileName;
+});
 
 // Objekt mit Startparameter im Controller
 $testify->beforeEach(function($testify) {
@@ -45,3 +56,6 @@ $testify->test("Test der Methode mult()", function($testify)
 });
 
 $testify();
+
+// ermitteln Fehler - Stack
+list($filename, $stack) = $testify->getAuswertung();
