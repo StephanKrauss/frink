@@ -19,7 +19,8 @@
       "erusev/parsedown": "1.6.0",
       "doctrine/orm": "~2.5.4",
 	  "bafs/testify": "dev-master",
-	  "psr/log": "1.0.0"
+	  "psr/log": "1.0.0",
+      "phpunit/phpunit": "4.8.24"
   },
   "autoload": {
     "psr-4": {

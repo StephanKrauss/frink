@@ -26,8 +26,6 @@ class basics extends main
     public function testNamespace()
     {
         try{
-            $test = 123;
-
             /** @var $testMath \models\myCalc */
             $testMath = new \models\myCalc(10);
             $testMath->add(5);
