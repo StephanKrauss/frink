@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
-    'Pimple' => array($vendorDir . '/pimple/pimple/src'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Doctrine\\ORM\\' => array($vendorDir . '/doctrine/orm/lib'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),

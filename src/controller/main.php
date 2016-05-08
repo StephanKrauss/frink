@@ -1,6 +1,7 @@
 <?php
 
 namespace controller;
+use tools\frinkError;
 
 /**
  * Erweiterung des Controller um Standard Methoden
@@ -59,5 +60,23 @@ class main
         catch(\Exception $e){
             throw $e;
         }
+    }
+
+    public function __call($actionName, $params)
+    {
+        throw new \tools\frinkError('unbekannt Action', 3);
+    }
+
+    public function sendLoggerMessage($message)
+    {
+        // eintragen / versenden der Message
+        $test = 123;
+
+        // Verwendung firelog zur Darstellung der Message im 'develop' - Modus
+
+        // Registrierung der Message in Tabelle / Mail
+
+
+        return;
     }
 }

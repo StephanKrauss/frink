@@ -10,6 +10,8 @@
 
 namespace controller;
 
+use \tools as tools;
+
 /**
  * darstellen der leeren Seite des Template
  *
@@ -26,11 +28,27 @@ class bla extends main
     public function index()
     {
         try{
-            $output = array(
-                'bausteine' => 'bla / index'
+            $outputTemplate = array(
+                'masterTemplate' => 'main.html',
+                'templateSuperuser' => 'bla_superuser.html'
             );
 
-            \Flight::view()->display($this->templateName, $output);
+            \Flight::view()->display($this->templateName, $outputTemplate);
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    /**
+     * Auswertung 'phpinfo();'
+     */
+    public function info()
+    {
+        try{
+            phpinfo();
+
+            exit();
         }
         catch(\Exception $e){
             throw $e;
@@ -149,6 +167,18 @@ class bla extends main
             );
 
             \Flight::view()->display($this->templateName, $outputTemplate);
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    public function testError()
+    {
+        try{
+            $testParams = $this->params;
+
+            throw new tools\frinkError('Fehlerbeschreibung', 3);
         }
         catch(\Exception $e){
             throw $e;

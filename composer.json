@@ -16,10 +16,10 @@
       "predis/predis": "1.0.*",
       "mikecao/flight": "1.2.20",
       "im0rtality/underscore": "*",
-      "pimple/pimple": "~3.0",
-      "simpletest/simpletest": "^1.1",
       "erusev/parsedown": "1.6.0",
-      "doctrine/orm": "~2.5.4"
+      "doctrine/orm": "~2.5.4",
+	  "bafs/testify": "dev-master",
+	  "psr/log": "1.0.0"
   },
   "autoload": {
     "psr-4": {

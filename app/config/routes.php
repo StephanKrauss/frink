@@ -1,8 +1,5 @@
 <?php
 
-// Start Session
-session_start();
-
 // Aufruf Baustein 'login' , Erststart
 \Flight::route('/', function()
 {
@@ -41,18 +38,29 @@ session_start();
     // ermitteln der übergebenen Parameter
     $data = ermittelnStartParams();
 
-    // Controller
-    $controllerString = "controller\\$controller";
-    $controller = new $controllerString($controller, $action);
-    
-    // Startroutinen des Controller
-    startController($controller, $action, $data);
-});
 
-// Mapping 'not found'
-\Flight::map('notFound', function() {
-    // \Flight::render('404', array());
-    Flight::redirect('/start/index');
+    // Start Action des Controller
+    try{
+        // Kontrolle Controller
+        $controllerPath = realpath(__DIR__ . '../../../src/controller/'.$controller.'.php');
+
+        if(empty($controllerPath))
+            throw new \tools\frinkError('Controller unbekannt', 3);
+
+        // Controller
+        $controllerString = "controller\\$controller";
+
+        $controller = new $controllerString($controller, $action);
+
+        // Kontrolle Aktion
+        if(!method_exists($controller, $action))
+            throw new \tools\frinkError('Action unbekannt', 3);
+
+        startController($controller, $action, $data);
+    }
+    catch(\Exception $e){
+        throw $e;
+    }
 });
 
 // Mapping 'Error Controller'
@@ -163,7 +171,8 @@ function ermittelnStartParams()
     $params = array();
 
     if($request->method == 'POST'){
-        $params = $_POST;
+        // $params = $_POST;
+        $params = $request->data;
     }
 
     if($request->method == 'GET'){
