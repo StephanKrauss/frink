@@ -8,6 +8,6 @@ ini_set('display_errors', '1');
 require __DIR__ . '/../vendor/autoload.php';
 
 // System Konfiguration	
-require __DIR__ . '/../app/config/routes.php';
+require __DIR__ . '/../app/config/bootstrap.php';
 
 \Flight::start();
