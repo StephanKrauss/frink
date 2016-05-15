@@ -2,6 +2,7 @@
 
 namespace controller;
 use tools\frinkError;
+use Pimple\Container;
 
 /**
  * Erweiterung des Controller um Standard Methoden
@@ -27,6 +28,8 @@ class main
     /** $redis \Predis\Client */
     protected $predis = null;
 
+    protected $pimple = null;
+
     /**
      * main constructor.
      * 
@@ -35,6 +38,7 @@ class main
      */
     public function __construct($controllerName, $actionName)
     {
+        // allgemeine Angaben
         $this->controllerName = $controllerName;
         $this->actionName = $actionName;
         $this->templateName = $controllerName.".html";
@@ -42,11 +46,25 @@ class main
         // Startparameter
         $this->request = \Flight::request();
         $this->params = \Flight::get('params');
+    }
 
-        // Datenbanken
-        $this->notNoSql = \Flight::get('notnosql');
-        $this->sparrow = \Flight::get('sparrow');
-        $this->predis = \Flight::get('predis');
+    /**
+     * Übernimmt die benötigten Model / Tool der Klasse sowie der Standardklassen
+     *
+     * @param array $values
+     */
+    protected function pimple($values = array())
+    {
+        // Datenbanken aus Bootstrap
+        $defaults = array(
+            'notNoSql' => \Flight::get('notnosql'),
+            'sparrow' => \Flight::get('sparrow'),
+            'predis' => \Flight::get('predis')
+        );
+
+        $this->pimple = new Container(array_merge($defaults, $values));
+
+        return $this->pimple;
     }
 
     public function setData(array $data)
