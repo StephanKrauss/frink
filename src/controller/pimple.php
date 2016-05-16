@@ -75,6 +75,7 @@ class pimple extends main
     {
         try{
             $this->template();
+
         }
         catch(\Exception $e){
             throw $e;
