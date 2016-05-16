@@ -23,21 +23,32 @@
 // Aufruf Baustein, mit Anzeigesprache
 \Flight::route('/@controller/@action(/*)',function($controller, $action)
 {
-    if($action == null)
-        $action = 'index';
+    try{
+        if($action == null)
+            $action = 'index';
 
-    // Konfiguration
-    readConfig();
+        // Konfiguration
+        readConfig();
 
-    // Datenbanken
-    connectDatabase();
+        // Datenbanken
+        connectDatabase();
 
-    // Twig
-    startTwig();
+        // Twig
+        startTwig();
 
-    // ermitteln der übergebenen Parameter
-    $data = ermittelnStartParams();
+        // Request
+        $request = \Flight::request();
 
+        // ermitteln der übergebenen Parameter
+        $data = ermittelnStartParams($request);
+
+        // Plugins
+        $plugins = new \models\plugins($request);
+        $request = $plugins->getRequest();
+    }
+    catch(\Exception $e){
+        throw $e;
+    }
 
     // Start Action des Controller
     try{
@@ -165,9 +176,8 @@ function startTwig()
  *
  * @return array
  */
-function ermittelnStartParams()
+function ermittelnStartParams($request)
 {
-    $request = \Flight::request();
     $params = array();
 
     if($request->method == 'POST'){
