@@ -462,4 +462,21 @@ class Testify {
 
         return $response;
     }
+
+    /**
+     * Gibt an den Runner die Anzahl der fehlgeschlagenen Test zurück
+     *
+     * @return mixed
+     */
+    public function getAuswertungRunner()
+    {
+        $response = array($this->fileName, $this->stack);
+
+        $fehler = 0;
+        foreach($response[1] as $key => $value){
+            $fehler += $value['fail'];
+        }
+
+        return $fehler;
+    }
 }

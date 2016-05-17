@@ -28,7 +28,7 @@ class main
     /** $redis \Predis\Client */
     protected $predis = null;
 
-    protected $pimple = null;
+    public $pimple = null;
 
     /**
      * main constructor.

@@ -10,6 +10,9 @@
 
 namespace controller;
 
+use models\model;
+use models\myCalc;
+
 /**
  * darstellen der leeren Seite des Template
  *
@@ -21,9 +24,28 @@ namespace controller;
 class testify extends main
 {
     /**
+     *
+     */
+    public function __construct($controllerName, $actionName)
+    {
+        $models = array(
+            'model' => function() {
+                return new model($this->params);
+            },
+            'myCalc' => function(){
+                return new myCalc(10);
+            }
+        );
+
+        parent::__construct($controllerName, $actionName);
+
+        parent::pimple($models);
+    }
+
+    /**
      * Laden des Parent Template und Subtemplate des Baustein
      */
-    protected function index()
+    protected function template()
     {
         try{
 
@@ -44,7 +66,7 @@ class testify extends main
         try{
             // Verarbeitung
             
-            $this->index();
+            $this->template();
         }
         catch(\Exception $e){
             throw $e;
@@ -56,7 +78,7 @@ class testify extends main
         try{
             // Verarbeitung
 
-            $this->index();
+            $this->template();
         }
         catch(\Exception $e){
             throw $e;
@@ -68,7 +90,7 @@ class testify extends main
         try{
             // Verarbeitung
 
-            $this->index();
+            $this->template();
         }
         catch(\Exception $e){
             throw $e;
@@ -80,7 +102,7 @@ class testify extends main
         try{
             // Verarbeitung
 
-            $this->index();
+            $this->template();
         }
         catch(\Exception $e){
             throw $e;
