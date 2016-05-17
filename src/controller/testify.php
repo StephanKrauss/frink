@@ -108,5 +108,10 @@ class testify extends main
             throw $e;
         }
     }
+
+    private function myPrivate()
+    {
+        return 'abc';
+    }
     
 }
