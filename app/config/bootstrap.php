@@ -6,8 +6,15 @@
     // Konfiguration
     readConfig();
 
+    $zugangswerte = \Flight::get('datenbankZugangswerte');
+    $zugangRedis = \Flight::get('datenbankRedis');
+
     // Datenbanken
-    connectDatabase();
+    list($sparrow, $notNoSql, $clientPredis, $pdo) = \tools\verbindungen::connectDatabase($zugangswerte, $zugangRedis);
+    \Flight::set('sparrow', $sparrow);
+    \Flight::set('notnosql',$notNoSql);
+    \Flight::set('predis',$clientPredis);
+    \Flight::set('pdo',$pdo);
 
     // Twig
     startTwig();
@@ -30,10 +37,18 @@
         // Konfiguration
         readConfig();
 
-        // Datenbanken
-        connectDatabase();
+        // Zuganswerte Datenbanken
+        $zugangswerte = \Flight::get('datenbankZugangswerte');
+        $zugangRedis = \Flight::get('datenbankRedis');
 
-        // Twig
+        // Datenbanken
+        list($sparrow, $notNoSql, $clientPredis, $pdo) = \tools\verbindungen::connectDatabase($zugangswerte, $zugangRedis);
+        \Flight::set('sparrow', $sparrow);
+        \Flight::set('notNoSql',$notNoSql);
+        \Flight::set('predis',$clientPredis);
+        \Flight::set('pdo',$pdo);
+
+            // Twig
         startTwig();
 
         // Request
@@ -105,31 +120,6 @@ function readConfig()
     // Datenbank NoSQL, Redis
     include_once('../app/config/redis.php');
     \Flight::set('datenbankRedis',$zugangRedis);
-
-    return;
-}
-
-function connectDatabase()
-{
-    $zugangswerte = \Flight::get('datenbankZugangswerte');
-
-    // erstellen PDO
-    $pdo = new \PDO("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'],$zugangswerte['username'],$zugangswerte['password']);
-    \Flight::set('pdo',$pdo);
-
-    // Sparrow
-    $sparrow = new \models\Sparrow();
-    $sparrow->setDb($pdo);
-    \Flight::set('sparrow', $sparrow);
-
-    // NotNoSQL
-    $notNoSql = new \models\notNoSql($pdo);
-    \Flight::set('notnosql',$notNoSql);
-
-    // Redis
-    $zugangRedis = \Flight::get('datenbankRedis');
-    $clientPredis = new \Predis\Client($zugangRedis);
-    \Flight::set('predis',$clientPredis);
 
     return;
 }
