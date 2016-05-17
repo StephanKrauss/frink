@@ -83,6 +83,8 @@ class main
     public function __call($actionName, $params)
     {
         throw new \tools\frinkError('unbekannt Action', 3);
+
+        return;
     }
 
     public function sendLoggerMessage($message)

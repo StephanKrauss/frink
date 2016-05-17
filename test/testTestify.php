@@ -35,11 +35,6 @@ $testify->before(function($testify) {
 
 	list($sparrow, $notNoSql, $clientPredis, $pdo) = \tools\verbindungen::connectDatabase($zugangswerte, $zugangRedis);
 
-	// Methoden auf 'public'
-//	$reflection = new \ReflectionClass(get_ob('testify'));
-//	$method = $reflection->getMethod('myPrivate');
-//	$method->setAccessible(true);
-
 	$testFile = new file($controller, $action);
 
 	$testFile->pimple['notNoSql'] = $notNoSql;
@@ -62,6 +57,17 @@ $testify->test("Controller testify / get", function($testify)
 $testify->test("Dummy 2", function($testify)
 {
 	$testify->assert(7 == 2,"dummy 2");
+});
+
+$testify->test("private / protected Method 'myPrivate'", function($testify)
+{
+	// Methode auf 'public'
+	$reflector = new ReflectionObject($testify->data->test);
+	$method = $reflector->getMethod('myPrivate');
+	$method->setAccessible(true);
+
+	$testify->assert($method->invoke($testify->data->test) == 'abc',"dummy 3");
+	$testify->assert($method->invoke($testify->data->test) == '123',"dummy 4");
 });
 
 $testify();
