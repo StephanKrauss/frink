@@ -20,8 +20,7 @@
 	  "bafs/testify": "dev-master",
 	  "psr/log": "1.0.0",
       "pimple/pimple": "3.*",
-	  "gabordemooij/redbean": "4.*",
-	  "wcm/git-php-hooks": "1.*"
+	  "gabordemooij/redbean": "4.*"
   },
   "autoload": {
     "psr-4": {
