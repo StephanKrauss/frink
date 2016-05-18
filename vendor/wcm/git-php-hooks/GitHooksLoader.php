@@ -66,13 +66,13 @@ class GitHooksLoader
 	public function prepare()
 	{
 		$this->fetched = $this->fetch( $this->location );
-		// $this->fetched->rewind();
+		$this->fetched->rewind();
 
-		// $this->filtered = $this->filter( $this->fetched );
-		// $this->filtered->rewind();
+		$this->filtered = $this->filter( $this->fetched );
+		$this->filtered->rewind();
 
-		// $this->sorted = $this->sort( $this->filtered );
-		// $this->sorted->rewind();
+		$this->sorted = $this->sort( $this->filtered );
+		$this->sorted->rewind();
 	}
 
 	/**
