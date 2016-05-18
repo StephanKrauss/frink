@@ -16,12 +16,11 @@
       "predis/predis": "1.0.*",
       "mikecao/flight": "1.2.20",
       "im0rtality/underscore": "*",
-      "erusev/parsedown": "1.6.0",
-      "doctrine/orm": "~2.5.4",
+      "erusev/parsedown": "1.6.0",      
 	  "bafs/testify": "dev-master",
 	  "psr/log": "1.0.0",
-      "phpunit/phpunit": "4.8.24",
-      "pimple/pimple": "3.*"
+      "pimple/pimple": "3.*",
+	  "gabordemooij/redbean": "4.*"
   },
   "autoload": {
     "psr-4": {
