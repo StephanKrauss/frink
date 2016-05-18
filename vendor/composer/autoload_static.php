@@ -78,6 +78,10 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         ),
     );
 
+    public static $classMap = array (
+        'GitHooksLoader' => __DIR__ . '/..' . '/wcm/git-php-hooks/GitHooksLoader.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
@@ -85,6 +89,7 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
             $loader->prefixDirsPsr4 = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$prefixDirsPsr4;
             $loader->fallbackDirsPsr4 = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$classMap;
 
         }, null, ClassLoader::class);
     }
