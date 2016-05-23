@@ -15,8 +15,10 @@ use \RedBeanPHP\R as R;
 /**
  * darstellen der leeren Seite des Template
  *
+ * + abschalten Kontrolle Foreign Key in MySQL: 'SET FOREIGN_KEY_CHECKS = 1;'
+ *
  * @author Stephan.Krauss
- * @date 23.06.2015
+ * @date 23.05.2016
  * @package Controller
  */
 
@@ -65,6 +67,37 @@ class redbean extends main
      *
      * @throws \Exception
      */
+    public function post()
+    {
+        try{
+            // Zugangsdaten
+            $datenbankZugangswerte = \Flight::get('datenbankZugangswerte');
+
+            // Redbean Setup
+            R::setup("mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database'], $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
+            $tabelleKunden = R::dispense('kunden');
+            $tabelleKunden->name = 'Mustermann';
+            $tabelleKunden->vorname = 'Max';
+
+            $tabelleMails = R::dispense('mails');
+            $tabelleMails->mail = 'info@blub.de';
+            $tabelleKunden->ownMails[] = $tabelleMails;
+
+            $tabelleMailsSecond = R::dispense('mails');
+            $tabelleMailsSecond->mail = 'info@blub.de';
+            $tabelleKunden->ownMails[] = $tabelleMailsSecond;
+
+            $id = R::store($tabelleKunden);
+
+            echo 'ID: '.$id;
+            
+            $this->template();
+        }
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
     public function get()
     {
         try{
@@ -73,11 +106,46 @@ class redbean extends main
 
             // Redbean Setup
             R::setup("mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database'], $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
-            
-            $this->template();
+            R::debug(true);
+
+            $where = array(
+                'id' => 2
+            );
+
+            $max = R::load('kunden', 2);
+
+            echo 'Name: '.$max->name;
+
+
+
+
+            // $this->template();
+
+            $test = 123;
         }
-        catch(\Exception $e){
+        catch (\Exception $e){
             throw $e;
         }
+
+    }
+
+    public function delete()
+    {
+        try{
+            // Zugangsdaten
+            $datenbankZugangswerte = \Flight::get('datenbankZugangswerte');
+
+            // Redbean Setup
+            R::setup("mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database'], $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
+
+            $tabelleKunden = R::load('kunden', 1);
+            R::trash($tabelleKunden);
+
+            $this->template();
+        }
+        catch (\Exception $e){
+            throw $e;
+        }
+
     }
 }
