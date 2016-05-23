@@ -10,7 +10,7 @@
 namespace controller;
 use models\model;
 use models\myCalc;
-use \RedBeanPHP\R;
+use \RedBeanPHP\R as R;
 
 /**
  * darstellen der leeren Seite des Template
@@ -72,7 +72,7 @@ class redbean extends main
             $datenbankZugangswerte = \Flight::get('datenbankZugangswerte');
 
             // Redbean Setup
-            \R::setup("'mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database']."'", $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
+            R::setup("mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database'], $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
             
             $this->template();
         }

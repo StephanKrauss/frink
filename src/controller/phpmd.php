@@ -4,6 +4,7 @@ namespace controller;
 
 /**
  * Class phpMd
+ *
  * @package controller
  */
 class PhpMd extends main
@@ -13,6 +14,32 @@ class PhpMd extends main
      */
     public function cleanCodeRules()
     {
+        $wert = 'abc';
+
+        if ($wert == 'aaa')
+            $wert = 'aaa';
+        elseif ($wert == 'bbb')
+            $wert = 'aaa';
+        elseif ($wert == 'ccc')
+            $wert = 'aaa';
+        else
+            $wert = 'aaa';
+
+        $x = true;
+        $y = true;
+        $z = true;
+
+        if($x){
+            if($y){
+                if($z){
+                    $wert = 'xyz';
+                }
+            }
+
+            return $x;
+        }
+
+        return $wert;
 
     }
 
@@ -20,7 +47,8 @@ class PhpMd extends main
      * @param bool $flag
      * @return bool
      */
-    public function boolenArgumenFlag($flag = true){
+    public function boolenArgumenFlag($flag = true)
+    {
 
         return $flag;
     }
@@ -28,7 +56,8 @@ class PhpMd extends main
     /**
      * @param $flag
      */
-    public function elseTest($flag){
+    public function elseTest($flag)
+    {
         if ($flag) {
             // one branch
         } else {
