@@ -1,8 +1,10 @@
 <?php
 
 namespace controller;
+
 use tools\frinkError;
 use Pimple\Container;
+use \RedBeanPHP\R as R;
 
 /**
  * Erweiterung des Controller um Standard Methoden
@@ -27,8 +29,15 @@ class main
     protected $notNoSql = null;
     /** $redis \Predis\Client */
     protected $predis = null;
+    /** @var $redbean \RedBeanPHP\R  */
+    protected $redbean = null;
 
+    // DIC
     public $pimple = null;
+
+    // Zugangswerte MySQL
+    public $zugangswerte = array();
+
 
     /**
      * main constructor.
@@ -67,6 +76,13 @@ class main
         return $this->pimple;
     }
 
+    /**
+     * Übernimmt die Parameter des Aufruf
+     *
+     * @param array $data
+     * @return $this
+     * @throws \Exception
+     */
     public function setData(array $data)
     {
         try{
@@ -87,6 +103,11 @@ class main
         return;
     }
 
+    /**
+     * Dummy Funktion zum senden einer Message
+     *
+     * @param $message
+     */
     public function sendLoggerMessage($message)
     {
         // eintragen / versenden der Message
@@ -96,6 +117,17 @@ class main
 
         // Registrierung der Message in Tabelle / Mail
 
+
+        return;
+    }
+
+    /**
+     * Start Redbean ORM
+     */
+    public function startRedbean($flagFluent = false)
+    {
+        R::setup("mysql:host=".$this->zugangswerte['hostname'].";dbname=".$this->zugangswerte['database'], $this->zugangswerte['username'], $this->zugangswerte['password']);
+        $this->redbean = R::$toolbox;
 
         return;
     }

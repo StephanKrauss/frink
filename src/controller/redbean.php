@@ -8,9 +8,9 @@
 */
 
 namespace controller;
+
 use models\model;
 use models\myCalc;
-use \RedBeanPHP\R as R;
 
 /**
  * darstellen der leeren Seite des Template
@@ -101,27 +101,18 @@ class redbean extends main
     public function get()
     {
         try{
-            // Zugangsdaten
-            $datenbankZugangswerte = \Flight::get('datenbankZugangswerte');
-
-            // Redbean Setup
-            R::setup("mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database'], $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
-            R::debug(true);
-
             $where = array(
                 'id' => 2
             );
 
-            $max = R::load('kunden', 2);
+            $redbean = $this->redbean->getRedBean();
+            // $redbean->debug(true);
+
+            $max = $redbean->load('kunden', 2);
 
             echo 'Name: '.$max->name;
 
-
-
-
-            // $this->template();
-
-            $test = 123;
+            $this->template();
         }
         catch (\Exception $e){
             throw $e;
@@ -129,7 +120,37 @@ class redbean extends main
 
     }
 
+    /**
+     * löschen eines Datensatzes
+     * 
+     * @throws \Exception
+     */
     public function delete()
+    {
+        try{
+            // Zugangsdaten
+            $datenbankZugangswerte = \Flight::get('datenbankZugangswerte');
+
+            // Redbean Setup
+            R::setup("mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database'], $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
+
+            $tabelleKunden = R::load('kunden', 1);
+            R::trash($tabelleKunden);
+
+            $this->template();
+        }
+        catch (\Exception $e){
+            throw $e;
+        }
+
+    }
+
+    /**
+     * finden eines Datensatzes
+     * 
+     * @throws \Exception
+     */
+    public function find()
     {
         try{
             // Zugangsdaten

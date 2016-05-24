@@ -1,6 +1,7 @@
 <?php
 
 namespace tools;
+use \RedBeanPHP\R as R;
 
 /**
  * Initialisiert die Datenbanken

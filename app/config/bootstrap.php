@@ -47,6 +47,7 @@
         \Flight::set('notNoSql',$notNoSql);
         \Flight::set('predis',$clientPredis);
         \Flight::set('pdo',$pdo);
+        \Flight::set('zugangswerte',$zugangswerte);
 
             // Twig
         startTwig();
@@ -132,8 +133,16 @@ function readConfig()
 */
 function startController($controller, $action = 'index', $data = null)
 {
+    // Übernahme Parameter
     if( (is_array($data)) and (count($data) > 0) )
         $controller->setData($data);
+
+    // Übernahme Zugangswerte MySQL
+    $controller->zugangswerte = \Flight::get('zugangswerte');
+
+    // Initialisieren Redbean
+    $flagFluent = true;
+    $controller->startRedbean($flagFluent);
 
     $controller->$action();
 }
