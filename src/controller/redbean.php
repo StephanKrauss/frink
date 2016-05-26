@@ -104,9 +104,18 @@ class redbean extends main
 
             $redbean = $this->redbean->getRedBean();
 
-            $max = $redbean->load('kunden', 1);
+            $where = array(
+                'id' => 1
+            );
 
-            echo 'Name: '.$max->name;
+            // $max = $redbean->load('kunden', 1);
+            $kunden = $redbean->find('kunden', $where);
+
+            // echo 'Name: '.$max->name;
+           foreach($kunden as $kunde){
+               echo 'Name: '.$kunde->name.'<br>';
+               echo 'Vorname: '.$kunde->vorname.'<br>';
+           }
 
             $this->template();
         }

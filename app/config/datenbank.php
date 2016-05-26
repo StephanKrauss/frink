@@ -11,5 +11,5 @@ $zugangswerte = array(
     'database' => 'test',
     'username' => 'root',
     'password' => '',
-	'debug' => false
+	'debug' => true
 );

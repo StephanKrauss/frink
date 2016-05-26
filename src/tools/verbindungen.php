@@ -34,7 +34,8 @@ class verbindungen
 
         // Redbean
         R::setup("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'], $zugangswerte['username'], $zugangswerte['password']);
-        R::debug($zugangswerte['debug']);
+        // R::debug($zugangswerte['debug']);
+        R::fancyDebug($zugangswerte['debug']);
 
         $redbean = R::getToolBox();
 
