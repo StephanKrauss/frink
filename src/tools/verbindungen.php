@@ -1,7 +1,9 @@
 <?php
 
 namespace tools;
+use models\model;
 use \RedBeanPHP\R as R;
+
 
 /**
  * Initialisiert die Datenbanken
@@ -32,6 +34,8 @@ class verbindungen
 
         // Redbean
         R::setup("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'], $zugangswerte['username'], $zugangswerte['password']);
+        R::debug($zugangswerte['debug']);
+
         $redbean = R::getToolBox();
 
         return array($sparrow, $notNoSql, $clientPredis, $pdo, $redbean);

@@ -10,5 +10,6 @@ $zugangswerte = array(
     'hostname' => '127.0.0.1',
     'database' => 'test',
     'username' => 'root',
-    'password' => ''
+    'password' => '',
+	'debug' => false
 );
