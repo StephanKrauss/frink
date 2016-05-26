@@ -15,7 +15,7 @@ use \RedBeanPHP\R as R;
  */
 class verbindungen
 {
-    public static function connectDatabase($zugangswerte, $zugangRedis)
+    public static function connectDataSource($zugangswerte, $zugangRedis)
     {
         // erstellen PDO
         $pdo = new \PDO("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'],$zugangswerte['username'],$zugangswerte['password']);
@@ -30,7 +30,11 @@ class verbindungen
         // Redis
         $clientPredis = new \Predis\Client($zugangRedis);
 
-        return array($sparrow, $notNoSql, $clientPredis, $pdo);
+        // Redbean
+        R::setup("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'], $zugangswerte['username'], $zugangswerte['password']);
+        $redbean = R::getToolBox();
+
+        return array($sparrow, $notNoSql, $clientPredis, $pdo, $redbean);
     }
 
 }

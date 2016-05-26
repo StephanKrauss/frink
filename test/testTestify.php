@@ -33,7 +33,7 @@ $testify->before(function($testify) {
 	$controller = 'testify';
 	$action = 'get';
 
-	list($sparrow, $notNoSql, $clientPredis, $pdo) = \tools\verbindungen::connectDatabase($zugangswerte, $zugangRedis);
+	list($sparrow, $notNoSql, $clientPredis, $pdo, $redbean) = \tools\verbindungen::connectDataSource($zugangswerte, $zugangRedis);
 
 	$testFile = new file($controller, $action);
 

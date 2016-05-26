@@ -70,24 +70,21 @@ class redbean extends main
     public function post()
     {
         try{
-            // Zugangsdaten
-            $datenbankZugangswerte = \Flight::get('datenbankZugangswerte');
+            $redbean = $this->redbean->getRedBean();
 
-            // Redbean Setup
-            R::setup("mysql:host=".$datenbankZugangswerte['hostname'].";dbname=".$datenbankZugangswerte['database'], $datenbankZugangswerte['username'], $datenbankZugangswerte['password']);
-            $tabelleKunden = R::dispense('kunden');
+            $tabelleKunden = $redbean->dispense('kunden');
             $tabelleKunden->name = 'Mustermann';
             $tabelleKunden->vorname = 'Max';
 
-            $tabelleMails = R::dispense('mails');
+            $tabelleMails = $redbean->dispense('mails');
             $tabelleMails->mail = 'info@blub.de';
             $tabelleKunden->ownMails[] = $tabelleMails;
 
-            $tabelleMailsSecond = R::dispense('mails');
+            $tabelleMailsSecond = $redbean->dispense('mails');
             $tabelleMailsSecond->mail = 'info@blub.de';
             $tabelleKunden->ownMails[] = $tabelleMailsSecond;
 
-            $id = R::store($tabelleKunden);
+            $id = $redbean->store($tabelleKunden);
 
             echo 'ID: '.$id;
             
@@ -106,9 +103,8 @@ class redbean extends main
             );
 
             $redbean = $this->redbean->getRedBean();
-            // $redbean->debug(true);
 
-            $max = $redbean->load('kunden', 2);
+            $max = $redbean->load('kunden', 1);
 
             echo 'Name: '.$max->name;
 

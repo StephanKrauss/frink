@@ -124,10 +124,9 @@ class main
     /**
      * Start Redbean ORM
      */
-    public function startRedbean($flagFluent = false)
+    public function startRedbean()
     {
-        R::setup("mysql:host=".$this->zugangswerte['hostname'].";dbname=".$this->zugangswerte['database'], $this->zugangswerte['username'], $this->zugangswerte['password']);
-        $this->redbean = R::$toolbox;
+        $this->redbean = \Flight::get('redbean');
 
         return;
     }

@@ -10,11 +10,12 @@
     $zugangRedis = \Flight::get('datenbankRedis');
 
     // Datenbanken
-    list($sparrow, $notNoSql, $clientPredis, $pdo) = \tools\verbindungen::connectDatabase($zugangswerte, $zugangRedis);
+    list($sparrow, $notNoSql, $clientPredis, $pdo, $redbean) = \tools\verbindungen::connectDataSource($zugangswerte, $zugangRedis);
     \Flight::set('sparrow', $sparrow);
     \Flight::set('notnosql',$notNoSql);
     \Flight::set('predis',$clientPredis);
     \Flight::set('pdo',$pdo);
+    \Flight::set('redbean',$redbean);
 
     // Twig
     startTwig();
@@ -42,12 +43,13 @@
         $zugangRedis = \Flight::get('datenbankRedis');
 
         // Datenbanken
-        list($sparrow, $notNoSql, $clientPredis, $pdo) = \tools\verbindungen::connectDatabase($zugangswerte, $zugangRedis);
+        list($sparrow, $notNoSql, $clientPredis, $pdo, $redbean) = \tools\verbindungen::connectDataSource($zugangswerte, $zugangRedis);
         \Flight::set('sparrow', $sparrow);
         \Flight::set('notNoSql',$notNoSql);
         \Flight::set('predis',$clientPredis);
         \Flight::set('pdo',$pdo);
         \Flight::set('zugangswerte',$zugangswerte);
+        \Flight::set('redbean',$redbean);
 
             // Twig
         startTwig();
@@ -141,8 +143,7 @@ function startController($controller, $action = 'index', $data = null)
     $controller->zugangswerte = \Flight::get('zugangswerte');
 
     // Initialisieren Redbean
-    $flagFluent = true;
-    $controller->startRedbean($flagFluent);
+    $controller->startRedbean();
 
     $controller->$action();
 }
