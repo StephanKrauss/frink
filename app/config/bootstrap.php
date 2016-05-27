@@ -6,6 +6,9 @@
     // Konfiguration
     readConfig();
 
+    // Session
+    sessionStart();
+
     $zugangswerte = \Flight::get('datenbankZugangswerte');
     $zugangRedis = \Flight::get('datenbankRedis');
 
@@ -37,6 +40,9 @@
 
         // Konfiguration
         readConfig();
+
+        // Session
+        sessionStart();
 
         // Zuganswerte Datenbanken
         $zugangswerte = \Flight::get('datenbankZugangswerte');
@@ -228,6 +234,17 @@ function ermittelnStartParams($request)
     }
 
     \Flight::set('params', $params);
+
+    return;
+}
+
+/**
+ * Initialisiert die Session
+ */
+function sessionStart()
+{
+    $session = new \models\session();
+    \Flight::set('session', $session);
 
     return;
 }

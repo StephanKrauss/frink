@@ -52,20 +52,39 @@ class session extends main
         }
     }
 
+    /**
+     * Setzt die Variablen in der Session
+     *
+     * @throws \Exception
+     */
+    public function post()
+    {
+        try{
+            $config = \Flight::get('config');
+            
+            $session = \Flight::get('session');
+
+            $session->setVar("test", array("a"=>1, "b"=>2));
+
+            $this->get();
+        }
+        catch(\Exception $e)
+        {
+            throw $e;
+        }
+    }
+
+    /**
+     * holt die Session Variablen
+     *
+     * @throws \Exception
+     */
     public function get()
     {
         try{
+            $session = \Flight::get('session');
 
-            //Array with configs pathes
-//            $configFiles = array(
-//                realpath("../app/config/config.ini"),
-//                realpath("../app/config/config2.ini")
-//            );
-//
-//            $iniParser = new \models\iniparser();
-//            $config = $iniParser->parse($configFiles);
-
-            $config = \Flight::get('config');
+            $test = $session->getVar("test");
 
             $this->template();
         }

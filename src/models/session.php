@@ -7,9 +7,9 @@ namespace models;
  * @package Model
  * @date 27.05.2016
  */
- class Session{
+ class session{
 
-     private $valid = false;
+    private $valid = false;
     private $error = false;
     private $lasterror;
 
@@ -22,7 +22,7 @@ namespace models;
         $ip = $_SERVER['REMOTE_ADDR'];
         $user_agent = !empty($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : "";
 
-        if(!ereg("proxy\.aol\.com$", gethostbyaddr($ip))){//if surfer's ISP is not AOL
+        if(!strstr("proxy\.aol\.com$", gethostbyaddr($ip))){//if surfer's ISP is not AOL
 
             if($this->isSetVar("config")){
                 if($ip == $this->getVar("config.ip") && $user_agent == $this->getVar("config.user_agent"))
