@@ -112,16 +112,23 @@
 */
 function readConfig()
 {
-    $config = configFile();
+    //Array with configs pathes
+    $configFiles = array(
+        realpath("../app/config/config.ini")
+        // realpath("../app/config/config2.ini")
+    );
+
+    $iniParser = new \models\iniparser();
+    $config = $iniParser->parse($configFiles);
+    
+    // alle Config Vars
     \Flight::set('config',$config);
 
     // Datenbank Zugangswerte MySQL
-    include_once('../app/config/datenbank.php');
-    \Flight::set('datenbankZugangswerte', $zugangswerte);
+    \Flight::set('datenbankZugangswerte', $config['zugangswerte']);
 
     // Datenbank NoSQL, Redis
-    include_once('../app/config/redis.php');
-    \Flight::set('datenbankRedis',$zugangRedis);
+    \Flight::set('datenbankRedis',$config['redis']['zugangRedis']);
 
     return;
 }
@@ -223,20 +230,4 @@ function ermittelnStartParams($request)
     \Flight::set('params', $params);
 
     return;
-}
-
-/**
- * parst den Config File
- */
-function configFile(){
-    //Array with configs pathes
-    $configFiles = array(
-        realpath("../app/config/config.ini"),
-        realpath("../app/config/config2.ini")
-    );
-
-    $iniParser = new \models\iniparser();
-    $config = $iniParser->parse($configFiles);
-
-    return $config;
 }
