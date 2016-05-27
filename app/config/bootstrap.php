@@ -6,6 +6,8 @@
     // Konfiguration
     readConfig();
 
+
+
     $zugangswerte = \Flight::get('datenbankZugangswerte');
     $zugangRedis = \Flight::get('datenbankRedis');
 
@@ -19,6 +21,8 @@
 
     // Twig
     startTwig();
+
+
 
     // Controller
     include_once('../src/Controller/start.php');
@@ -112,9 +116,8 @@
 */
 function readConfig()
 {
-    // spezielle Konfiguration , Bsp.: 'salt'
-    // include_once('../app/config/config.php');
-    // \Flight::set('config', $config);
+    $config = configFile();
+    \Flight::set('config',$config);
 
     // Datenbank Zugangswerte MySQL
     include_once('../app/config/datenbank.php');
@@ -220,4 +223,20 @@ function ermittelnStartParams($request)
     \Flight::set('params', $params);
 
     return;
+}
+
+/**
+ * parst den Config File
+ */
+function configFile(){
+    //Array with configs pathes
+    $configFiles = array(
+        realpath("../app/config/config.ini"),
+        realpath("../app/config/config2.ini")
+    );
+
+    $iniParser = new \models\iniparser();
+    $config = $iniParser->parse($configFiles);
+
+    return $config;
 }
