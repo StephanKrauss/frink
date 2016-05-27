@@ -6,8 +6,6 @@
     // Konfiguration
     readConfig();
 
-
-
     $zugangswerte = \Flight::get('datenbankZugangswerte');
     $zugangRedis = \Flight::get('datenbankRedis');
 
@@ -21,8 +19,6 @@
 
     // Twig
     startTwig();
-
-
 
     // Controller
     include_once('../src/Controller/start.php');
@@ -55,7 +51,7 @@
         \Flight::set('zugangswerte',$zugangswerte);
         \Flight::set('redbean',$redbean);
 
-            // Twig
+         // Twig
         startTwig();
 
         // Request
@@ -190,6 +186,10 @@ function ermittelnStartParams($request)
 
     if($request->method == 'GET'){
         $url = $request->url;
+
+        // URL Decode
+        $url = urldecode($url);
+
         $url = ltrim($url,'/');
         $url = rtrim($url, '/');
 
