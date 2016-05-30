@@ -2,6 +2,8 @@
 
 namespace controller;
 
+use tools\frinkError;
+
 /**
 * Test  der Session Klasse
 * 
@@ -67,6 +69,8 @@ class session extends main
     public function post()
     {
         try{
+            // throw new frinkError('Fehler Typ 3', 3);
+
             $config = \Flight::get('config');
 
             /** @var $session \models\session */

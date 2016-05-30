@@ -211,7 +211,7 @@
 			// Read complete session
 			try{
 
-				$stmt = $this->dbc->prepare("SELECT data FROM " . $this->table . " WHERE fingerprint = :fingerprint and data > ''");
+				$stmt = $this->dbc->prepare("SELECT id, data FROM " . $this->table . " WHERE fingerprint = :fingerprint and data > ''");
 				$stmt->execute([':fingerprint' => $this->fingerprint]);
 				$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			}
@@ -226,9 +226,9 @@
 
 			// aufbereiten aller Daten der Session
 			for($i=0; $i < count($data); $i++)
-				$result[] = $data[$i]['data'];
+				$result[$data[$i]['id']] = $data[$i]['data'];
 
-			return $result;
+  			return $result;
 		}
 
 		/**

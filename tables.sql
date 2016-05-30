@@ -8,3 +8,6 @@ CREATE TABLE `user_sessions` (
   `date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+-- Tabelle zum speichern der Exception
+

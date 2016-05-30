@@ -1,10 +1,11 @@
 <?php
 /**
- * allgemeiner ErrorController
+ * allgemeiner ErrorController mit Fire Logger
  *
  * @package Controller
  * @date 21.04.2016
  * @author Stephan Krauß
+ * @link http://firelogger.binaryage.com/
  */
 
 namespace controller;
@@ -19,46 +20,55 @@ class error extends main
     public function index()
     {
         try {
-            include_once('../src/tools/FireLogger.php');
+            $config = \Flight::get('config');
 
-            echo 'Error Controller';
+            /** @var $session \models\session */
+            $modelSession = \Flight::get('session');
+            $completeSession = $modelSession->readCompleteSession();
 
-            if(!stristr($_SERVER['HTTP_HOST'],'frink.de')){
-                flog("Hello from PHP!");
-                flog("Expansion %s", 1);
-                flog("Expansion %s", "string");
-                flog("Expansion %s", array(1,2,3,4,5));
-                flog("Expansion %s", array("a" => 1, "b" => 2, "c" => 3));
-                flog("Unbound args", 1, 2, 3, 4, 5);
-                flog(1, "no formating string");
-                flog("debug", "DEBUG log level");
-                flog("info", "INFO log level");
-                flog("error", "ERROR log level");
-                flog("warning", "LOG level");
-                flog("critical", "CRITICAL log level");
-                flog("Complex structure %o", $_SERVER);
-                // flog("Complex object structure %o", (object) array('item1' => new ArrayObject($_SERVER), 'item2' => new SplFileInfo(__FILE__)));
-                flog("Global scope!", $GLOBALS);
-                // $api = new FireLogger("api");
-                // $api->log("info", "hello from api logger");
-                // $api->log("have", "fun!");
-                $a = array();
-                $a["bad_index"]; // should give notice!
-                try {
-                    throw new \Exception("this is a nasty exception, catch it!");
-                } catch (\Exception $e) {
-                    flog($e);
+            $error = array(
+                'message' => $this->error->getMessage(),
+                'code' => $this->error->getCode(),
+                'file' => $this->error->getFile(),
+                'line' => $this->error->getLine(),
+                'trace' => $this->error->getTraceAsString(),
+                'session' => json_encode($completeSession)
+            );
+
+            // Debug Modus anzeigen
+            if($config['debugBlock']['debug'])
+            {
+                foreach($error as $key => $value){
+                    echo $key.': '.nl2br($value).'<br>';
                 }
-                flog("1.timing test - this must display after nasty exception");
-                // $api->log("2.timing test - this must display after nasty exception");
-                // throw new \Exception("this exception is caught automagically because firelogger installs set_exception_handler");
-                // flog("info", "you should not see this!");
             }
+            // speichern in der Tabelle 'exception'
             else{
-                var_dump($this->error);
+                /** @var $pdo \PDO */
+                $pdo = \Flight::get('pdo');
+
+                // here you have to trust your field names!
+                $fields = array_keys($error);
+                $values = array_values($error);
+
+                $fieldListString = implode(',',$fields);
+
+                $valueListString = '';
+                for($i=0; $i < count($values); $i++){
+                    $value = addslashes($values[$i]);
+                    $valueListString .= "'".$value."',";
+                }
+
+                $valueListString = substr($valueListString, 0,-1);
+
+                $sql = "insert into exception(".$fieldListString.") values(".$valueListString.")";
+                $pdo->exec($sql);
+
+                \Flight::redirect('/start/index');
             }
 
-            exit();
+
+
         }
         catch (\Exception $e) {
             throw $e;
