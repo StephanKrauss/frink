@@ -40,7 +40,7 @@ class session extends main
     {
         try{
             /** @var $session \models\session */
-            $session = \Flight::get('session');
+            $modelSession = \Flight::get('session');
 
             $outputTemplate = array(
                 'masterTemplate' => 'main.html',
@@ -50,7 +50,7 @@ class session extends main
             $config = \Flight::get('config');
             
             if($config['debugBlock']['debug'])
-                $outputTemplate['debugBlock'] = $this->setDebug($session);
+                $outputTemplate['debugBlock'] = $this->setDebug($modelSession);
 
             \Flight::view()->display($this->templateName, $outputTemplate);
         }
@@ -70,11 +70,11 @@ class session extends main
             $config = \Flight::get('config');
 
             /** @var $session \models\session */
-            $session = \Flight::get('session');
+            $modelSession = \Flight::get('session');
 
-            $session->write('test','test');
+            $modelSession->write('test','test');
 
-            $session->write('test1','test1');
+            $modelSession->write('test1','test1');
 
             $this->get();
         }
@@ -93,11 +93,11 @@ class session extends main
     {
         try{
             /** @var $session \models\session */
-            $session = \Flight::get('session');
+            $modelSession = \Flight::get('session');
 
-            $test = $session->read("test");
+            $test = $modelSession->read("test");
 
-            $test1 = $session->read('test1');
+            $test1 = $modelSession->read('test1');
 
             $this->template();
         }

@@ -1,10 +1,10 @@
 -- Tabelle zum speichern der Session
 
-CREATE TABLE IF NOT EXISTS `user_sessions` (
-  `id` varchar(32) COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `fingerprint` varchar(100) COLLATE latin1_general_ci DEFAULT NULL,
-  `data` text COLLATE latin1_general_ci,
+CREATE TABLE `user_sessions` (
+  `id` varchar(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `fingerprint` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `data` text CHARACTER SET latin1 COLLATE latin1_general_ci,
   `access` int(32) NOT NULL DEFAULT '0',
-  `date` varchar(20) COLLATE latin1_general_ci DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
