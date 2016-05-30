@@ -58,6 +58,18 @@ class main
     }
 
     /**
+     * ermittelt die Parameter des Debug Block
+     *
+     * @param $session
+     */
+    public function setDebug($session)
+    {
+        $debugBlock = $session->readCompleteSession();
+
+        return $debugBlock;
+    }
+
+    /**
      * Übernimmt die benötigten Model / Tool der Klasse sowie der Standardklassen
      *
      * @param array $values

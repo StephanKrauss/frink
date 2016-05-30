@@ -20,7 +20,12 @@ class verbindungen
     public static function connectDataSource($zugangswerte, $zugangRedis)
     {
         // erstellen PDO
-        $pdo = new \PDO("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'],$zugangswerte['username'],$zugangswerte['password']);
+        try {
+           $pdo = new \PDO("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'],$zugangswerte['username'],$zugangswerte['password']);
+        }
+        catch (\Exception $e) {
+           throw $e;
+        }
 
         // Sparrow
         $sparrow = new \models\Sparrow();

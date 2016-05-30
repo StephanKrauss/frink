@@ -39,11 +39,18 @@ class session extends main
     protected function template()
     {
         try{
+            /** @var $session \models\session */
+            $session = \Flight::get('session');
 
             $outputTemplate = array(
                 'masterTemplate' => 'main.html',
                 'templateSuperuser' => 'bla_superuser.html'
             );
+            
+            $config = \Flight::get('config');
+            
+            if($config['debugBlock']['debug'])
+                $outputTemplate['debugBlock'] = $this->setDebug($session);
 
             \Flight::view()->display($this->templateName, $outputTemplate);
         }
@@ -61,10 +68,13 @@ class session extends main
     {
         try{
             $config = \Flight::get('config');
-            
+
+            /** @var $session \models\session */
             $session = \Flight::get('session');
 
-            $session->setVar("test", array("a"=>1, "b"=>2));
+            $session->write('test','test');
+
+            $session->write('test1','test1');
 
             $this->get();
         }
@@ -82,9 +92,12 @@ class session extends main
     public function get()
     {
         try{
+            /** @var $session \models\session */
             $session = \Flight::get('session');
 
-            $test = $session->getVar("test");
+            $test = $session->read("test");
+
+            $test1 = $session->read('test1');
 
             $this->template();
         }

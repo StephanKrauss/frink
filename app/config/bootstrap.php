@@ -6,9 +6,6 @@
     // Konfiguration
     readConfig();
 
-    // Session
-    sessionStart();
-
     $zugangswerte = \Flight::get('datenbankZugangswerte');
     $zugangRedis = \Flight::get('datenbankRedis');
 
@@ -19,6 +16,9 @@
     \Flight::set('predis',$clientPredis);
     \Flight::set('pdo',$pdo);
     \Flight::set('redbean',$redbean);
+
+    // Session
+    sessionStart();
 
     // Twig
     startTwig();
@@ -41,9 +41,6 @@
         // Konfiguration
         readConfig();
 
-        // Session
-        sessionStart();
-
         // Zuganswerte Datenbanken
         $zugangswerte = \Flight::get('datenbankZugangswerte');
         $zugangRedis = \Flight::get('datenbankRedis');
@@ -56,6 +53,9 @@
         \Flight::set('pdo',$pdo);
         \Flight::set('zugangswerte',$zugangswerte);
         \Flight::set('redbean',$redbean);
+
+        // Session
+        sessionStart();
 
          // Twig
         startTwig();
@@ -243,7 +243,10 @@ function ermittelnStartParams($request)
  */
 function sessionStart()
 {
-    $session = new \models\session();
+    $config = \Flight::get('config');
+    $pdo = \Flight::get('pdo');
+
+    $session = new \models\session($pdo, $config['session']['salt']);
     \Flight::set('session', $session);
 
     return;
