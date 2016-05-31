@@ -5,16 +5,16 @@ namespace controller;
 use tools\frinkError;
 
 /**
-* Test  der Session Klasse
+* Test des Swiftmailer
 * 
 * @author Stephan Krauss
 * @copyright Stephan Krauss
 * @lisence MIT
 * @package Controller
-* @date 27.05.2016
+* @date 31.05.2016
 */
 
-class session extends main
+class mail extends main
 {
     /**
      * erweitern Pimple um spezielle Model und Tools
@@ -62,32 +62,20 @@ class session extends main
     }
 
     /**
-     * Setzt die Variablen in der Session
+     * Test von Swift - Mail
      *
      * @throws \Exception
      */
-    public function post()
+    public function get()
     {
         try{
-            try{
-                throw new frinkError('Fehler Typ 2', 2);
-            }
-            catch(\Exception $e){
-                // Error Typ 2
-                $error = \tools\errorAuswertung::readException($e);
-                \tools\errorAuswertung::writeException($error);
-            }
+            $test = 123;
 
-            throw new frinkError('Fehler Typ 3', 3);
+            $swiftmail = new \Swift_Mailer();
 
-            /** @var $session \models\session */
-            $modelSession = \Flight::get('session');
+            // mail('info@suppenterrine.de', 'Mein Betreff', 'meine wichtige Nachricht',"From: johann@frink.de");
 
-            $modelSession->write('test','test');
-
-            $modelSession->write('test1','test1');
-
-            $this->get();
+            $this->template();
         }
         // eigene Exception
         catch(\tools\frinkError $e)
@@ -99,28 +87,4 @@ class session extends main
             throw $e;
         }
     }
-
-    /**
-     * holt die Session Variablen
-     *
-     * @throws \Exception
-     */
-    public function get()
-    {
-        try{
-            /** @var $session \models\session */
-            $modelSession = \Flight::get('session');
-
-            $test = $modelSession->read("test");
-
-            $test1 = $modelSession->read('test1');
-
-            $this->template();
-        }
-        catch(\Exception $e)
-        {
-            throw $e;
-        }
-    }
-    
 }
