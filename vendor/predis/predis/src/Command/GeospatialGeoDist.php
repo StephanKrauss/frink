@@ -12,17 +12,17 @@
 namespace Predis\Command;
 
 /**
- * @link http://redis.io/commands/zrevrangebylex
+ * @link http://redis.io/commands/geodist
  *
  * @author Daniele Alessandri <suppakilla@gmail.com>
  */
-class ZSetReverseRangeByLex extends ZSetRangeByLex
+class GeospatialGeoDist extends Command
 {
     /**
      * {@inheritdoc}
      */
     public function getId()
     {
-        return 'ZREVRANGEBYLEX';
+        return 'GEODIST';
     }
 }

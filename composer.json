@@ -18,9 +18,9 @@
       "im0rtality/underscore": "*",
       "erusev/parsedown": "1.6.0",      
 	  "bafs/testify": "dev-master",
-	  "psr/log": "1.0.0",
       "pimple/pimple": "3.*",
-	  "gabordemooij/redbean": "4.*"
+	  "gabordemooij/redbean": "4.*",
+      "swiftmailer/swiftmailer": "5.4.*"
   },
   "autoload": {
     "psr-4": {

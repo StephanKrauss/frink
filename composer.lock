@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03d2c87c8a9c052ffec775fbbdfd2c90",
-    "content-hash": "6eff201cfb3dd32e1832f58074657682",
+    "hash": "674d5b8f617e358be6ffe5171cb57512",
+    "content-hash": "a364f34aed8deb3948af87c33c4f2f8c",
     "packages": [
         {
             "name": "bafs/testify",
@@ -83,16 +83,16 @@
         },
         {
             "name": "gabordemooij/redbean",
-            "version": "v4.3.1",
+            "version": "v4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gabordemooij/redbean.git",
-                "reference": "f1f572ddac226d047d730444927794321ee9aca6"
+                "reference": "72368f15cedfa7990c7fb228e47d2f00c7f49d4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/f1f572ddac226d047d730444927794321ee9aca6",
-                "reference": "f1f572ddac226d047d730444927794321ee9aca6",
+                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/72368f15cedfa7990c7fb228e47d2f00c7f49d4f",
+                "reference": "72368f15cedfa7990c7fb228e47d2f00c7f49d4f",
                 "shasum": ""
             },
             "require": {
@@ -120,7 +120,7 @@
             "keywords": [
                 "orm"
             ],
-            "time": "2015-12-28 19:46:34"
+            "time": "2016-05-01 10:27:43"
         },
         {
             "name": "im0rtality/underscore",
@@ -256,23 +256,23 @@
         },
         {
             "name": "predis/predis",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04"
+                "reference": "9ead747663bb1b1ae017dfa0d152aca87792b42f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/84060b9034d756b4d79641667d7f9efe1aeb8e04",
-                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/9ead747663bb1b1ae017dfa0d152aca87792b42f",
+                "reference": "9ead747663bb1b1ae017dfa0d152aca87792b42f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "~4.8"
             },
             "suggest": {
                 "ext-curl": "Allows access to Webdis when paired with phpiredis",
@@ -295,34 +295,45 @@
                     "homepage": "http://clorophilla.net"
                 }
             ],
-            "description": "Flexible and feature-complete PHP client library for Redis",
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
             "homepage": "http://github.com/nrk/predis",
             "keywords": [
                 "nosql",
                 "predis",
                 "redis"
             ],
-            "time": "2015-07-30 18:34:15"
+            "time": "2016-05-30 15:25:52"
         },
         {
-            "name": "psr/log",
-            "version": "1.0.0",
+            "name": "swiftmailer/swiftmailer",
+            "version": "v5.4.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d8db871a54619458a805229a057ea2af33c753e8",
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1,<0.9.4"
+            },
             "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.4-dev"
                 }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -330,17 +341,21 @@
             ],
             "authors": [
                 {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
-            "description": "Common interface for logging libraries",
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
             "keywords": [
-                "log",
-                "psr",
-                "psr-3"
+                "email",
+                "mail",
+                "mailer"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2016-05-01 08:45:47"
         },
         {
             "name": "twig/twig",

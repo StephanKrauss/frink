@@ -12,17 +12,17 @@
 namespace Predis\Command;
 
 /**
- * @link http://redis.io/commands/zrevrangebylex
+ * @link http://redis.io/commands/bitfield
  *
  * @author Daniele Alessandri <suppakilla@gmail.com>
  */
-class ZSetReverseRangeByLex extends ZSetRangeByLex
+class StringBitField extends Command
 {
     /**
      * {@inheritdoc}
      */
     public function getId()
     {
-        return 'ZREVRANGEBYLEX';
+        return 'BITFIELD';
     }
 }
