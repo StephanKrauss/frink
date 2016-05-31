@@ -69,9 +69,16 @@ class session extends main
     public function post()
     {
         try{
-            // throw new frinkError('Fehler Typ 3', 3);
+            try{
+                throw new frinkError('Fehler Typ 2', 2);
+            }
+            catch(\Exception $e){
+                // Error Typ 2
+                $error = \tools\errorAuswertung::readException($e);
+                \tools\errorAuswertung::writeException($error);
+            }
 
-            $config = \Flight::get('config');
+            throw new frinkError('Fehler Typ 3', 3);
 
             /** @var $session \models\session */
             $modelSession = \Flight::get('session');
@@ -82,10 +89,16 @@ class session extends main
 
             $this->get();
         }
-        catch(\Exception $e)
+        // eigene Exception
+        catch(\tools\frinkError $e)
         {
             throw $e;
         }
+        // Exception anderer Klassen
+        catch(\Exception $e){
+            throw $e;
+        }
+
     }
 
     /**

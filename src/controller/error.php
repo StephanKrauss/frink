@@ -10,6 +10,8 @@
 
 namespace controller;
 
+use tools\errorAuswertung;
+
 class error extends main
 {
     protected $error = null;
@@ -22,18 +24,7 @@ class error extends main
         try {
             $config = \Flight::get('config');
 
-            /** @var $session \models\session */
-            $modelSession = \Flight::get('session');
-            $completeSession = $modelSession->readCompleteSession();
-
-            $error = array(
-                'message' => $this->error->getMessage(),
-                'code' => $this->error->getCode(),
-                'file' => $this->error->getFile(),
-                'line' => $this->error->getLine(),
-                'trace' => $this->error->getTraceAsString(),
-                'session' => json_encode($completeSession)
-            );
+            $error = \tools\errorAuswertung::readException($this->error);
 
             // Debug Modus anzeigen
             if($config['debugBlock']['debug'])
@@ -44,25 +35,7 @@ class error extends main
             }
             // speichern in der Tabelle 'exception'
             else{
-                /** @var $pdo \PDO */
-                $pdo = \Flight::get('pdo');
-
-                // here you have to trust your field names!
-                $fields = array_keys($error);
-                $values = array_values($error);
-
-                $fieldListString = implode(',',$fields);
-
-                $valueListString = '';
-                for($i=0; $i < count($values); $i++){
-                    $value = addslashes($values[$i]);
-                    $valueListString .= "'".$value."',";
-                }
-
-                $valueListString = substr($valueListString, 0,-1);
-
-                $sql = "insert into exception(".$fieldListString.") values(".$valueListString.")";
-                $pdo->exec($sql);
+                \tools\errorAuswertung::writeException($error);
 
                 \Flight::redirect('/start/index');
             }
