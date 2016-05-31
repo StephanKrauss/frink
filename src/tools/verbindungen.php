@@ -2,7 +2,7 @@
 
 namespace tools;
 use models\model;
-use \RedBeanPHP\R as R;
+// use \RedBeanPHP\R as R;
 
 
 /**
@@ -37,14 +37,15 @@ class verbindungen
         // Redis
         $clientPredis = new \Predis\Client($zugangRedis);
 
-        // Redbean
-        R::setup("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'], $zugangswerte['username'], $zugangswerte['password']);
-        // R::debug($zugangswerte['debug']);
-        R::fancyDebug($zugangswerte['debug']);
+        // Redbean Wrapper, Aufruf als Instance
+        $redbeanWrapper = new \tools\redbeanWrapper();
+        $redbeanWrapper->setup("mysql:host=".$zugangswerte['hostname'].";dbname=".$zugangswerte['database'], $zugangswerte['username'], $zugangswerte['password']);
+        // $redbeanWrapper->debug($zugangswerte['debug']);
+        // R::fancyDebug($zugangswerte['debug']);
 
-        $redbean = R::getToolBox();
+        // $redbean = R::getToolBox();
 
-        return array($sparrow, $notNoSql, $clientPredis, $pdo, $redbean);
+        return array($sparrow, $notNoSql, $clientPredis, $pdo, $redbeanWrapper);
     }
 
 }
