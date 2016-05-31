@@ -71,7 +71,13 @@ class mail extends main
         try{
             $test = 123;
 
-            $swiftmail = new \Swift_Mailer();
+            $mailer = new \SimpleMail();
+            $mailer
+                ->setTo('johann@frink.de','Dein Email' )
+                ->setSubject('wichtige Mail')
+                ->setFrom('info@bla.de','meine Mailadresse' )
+                ->setMessage('ein extrem wichtiger Text')
+                ->send();
 
             // mail('info@suppenterrine.de', 'Mein Betreff', 'meine wichtige Nachricht',"From: johann@frink.de");
 
