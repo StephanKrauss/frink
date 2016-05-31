@@ -69,15 +69,15 @@ class mail extends main
     public function get()
     {
         try{
-            $test = 123;
+            throw new frinkError('ein gefährlicher Fehler', 3);
 
-            $mailer = new \SimpleMail();
-            $mailer
-                ->setTo('johann@frink.de','Dein Email' )
-                ->setSubject('wichtige Mail')
-                ->setFrom('info@bla.de','meine Mailadresse' )
-                ->setMessage('ein extrem wichtiger Text')
-                ->send();
+//            $mailer = new \SimpleMail();
+//            $mailer
+//                ->setTo('johann@frink.de','Dein Email' )
+//                ->setSubject('wichtige Mail')
+//                ->setFrom('info@bla.de','meine Mailadresse' )
+//                ->setMessage('ein extrem wichtiger Text')
+//                ->send();
 
             // mail('info@suppenterrine.de', 'Mein Betreff', 'meine wichtige Nachricht',"From: johann@frink.de");
 

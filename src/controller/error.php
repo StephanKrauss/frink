@@ -35,7 +35,8 @@ class error extends main
             }
             // speichern in der Tabelle 'exception'
             else{
-                \tools\errorAuswertung::writeException($error);
+                $error = \tools\errorAuswertung::writeException($error);
+                \tools\errorAuswertung::mailException($error);
 
                 \Flight::redirect('/start/index');
             }

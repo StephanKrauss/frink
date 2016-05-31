@@ -66,8 +66,31 @@ class errorAuswertung
 		$sql = "insert into exception(".$fieldListString.") values(".$valueListString.")";
 		$pdo->exec($sql);
 
-		return;
+		$fehlernummer = $pdo->lastInsertId();
+
+		$error['fehlernummer'] = $fehlernummer;
+
+		return $error;
 	}
 
+	/**
+	 * Meldet Fehlernummer, Datum und Uhrzeit als Mail
+	 *
+	 * @param array $error
+	 */
+	public static function mailException(array $error)
+	{
+		if($error['code'] != 3)
+			return;
 
+		$message = "Ein Fehler ist aufgetreten, Fehlernummer ".$error['fehlernummer'].". ".date('Y-m-d H:i:s')." Uhr";
+
+		$mailer = new \SimpleMail();
+		$mailer
+			->setTo('johann@frink.de','Dein Email' )
+			->setSubject('Fehlermeldung Typ 3')
+			->setFrom('info@system.de','Systemmeldung' )
+			->setMessage($message)
+			->send();
+	}
 }
