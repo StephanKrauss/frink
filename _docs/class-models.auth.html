@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class models\auth</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-controller.html">
+						controller					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-models.html">
+						models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tools.html">
+						tools					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-models.auth.html">auth</a></li>
+				<li><a href="class-models.config.html">config</a></li>
+				<li><a href="class-models.iniparser.html">iniparser</a></li>
+				<li><a href="class-models.model.html">model</a></li>
+				<li><a href="class-models.myCalc.html">myCalc</a></li>
+				<li><a href="class-models.notNoSql.html">notNoSql</a></li>
+				<li><a href="class-models.plugins.html">plugins</a></li>
+				<li><a href="class-models.redisko.html">redisko</a></li>
+				<li><a href="class-models.session.html">session</a></li>
+				<li><a href="class-models.Sparrow.html">Sparrow</a></li>
+				<li><a href="class-models.validator.html">validator</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-models.NotNoSQLException.html">NotNoSQLException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-models.html" title="Summary of models"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class auth</h1>
+
+
+	<div class="description">
+	<p>Klasse ur Authentifikation des Benutzers. Wird zum Login und vor der Verwendung einer Action in einem Controller verwendet</p>
+
+<ul>
+<li>Kontrolle Login des Benutzers und speichern der Variablen in der Session</li>
+<li>Kontrolle des Zugang zur Action eines Controller</li>
+</ul>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-models.html">models</a><br>
+		<b>Package:</b> Model<br>
+
+				<b>Author:</b>
+				Stephan Krauß<br>
+				<b>Date:</b>
+				25.05.2016<br>
+			<b>Located at</b> <a href="source-class-models.auth.html#6-136" title="Go to source code">models/login.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="i" id="_i">
+
+		<td class="attributes"><code>
+			 public static
+
+			the
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_i">#</a>
+		<code><a href="source-class-models.auth.html#28-38" title="Go to source code">i</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					the<br>same instance of the class
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="login" id="_login">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_login">#</a>
+		<code><a href="source-class-models.auth.html#40-55" title="Go to source code">login</a>( <span>str <var>$login</var></span>, <span>str <var>$pass</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$login</var></dt>
+					<dd></dd>
+					<dt><var>$pass</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="logout" id="_logout">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_logout">#</a>
+		<code><a href="source-class-models.auth.html#94-99" title="Go to source code">logout</a>( )</code>
+
+		<div class="description short">
+			<p>Destroys all data registered to a session</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Destroys all data registered to a session</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRole" id="_getRole">
+
+		<td class="attributes"><code>
+			 public 
+
+			id
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRole">#</a>
+		<code><a href="source-class-models.auth.html#101-119" title="Go to source code">getRole</a>( <span>integer <var>$id</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>role id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					id<br>and role name
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAuthStatus" id="_getAuthStatus">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAuthStatus">#</a>
+		<code><a href="source-class-models.auth.html#121-127" title="Go to source code">getAuthStatus</a>( )</code>
+
+		<div class="description short">
+			<p>Getting authorization status</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Getting authorization status</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true - logined; false - logouted
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getName" id="_getName">
+
+		<td class="attributes"><code>
+			 public 
+
+			str
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getName">#</a>
+		<code><a href="source-class-models.auth.html#129-135" title="Go to source code">getName</a>( )</code>
+
+		<div class="description short">
+			<p>Getting user name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Getting user name</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					str<br>logined usr name
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="PRE_SALT" id="PRE_SALT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-models.auth.html#19" title="Go to source code"><b>PRE_SALT</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#PRE_SALT" class="anchor">#</a>
+				<code><span class="php-quote">'dEmoS75AUNT?'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="POST_SALT" id="POST_SALT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-models.auth.html#20" title="Go to source code"><b>POST_SALT</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#POST_SALT" class="anchor">#</a>
+				<code><span class="php-quote">'plOD@pAR14'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
