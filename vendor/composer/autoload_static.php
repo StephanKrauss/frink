@@ -9,7 +9,6 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
     public static $files = array (
         'fc73bab8d04e21bcdda37ca319c63800' => __DIR__ . '/..' . '/mikecao/flight/flight/autoload.php',
         '5b7d984aab5ae919d3362ad9588977eb' => __DIR__ . '/..' . '/mikecao/flight/flight/Flight.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -75,6 +74,10 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         ),
     );
 
+    public static $classMap = array (
+        'SimpleMail' => __DIR__ . '/..' . '/eoghanobrien/php-simple-mail/class.simple_mail.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
@@ -82,6 +85,7 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
             $loader->prefixDirsPsr4 = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$prefixDirsPsr4;
             $loader->fallbackDirsPsr4 = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16::$classMap;
 
         }, null, ClassLoader::class);
     }

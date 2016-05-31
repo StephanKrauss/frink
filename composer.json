@@ -20,7 +20,7 @@
 	  "bafs/testify": "dev-master",
       "pimple/pimple": "3.*",
 	  "gabordemooij/redbean": "4.*",
-      "swiftmailer/swiftmailer": "5.4.*"
+      "eoghanobrien/php-simple-mail": "dev-master"
   },
   "autoload": {
     "psr-4": {

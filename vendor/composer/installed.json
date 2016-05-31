@@ -370,37 +370,29 @@
         ]
     },
     {
-        "name": "swiftmailer/swiftmailer",
-        "version": "v5.4.2",
-        "version_normalized": "5.4.2.0",
+        "name": "eoghanobrien/php-simple-mail",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/swiftmailer/swiftmailer.git",
-            "reference": "d8db871a54619458a805229a057ea2af33c753e8"
+            "url": "https://github.com/eoghanobrien/php-simple-mail.git",
+            "reference": "c9d6bf3e768c0b7ac3fd3f079249f8bfb84ffcfb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d8db871a54619458a805229a057ea2af33c753e8",
-            "reference": "d8db871a54619458a805229a057ea2af33c753e8",
+            "url": "https://api.github.com/repos/eoghanobrien/php-simple-mail/zipball/c9d6bf3e768c0b7ac3fd3f079249f8bfb84ffcfb",
+            "reference": "c9d6bf3e768c0b7ac3fd3f079249f8bfb84ffcfb",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.3"
+            "php": ">=5.2.0"
         },
-        "require-dev": {
-            "mockery/mockery": "~0.9.1,<0.9.4"
-        },
-        "time": "2016-05-01 08:45:47",
+        "time": "2015-11-13 08:40:58",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.4-dev"
-            }
-        },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
-            "files": [
-                "lib/swift_required.php"
+            "classmap": [
+                "class.simple_mail.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -409,19 +401,17 @@
         ],
         "authors": [
             {
-                "name": "Chris Corbyn"
-            },
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
+                "name": "Eoghan O'Brien",
+                "email": "eoghan@eoghanobrien.com",
+                "homepage": "http://www.eoghanobrien.com",
+                "role": "Developer"
             }
         ],
-        "description": "Swiftmailer, free feature-rich PHP mailer",
-        "homepage": "http://swiftmailer.org",
+        "description": "Simple PHP 5 Email Class with Chainable Methods",
+        "homepage": "https://github.com/eoghanobrien/php-simple-mail",
         "keywords": [
             "email",
-            "mail",
-            "mailer"
+            "php5"
         ]
     }
 ]
