@@ -16,6 +16,7 @@ use models\myCalc;
  * darstellen der leeren Seite des Template
  *
  * + abschalten Kontrolle Foreign Key in MySQL: 'SET FOREIGN_KEY_CHECKS = 1;'
+ * + 0 => keine Kontrolle auf Fremdschlüssel
  *
  * @author Stephan.Krauss
  * @date 23.05.2016
