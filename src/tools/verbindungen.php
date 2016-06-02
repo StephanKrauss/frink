@@ -1,9 +1,6 @@
 <?php
 
 namespace tools;
-use models\model;
-// use \RedBeanPHP\R as R;
-
 
 /**
  * Initialisiert die Datenbanken
