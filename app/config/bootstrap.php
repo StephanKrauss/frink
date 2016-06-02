@@ -56,18 +56,19 @@
 
         // Session
         sessionStart();
-        
-        // Authentifikation Nutzung Controller
 
+        // Fake !!!
         /** @var $session \models\session */
         $session = \Flight::get('session');
         $session->write('benutzerId', 3);
         $session->write('rolleId', 7);
 
+        // Authentifikation Nutzung Controller
         if( $controller != 'start' )
             \tools\Auth::checkAccessController(\Flight::get('session'), \Flight::get('pdo'), $controller);
 
-        // screibt Benutzer in Datenbank
+        // schreibt Benutzer in Datenbank
+        \tools\DatenbankBenutzer::benutzer(\Flight::get('session'), \Flight::get('pdo'));
 
          // Twig
         startTwig();
