@@ -19,8 +19,7 @@
       "erusev/parsedown": "1.6.0",      
 	  "bafs/testify": "dev-master",
       "pimple/pimple": "3.*",
-	  "gabordemooij/redbean": "4.*",
-      "eoghanobrien/php-simple-mail": "dev-master"
+	  "gabordemooij/redbean": "4.*"
   },
   "autoload": {
     "psr-4": {

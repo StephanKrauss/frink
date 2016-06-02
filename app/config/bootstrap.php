@@ -56,6 +56,18 @@
 
         // Session
         sessionStart();
+        
+        // Authentifikation Nutzung Controller
+
+        /** @var $session \models\session */
+        $session = \Flight::get('session');
+        $session->write('benutzerId', 3);
+        $session->write('rolleId', 7);
+
+        if( $controller != 'start' )
+            \tools\Auth::checkAccessController(\Flight::get('session'), \Flight::get('pdo'), $controller);
+
+        // screibt Benutzer in Datenbank
 
          // Twig
         startTwig();
@@ -65,10 +77,6 @@
 
         // ermitteln der übergebenen Parameter
         $data = ermittelnStartParams($request);
-
-        // Plugins
-        $plugins = new \models\plugins($request);
-        $request = $plugins->getRequest();
     }
     catch(\Exception $e){
         throw $e;
@@ -142,9 +150,10 @@ function readConfig()
 /**
 * Start des Controller und der Action
 *
-* @param $controller
-* @param $action
-*/
+ * @param $controller
+ * @param string $action
+ * @param null $data
+ */
 function startController($controller, $action = 'index', $data = null)
 {
     // Übernahme Parameter

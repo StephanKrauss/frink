@@ -69,7 +69,7 @@ class mail extends main
     public function get()
     {
         try{
-            throw new frinkError('ein gefährlicher Fehler', 3);
+            // throw new frinkError('ein gefährlicher Fehler', 3);
 
 //            $mailer = new \SimpleMail();
 //            $mailer

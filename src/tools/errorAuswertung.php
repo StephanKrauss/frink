@@ -85,7 +85,7 @@ class errorAuswertung
 
 		$message = "Ein Fehler ist aufgetreten, Fehlernummer ".$error['fehlernummer'].". ".date('Y-m-d H:i:s')." Uhr";
 
-		$mailer = new \SimpleMail();
+		$mailer = new \models\SimpleMail();
 		$mailer
 			->setTo('johann@frink.de','Dein Email' )
 			->setSubject('Fehlermeldung Typ 3')
