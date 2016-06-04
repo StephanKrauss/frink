@@ -61,7 +61,7 @@
         /** @var $session \models\session */
         $session = \Flight::get('session');
         $session->write('benutzerId', 3);
-        $session->write('rolleId', 7);
+        $session->write('rolleId', 3);
 
         // Authentifikation Nutzung Controller
         if( $controller != 'start' )

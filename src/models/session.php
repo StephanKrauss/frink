@@ -40,7 +40,7 @@
 			$this->dbc = $pdo;
 
 			// Tabelle in der die Session gespeichert wird
-			$this->table = 'user_sessions';
+			$this->table = 'sessions';
 
 			// CONFIG: SALT [free random sequence to increase the session security]
 			$this->salt = $salz;
@@ -287,7 +287,7 @@
 
 			// Delete session
 			try{
-				$stmt = $this->dbc->prepare("DELETE FROM user_sessions WHERE id = :id");
+				$stmt = $this->dbc->prepare("DELETE FROM sessions WHERE id = :id");
 				$stmt->execute([':id'=>$id]);
 			}
 			// PDO error handling
@@ -395,7 +395,7 @@
 				$this->ua='unknown';
 			}
 
-			$this->fingerprint = md5($this->salt . $this->hostname . $this->ipaddr . $this->ua);
+			$this->fingerprint = md5($this->salt . $this->hostname . $this->ipaddr . $this->ua . $this->sessfp);
 
 			return;
 		}
