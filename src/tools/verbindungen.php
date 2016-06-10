@@ -44,7 +44,7 @@ class verbindungen
 
         // Konfiguration ORM
         $configSpot = new \Spot\Config();
-        $configSpot->addConnection('mysql','mysql://test:test@localhost/test');
+        $configSpot->addConnection('mysql','mysql://'.$zugangswerte['username'].':'.$zugangswerte['password'].'@localhost/'.$zugangswerte['database']);
 
         /** @var $spot \Spot\Locator */
         $spot = new \Spot\Locator($configSpot);

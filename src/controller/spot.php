@@ -105,6 +105,10 @@ class spot extends main
             $mapperTest = $spot->mapper('entity\test');
             $result = $mapperTest->all()->toArray();
 
+            $test = $mapperTest->
+
+
+
             $this->template();
         }
             // eigene Exception
