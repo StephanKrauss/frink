@@ -20,6 +20,12 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         array (
             'Testify\\' => 8,
         ),
+        'S' => 
+        array (
+            'Spot\\' => 5,
+            'SpotTest\\' => 9,
+            'Sabre\\Event\\' => 12,
+        ),
         'R' => 
         array (
             'RedBeanPHP\\' => 11,
@@ -27,6 +33,11 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         'P' => 
         array (
             'Predis\\' => 7,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\' => 16,
         ),
     );
 
@@ -39,6 +50,18 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         array (
             0 => __DIR__ . '/..' . '/bafs/testify/lib/Testify',
         ),
+        'Spot\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/spot2/lib',
+        ),
+        'SpotTest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/spot2/tests',
+        ),
+        'Sabre\\Event\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabre/event/lib',
+        ),
         'RedBeanPHP\\' => 
         array (
             0 => __DIR__ . '/..' . '/gabordemooij/redbean/RedBeanPHP',
@@ -47,6 +70,14 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         array (
             0 => __DIR__ . '/..' . '/predis/predis/src',
         ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -54,6 +85,13 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
     );
 
     public static $prefixesPsr0 = array (
+        'V' => 
+        array (
+            'Valitron' => 
+            array (
+                0 => __DIR__ . '/..' . '/vlucas/valitron/src',
+            ),
+        ),
         'T' => 
         array (
             'Twig_' => 
@@ -70,6 +108,29 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
             'Parsedown' => 
             array (
                 0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
+        'D' => 
+        array (
+            'Doctrine\\DBAL\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/dbal/lib',
+            ),
+            'Doctrine\\Common\\Lexer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
+            'Doctrine\\Common\\Inflector\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
+            'Doctrine\\Common\\Collections\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
+            ),
+            'Doctrine\\Common\\Annotations\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
             ),
         ),
     );

@@ -10,12 +10,13 @@
     $zugangRedis = \Flight::get('datenbankRedis');
 
     // Datenbanken
-    list($sparrow, $notNoSql, $clientPredis, $pdo, $redbean) = \tools\verbindungen::connectDataSource($zugangswerte, $zugangRedis);
+    list($sparrow, $notNoSql, $clientPredis, $pdo, $redbean, $spot) = \tools\verbindungen::connectDataSource($zugangswerte, $zugangRedis);
     \Flight::set('sparrow', $sparrow);
     \Flight::set('notnosql',$notNoSql);
     \Flight::set('predis',$clientPredis);
     \Flight::set('pdo',$pdo);
     \Flight::set('redbean',$redbean);
+    \Flight::set('spot', $spot);
 
     // Session
     sessionStart();
@@ -46,13 +47,14 @@
         $zugangRedis = \Flight::get('datenbankRedis');
 
         // Datenbanken
-        list($sparrow, $notNoSql, $clientPredis, $pdo, $redbean) = \tools\verbindungen::connectDataSource($zugangswerte, $zugangRedis);
+        list($sparrow, $notNoSql, $clientPredis, $pdo, $redbean, $spot) = \tools\verbindungen::connectDataSource($zugangswerte, $zugangRedis);
         \Flight::set('sparrow', $sparrow);
         \Flight::set('notNoSql',$notNoSql);
         \Flight::set('predis',$clientPredis);
         \Flight::set('pdo',$pdo);
         \Flight::set('zugangswerte',$zugangswerte);
         \Flight::set('redbean',$redbean);
+        \Flight::set('spot', $spot);
 
         // Session
         sessionStart();

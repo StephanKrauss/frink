@@ -6,8 +6,8 @@
 <canvas zoom="100">
 <tables>
 <table name="benutzer" view="colnames">
-<left>114</left>
-<top>49</top>
+<left>221</left>
+<top>421</top>
 <width>97</width>
 <height>180</height>
 <sql_create_table>CREATE TABLE `benutzer` (
@@ -23,8 +23,8 @@
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="rollen" view="colnames">
-<left>286</left>
-<top>55</top>
+<left>383</left>
+<top>423</top>
 <width>117</width>
 <height>112</height>
 <sql_create_table>CREATE TABLE `rollen` (
@@ -34,10 +34,10 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="navigation" view="colnames">
-<left>510</left>
-<top>62</top>
-<width>88</width>
-<height>129</height>
+<left>534</left>
+<top>415</top>
+<width>145</width>
+<height>132</height>
 <sql_create_table>CREATE TABLE `navigation` (
   `id` tinyint(3) NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL COMMENT 'Name des Controller für die Navigation',
@@ -47,23 +47,9 @@
   CONSTRAINT `navigation_ibfk_1` FOREIGN KEY (`rolle_id`) REFERENCES `rollen` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
-<table name="user_sessions" view="colnames">
-<left>152</left>
-<top>334</top>
-<width>105</width>
-<height>163</height>
-<sql_create_table>CREATE TABLE `user_sessions` (
-  `id` varchar(32) NOT NULL DEFAULT '',
-  `fingerprint` varchar(100) DEFAULT NULL,
-  `data` text,
-  `access` int(32) NOT NULL DEFAULT '0',
-  `date` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
-</table>
 <table name="exception" view="colnames">
-<left>317</left>
-<top>339</top>
+<left>400</left>
+<top>571</top>
 <width>115</width>
 <height>197</height>
 <sql_create_table>CREATE TABLE `exception` (
@@ -78,18 +64,21 @@
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 <table name="artikel" view="colnames">
-<left>589</left>
-<top>350</top>
+<left>46</left>
+<top>57</top>
 <width>158</width>
-<height>180</height>
+<height>197</height>
 <sql_create_table>CREATE TABLE `artikel` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
-  `artikelbeschreibung` int(11) NOT NULL,
+  `benutzer_id` mediumint(5) DEFAULT NULL,
+  `artikelbeschreibung` varchar(255) NOT NULL,
   `erstelltAm` datetime DEFAULT CURRENT_TIMESTAMP,
   `erstelltDurch` int(5) NOT NULL,
   `geaendertAm` datetime DEFAULT NULL,
   `geaendertDurch` int(5) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `benutzer_id` (`benutzer_id`),
+  CONSTRAINT `artikel_ibfk_1` FOREIGN KEY (`benutzer_id`) REFERENCES `benutzer` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 </tables>

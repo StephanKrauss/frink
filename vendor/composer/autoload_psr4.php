@@ -8,7 +8,12 @@ $baseDir = dirname($vendorDir);
 return array(
     'Underscore\\' => array($vendorDir . '/im0rtality/underscore/src'),
     'Testify\\' => array($vendorDir . '/bafs/testify/lib/Testify'),
+    'Spot\\' => array($vendorDir . '/vlucas/spot2/lib'),
+    'SpotTest\\' => array($vendorDir . '/vlucas/spot2/tests'),
+    'Sabre\\Event\\' => array($vendorDir . '/sabre/event/lib'),
     'RedBeanPHP\\' => array($vendorDir . '/gabordemooij/redbean/RedBeanPHP'),
     'Predis\\' => array($vendorDir . '/predis/predis/src'),
+    'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
+    'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common'),
     '' => array($baseDir . '/src'),
 );

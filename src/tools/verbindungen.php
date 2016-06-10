@@ -42,7 +42,14 @@ class verbindungen
 
         // $redbean = R::getToolBox();
 
-        return array($sparrow, $notNoSql, $clientPredis, $pdo, $redbeanWrapper);
+        // Konfiguration ORM
+        $configSpot = new \Spot\Config();
+        $configSpot->addConnection('mysql','mysql://test:test@localhost/test');
+
+        /** @var $spot \Spot\Locator */
+        $spot = new \Spot\Locator($configSpot);
+
+        return array($sparrow, $notNoSql, $clientPredis, $pdo, $redbeanWrapper, $spot);
     }
 
 }

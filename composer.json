@@ -19,7 +19,8 @@
       "erusev/parsedown": "1.6.0",      
 	  "bafs/testify": "dev-master",
       "pimple/pimple": "3.*",
-	  "gabordemooij/redbean": "4.*"
+	  "gabordemooij/redbean": "4.*",
+      "vlucas/spot2": "2.2.*"
   },
   "autoload": {
     "psr-4": {
