@@ -30,4 +30,6 @@ class test extends \Spot\Entity
             'name' => ['type' => 'string', 'required' => true]
         ];
     }
+
+    // Relations
 }

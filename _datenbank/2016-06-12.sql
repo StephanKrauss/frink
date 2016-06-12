@@ -102,6 +102,20 @@ CREATE TABLE `rollen` (
 
 insert  into `rollen`(`id`,`bezeichnung`) values (1,'besucher'),(2,'angemeldet'),(3,'kunde'),(4,'koordinator'),(5,'anbieter'),(6,'redakteur'),(7,'administrator');
 
+/*Table structure for table `test` */
+
+DROP TABLE IF EXISTS `test`;
+
+CREATE TABLE `test` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+/*Data for the table `test` */
+
+insert  into `test`(`id`,`name`) values (1,'Stephan'),(2,'Antje'),(3,'Thomas'),(4,'Matthias');
+
 /*Table structure for table `users_sessions` */
 
 DROP TABLE IF EXISTS `users_sessions`;
@@ -117,7 +131,7 @@ CREATE TABLE `users_sessions` (
 
 /*Data for the table `users_sessions` */
 
-insert  into `users_sessions`(`id`,`fingerprint`,`data`,`access`,`date`) values ('benutzerId','4f95aefd1eb7f205f655097da49c2c28','3',1465723404,'2016-06-12 11:23:24'),('fyIL5WYmgiZq52fskjli1QJ-aba','4f95aefd1eb7f205f655097da49c2c28','',1465723434,'2016-06-12 11:23:54'),('rolleId','4f95aefd1eb7f205f655097da49c2c28','7',1465723418,'2016-06-12 11:23:38');
+insert  into `users_sessions`(`id`,`fingerprint`,`data`,`access`,`date`) values ('1z9Q9O1ESwNYbzcPrsjI-fOvzPa','Session hijacked','',0,'0000-00-00 00:00:00'),('2SY5FYFbsyDm9b41ZkuNfcEq324','Session hijacked','',0,'0000-00-00 00:00:00'),('4GceSAHo-3oABk275OgUV4WwSob','Session hijacked','',0,'0000-00-00 00:00:00'),('4kxyNRibIYJATHytuSOOtbAKtPe','Session hijacked','',0,'0000-00-00 00:00:00'),('4rWukeFEURbq7L0ir4sJnnqXMdd','Session hijacked','',0,'0000-00-00 00:00:00'),('8vUOC7ods-zAKt2eYRSOUYBGOo1','Session hijacked','',0,'0000-00-00 00:00:00'),('AqrJ,h9wpx,bSCoHwIiOgRzXQ6c','Session hijacked','',0,'0000-00-00 00:00:00'),('benutzerId','4f95aefd1eb7f205f655097da49c2c28','3',1465729038,'2016-06-12 12:57:18'),('BYj6VSVBdGiNtjbzkW92G,7,N9a','Session hijacked','',0,'0000-00-00 00:00:00'),('CHwOZAQvx7FlTV4qOzQUQRw2nMa','Session hijacked','',0,'0000-00-00 00:00:00'),('cQ1TjkE0JDdp7j-x7E0GS6e5zU3','Session hijacked','',0,'0000-00-00 00:00:00'),('Eelq9nZvVZjleCIq19PI2hViqD4','Session hijacked','',0,'0000-00-00 00:00:00'),('fyIL5WYmgiZq52fskjli1QJ-aba','4f95aefd1eb7f205f655097da49c2c28','',1465723434,'2016-06-12 11:23:54'),('gyiQaeSIT2FExZY7ZpI23Hkcxu8','Session hijacked','',0,'0000-00-00 00:00:00'),('hbd0hFRo28cOn4KF9F,rWlthNA1','Session hijacked','',0,'0000-00-00 00:00:00'),('ioEYaoOOTlSHak75-LTJjxChdS3','Session hijacked','',0,'0000-00-00 00:00:00'),('lgqg-oaHHxXk7HqOE2rFawSPw56','4f95aefd1eb7f205f655097da49c2c28','',1465729050,'2016-06-12 12:57:30'),('Lws9bO4PUYoRROq-lMMz6qpf6H9','Session hijacked','',0,'0000-00-00 00:00:00'),('M52ROfmVD1Xkm7Z1gyQ9,gYqZf3','Session hijacked','',0,'0000-00-00 00:00:00'),('n18RcRmrY37R6SpVXUHbtD3JFR4','Session hijacked','',0,'0000-00-00 00:00:00'),('nXnwny2EFSzVjRGz6V,yEfpRHp8','Session hijacked','',0,'0000-00-00 00:00:00'),('pjS26WhZEkKfEowYZW7gyycnJi2','Session hijacked','',0,'0000-00-00 00:00:00'),('rolleId','4f95aefd1eb7f205f655097da49c2c28','7',1465729039,'2016-06-12 12:57:19'),('TCw0uoVQ5Rc6Yqn,sXanriNmafe','Session hijacked','',0,'0000-00-00 00:00:00'),('Ti1ce6jR1mJ-x,6IMtGA0OQtNMe','Session hijacked','',0,'0000-00-00 00:00:00'),('yQZZ9byqF5Ikl,oPRtJg,f5zMr4','4f95aefd1eb7f205f655097da49c2c28','',1465724146,'2016-06-12 11:35:46');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

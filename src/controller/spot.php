@@ -74,7 +74,7 @@ class spot extends main
 
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
-            $mapperTest = $spot->mapper('tables\test');
+            $mapperTest = $spot->mapper('mapper\test');
             $mapperTest->create($insert);
 
 
@@ -102,11 +102,63 @@ class spot extends main
         try{
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
-            $mapperTest = $spot->mapper('entity\test');
-            $result = $mapperTest->all()->toArray();
 
-            $test = $mapperTest->
+            /** @var $mapperTest \mapper\test */
+            $mapperTest = $spot->mapper('mapper\test');
+            // $result = $mapperTest->all()->active()->toArray();
+            $result = $mapperTest->get(2)->toArray();
 
+            $this->template();
+        }
+            // eigene Exception
+        catch(\tools\frinkError $e)
+        {
+            throw $e;
+        }
+            // Exception anderer Klassen
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    /**
+     * bauen einer Entity ???
+     *
+     * @throws \Exception
+     * @throws \tools\frinkError
+     */
+    public function build()
+    {
+        try{
+            /** @var $spot \Spot\Locator */
+            $spot = \Flight::get('spot');
+
+            $entity = $spot->build([
+                'name' => 'Chester Tester',
+                'email' => 'chester@example.com'
+            ]);
+
+            $this->template();
+        }
+            // eigene Exception
+        catch(\tools\frinkError $e)
+        {
+            throw $e;
+        }
+            // Exception anderer Klassen
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    public function trans()
+    {
+        try{
+            /** @var $spot \Spot\Locator */
+            $spot = \Flight::get('spot');
+            $mapperTest = $spot->mapper('mapper\test');
+            
+            
 
 
             $this->template();

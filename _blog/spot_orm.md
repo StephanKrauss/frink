@@ -36,6 +36,7 @@ The get method accepts a primary key to load a record with
 	// Get Post with 'id' = 58
 	$mapper = $spot->mapper('Entity\Post');
 	$post = $mapper->get(58);
+	// $post = $mapper->get(58)->toArray();
 
 ### $mapperTest->belongsTo()
 
