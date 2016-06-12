@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemadesigner version="6.5">
 <source>
-<database charset="utf8" collation="utf8_general_ci">test</database>
+<database charset="latin1" collation="latin1_swedish_ci">test</database>
 </source>
 <canvas zoom="100">
 <tables>

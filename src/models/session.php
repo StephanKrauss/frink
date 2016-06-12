@@ -40,7 +40,7 @@
 			$this->dbc = $pdo;
 
 			// Tabelle in der die Session gespeichert wird
-			$this->table = 'sessions';
+			$this->table = 'users_sessions';
 
 			// CONFIG: SALT [free random sequence to increase the session security]
 			$this->salt = $salz;
@@ -251,9 +251,8 @@
 
 			// Write session data
 			try{
-				$stmt=$this->dbc->prepare(
-					"REPLACE INTO " . $this->table . " ( id, fingerprint, data, access, date ) VALUES ( :id, :fingerprint, :data, :access, :date )"
-				);
+				$stmt = $this->dbc->prepare("REPLACE INTO " . $this->table . " ( id, fingerprint, data, access, date ) VALUES ( :id, :fingerprint, :data, :access, :date )");
+
 				$stmt->execute(
 					[
 						':id'=>$id,
@@ -263,6 +262,7 @@
 						':date'=>date("Y-m-d") . " " . date("H:i:s")
 					]
 				);
+
 			} // PDO error handling
 			catch(\Exception $errMsg){
 				$this->dbc=null;
