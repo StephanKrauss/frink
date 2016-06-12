@@ -64,20 +64,6 @@
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8</sql_create_table>
 </table>
-<table name="user_sessions" view="colnames">
-<left>437</left>
-<top>471</top>
-<width>105</width>
-<height>158</height>
-<sql_create_table>CREATE TABLE `user_sessions` (
-  `id` varchar(32) NOT NULL DEFAULT '',
-  `fingerprint` varchar(100) DEFAULT NULL,
-  `data` text,
-  `access` int(32) NOT NULL DEFAULT '0',
-  `date` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
-</table>
 <table name="navigation" view="colnames">
 <left>607</left>
 <top>224</top>
@@ -90,7 +76,18 @@
   PRIMARY KEY (`id`),
   KEY `rolle_id` (`rolle_id`),
   CONSTRAINT `navigation_ibfk_1` FOREIGN KEY (`rolle_id`) REFERENCES `rollen` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8</sql_create_table>
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="test" view="colnames">
+<left>459</left>
+<top>476</top>
+<width>95</width>
+<height>166</height>
+<sql_create_table>CREATE TABLE `test` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
 </table>
 </tables>
 </canvas>

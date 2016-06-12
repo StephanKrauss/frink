@@ -1,5 +1,5 @@
 <?php
-namespace entity;
+namespace tables;
 
 use Spot\EntityInterface as Entity;
 use Spot\MapperInterface as Mapper;

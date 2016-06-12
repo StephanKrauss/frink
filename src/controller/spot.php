@@ -74,7 +74,7 @@ class spot extends main
 
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
-            $mapperTest = $spot->mapper('entity\test');
+            $mapperTest = $spot->mapper('tables\test');
             $mapperTest->create($insert);
 
 
