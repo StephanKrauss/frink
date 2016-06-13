@@ -70,11 +70,11 @@ class spot extends main
     {
         try{
             // insert
-            $insert = ['name' => 'Matthias'];
+            $insert = ['name' => 'yyy', 'zahl' => 3];
 
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
-            $mapperTest = $spot->mapper('mapper\test');
+            $mapperTest = $spot->mapper('tables\test');
             $mapperTest->create($insert);
 
 
@@ -104,9 +104,9 @@ class spot extends main
             $spot = \Flight::get('spot');
 
             /** @var $mapperTest \mapper\test */
-            $mapperTest = $spot->mapper('mapper\test');
-            // $result = $mapperTest->all()->active()->toArray();
-            $result = $mapperTest->get(2)->toArray();
+            $mapperTest = $spot->mapper('tables\test');
+            $result = $mapperTest->all()->active()->toArray();
+            // $result = $mapperTest->get(2)->toArray();
 
             $this->template();
         }

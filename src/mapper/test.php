@@ -29,4 +29,11 @@
 			   }
 		   ];
 		}
+		
+		public static function events(\Spot\EventEmitter $eventEmitter)
+		{
+			$eventEmitter->on('beforeSave', function (Entity $entity, Mapper $mapper) {
+				$entity->zahl = 5;
+			});
+		}
 	}

@@ -27,9 +27,38 @@ class test extends \Spot\Entity
     {
         return [
             'id' => ['type' => 'integer', 'primary' => true, 'autoincrement' => true],
-            'name' => ['type' => 'string', 'required' => true]
+            'name' => ['type' => 'string', 'required' => true],
+			'zahl' => ['type' => 'integer']
         ];
     }
 
-    // Relations
+	// Relations
+
+	/**
+	 * einfache Abfragen
+	 *
+	 * @return array
+	 */
+	public static function scopes()
+	{
+		return [
+		   'free' => function ($query) {
+			   return $query->where(['type' => 'free']);
+		   },
+		   'active' => function ($query) {
+			   return $query->where(['id' => 1]);
+		   }
+	   ];
+	}
+
+	public static function events(\Spot\EventEmitter $eventEmitter)
+	{
+		$eventEmitter->on('beforeSave', function (Entity $entity, Mapper $mapper) {
+			$entity->zahl = 5;
+		});
+	}
+
+	// komplexe Abfragen
+
+
 }
