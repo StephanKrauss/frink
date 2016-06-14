@@ -53,6 +53,13 @@ Build an entity object with the provided array data.
 
 ### $mapperTest->collectionClass()
 
+Get collection class name to use
+
+	/** @var $spot \Spot\Locator */
+	$spot = \Flight::get('spot');
+
+	$collectionClassName = $mapperTest->collectionClass();
+
 ### $mapperTest->config()
 
 ### $mapperTest->connections()
@@ -72,6 +79,13 @@ Create will both build and insert the entity. The result will be a fully-loaded 
 ### $mapperTest->dropTable()
 
 ### $mapperTest->entity()
+
+Get name of the Entity class mapper was instantiated with
+
+    /** @var $spot \Spot\Locator */
+    $spot = \Flight::get('spot');
+
+    $entityName = $mapperTest->entity();
 
 ### $mapperTest->entityManager()
 
@@ -135,11 +149,24 @@ A Spot\Query object is returned with all queries, which means additional conditi
 
 ### $mapperTest->getMapper()
 
+Get mapper for specified entity
+
+    /** @var $spot \Spot\Locator */
+    $spot = \Flight::get('spot');
+
+    $mapperProfile = $mapperTest->getMapper('tables\profile');
+
 ### $mapperTest->hasMany()
+
+Verknüpfung einer Tabelle 1:n mit einer anderen Tabelle
 
 ### $mapperTest->hasManyThrough()
 
+Verknüpfung einer Tabelle mit einer anderen Tabelle n:m
+
 ### $mapperTest->hasOne()
+
+Verknüpfung einer Tabelle 1:1 mit einer anderen Tabelle 
 
 ### $mapperTest->insert()
 
@@ -195,6 +222,13 @@ Your database should now have the posts table in it, with all the fields you des
 ### $mapperTest->queryBuilder()
 
 ### $mapperTest->queryClass()
+
+Get query class name to use
+
+    /** @var $spot \Spot\Locator */
+    $spot = \Flight::get('spot');
+
+    $queryClassName = $mapperTest->queryClass();
 
 ### $mapperTest->relations()
 

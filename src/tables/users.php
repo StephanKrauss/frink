@@ -4,7 +4,7 @@ namespace tables;
 use Spot\EntityInterface as Entity;
 use Spot\MapperInterface as Mapper;
 
-class User extends \Spot\Entity
+class users extends \Spot\Entity
 {
     protected static $table = 'users';
 
@@ -22,7 +22,7 @@ class User extends \Spot\Entity
     public static function relations(Mapper $mapper, Entity $entity)
     {
         return [
-            'profile' => $mapper->hasOne($entity, 'Entity\User\Profile', 'user_id')
+            'profile' => $mapper->hasMany($entity, 'tables\profile', 'user_id')
         ];
     }
 }

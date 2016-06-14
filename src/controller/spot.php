@@ -189,15 +189,56 @@ class spot extends main
         }
     }
 
-    public function relations()
+    public function komplex1()
     {
         try{
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
 
             $mapperTest = $spot->mapper('tables\test');
+            // $result = $mapperTest->all()->where(['id' => 3])->toArray();
 
-            
+            // gibt Mapper zurück
+            // $mapperProfile = $mapperTest->getMapper('tables\profile');
+
+            // gibt Name der Entity zurück
+            // $entityName = $mapperTest->entity();
+
+            // Get query class name to use
+            // $queryClassName = $mapperTest->queryClass();
+
+            // Get collection class name to use
+            // $collectionClassName = $mapperTest->collectionClass();
+
+
+            $this->template();
+        }
+            // eigene Exception
+        catch(\tools\frinkError $e)
+        {
+            throw $e;
+        }
+            // Exception anderer Klassen
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    /**
+     * Abbilden der Beziehungen zwischen den Tabellen. Die Beziehung wird in der Entity definiert.
+     *
+     * @throws \Exception
+     * @throws frinkError
+     */
+    public function relations()
+    {
+        try{
+            /** @var $spot \Spot\Locator */
+            $spot = \Flight::get('spot');
+
+            $mapperUsers = $spot->mapper('tables\users');
+
+            $result = $mapperUsers->all()->with('profile')->toArray();
 
             $this->template();
         }
