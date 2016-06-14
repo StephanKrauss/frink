@@ -17,6 +17,7 @@ use Spot\MapperInterface as Mapper;
 class test extends \Spot\Entity
 {
     protected static $table = 'test';
+	protected static $mapper = 'tables\mapper\test';
 
     /**
      * Felder der Tabelle 'test'
@@ -28,37 +29,19 @@ class test extends \Spot\Entity
         return [
             'id' => ['type' => 'integer', 'primary' => true, 'autoincrement' => true],
             'name' => ['type' => 'string', 'required' => true],
-			'zahl' => ['type' => 'integer']
+			'zahl' => ['type' => 'integer'],
+			'author_id' => ['type' => 'integer']
         ];
     }
 
 	// Relations
 
-	/**
-	 * einfache Abfragen
-	 *
-	 * @return array
-	 */
-	public static function scopes()
-	{
-		return [
-		   'free' => function ($query) {
-			   return $query->where(['type' => 'free']);
-		   },
-		   'active' => function ($query) {
-			   return $query->where(['id' => 1]);
-		   }
-	   ];
-	}
-
+	
+	// Events
 	public static function events(\Spot\EventEmitter $eventEmitter)
 	{
 		$eventEmitter->on('beforeSave', function (Entity $entity, Mapper $mapper) {
 			$entity->zahl = 5;
 		});
 	}
-
-	// komplexe Abfragen
-
-
 }

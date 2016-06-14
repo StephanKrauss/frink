@@ -178,8 +178,10 @@ You can also pass a Spot\Entity object to insert
 ### $mapperTest->migrate()
 Spot comes with a method for running migrations on Entities that will automatically CREATE and ALTER tables based on the current Entity’s fields definition.
 
-	$mapper = $spot->mapper('Entity\Post');
-	$mapper->migrate();
+	 /** @var $spot \Spot\Locator */
+     $spot = \Flight::get('spot');
+
+     $spot->mapper('tables\posts')->migrate();
 
 Your database should now have the posts table in it, with all the fields you described in your Post entity.
 

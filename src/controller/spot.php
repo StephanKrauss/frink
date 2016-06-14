@@ -70,7 +70,7 @@ class spot extends main
     {
         try{
             // insert
-            $insert = ['name' => 'yyy', 'zahl' => 3];
+            $insert = ['name' => 'zzz', 'zahl' => 2, 'author_id' => 2];
 
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
@@ -103,10 +103,8 @@ class spot extends main
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
 
-            /** @var $mapperTest \mapper\test */
             $mapperTest = $spot->mapper('tables\test');
             $result = $mapperTest->all()->active()->toArray();
-            // $result = $mapperTest->get(2)->toArray();
 
             $this->template();
         }
@@ -122,21 +120,18 @@ class spot extends main
     }
 
     /**
-     * bauen einer Entity ???
+     * Generiert aus einer Entity / Tabelle die Tabelle in der MySQL
      *
      * @throws \Exception
-     * @throws \tools\frinkError
+     * @throws frinkError
      */
-    public function build()
+    public function tabelle()
     {
         try{
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
 
-            $entity = $spot->build([
-                'name' => 'Chester Tester',
-                'email' => 'chester@example.com'
-            ]);
+            $spot->mapper('tables\posts')->migrate();
 
             $this->template();
         }
@@ -151,15 +146,58 @@ class spot extends main
         }
     }
 
-    public function trans()
+    /**
+     * Verwendung von vordefinierten Abfragen
+     * 
+     * + komplexe Abfragen
+     * + Teilabfragen / Scope
+     *
+     * @throws \Exception
+     * @throws frinkError
+     */
+    public function komplex()
     {
         try{
             /** @var $spot \Spot\Locator */
             $spot = \Flight::get('spot');
-            $mapperTest = $spot->mapper('mapper\test');
-            
-            
 
+            $mapperTest = $spot->mapper('tables\test');
+
+            // Verwendung einer komplexen Frage
+            $result = $mapperTest->erste(3)->toArray();
+
+            // Verwendung des Scope
+            $result = $mapperTest->all()->zweite()->toArray();
+
+            // Verwendung von 'get'
+            $result = $mapperTest->get(3)->toArray();
+
+            // Verwendung von 'where'
+            // $query = $mapperTest->all()->where(['id >=' => 3])->toSql();
+            $result = $mapperTest->all()->where(['id >=' => 3])->toArray();
+
+            $this->template();
+        }
+            // eigene Exception
+        catch(\tools\frinkError $e)
+        {
+            throw $e;
+        }
+            // Exception anderer Klassen
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    public function relations()
+    {
+        try{
+            /** @var $spot \Spot\Locator */
+            $spot = \Flight::get('spot');
+
+            $mapperTest = $spot->mapper('tables\test');
+
+            
 
             $this->template();
         }

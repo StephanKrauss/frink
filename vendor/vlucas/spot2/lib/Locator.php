@@ -44,6 +44,8 @@ class Locator
      */
     public function mapper($entityName)
     {
+        $test = 123;
+
         if (!isset($this->mapper[$entityName])) {
             // Get custom mapper, if set
             $mapper = $entityName::mapper();

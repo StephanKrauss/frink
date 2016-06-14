@@ -1,5 +1,5 @@
 <?php
-namespace tables;
+namespace Entity;
 
 /**
 * Entity der Tabelle 'posts'
@@ -14,6 +14,7 @@ namespace tables;
 class posts extends \Spot\Entity
 {
     protected static $table = 'posts';
+    protected static $mapper = 'tables\mapper\post';
 
     public static function fields()
     {
