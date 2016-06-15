@@ -6,6 +6,9 @@ use Spot\MapperInterface as Mapper;
 
 class users extends \Spot\Entity
 {
+    // zentrale Methoden des Mapper
+    use \traits\MapperData;
+
     protected static $table = 'users';
     protected static $mapper = 'mapper\users';
 
@@ -16,7 +19,7 @@ class users extends \Spot\Entity
             'username'     => ['type' => 'string', 'required' => true],
             'email'        => ['type' => 'string', 'required' => true],
             'status'       => ['type' => 'integer', 'default' => 0, 'index' => true],
-            'date_created' => ['type' => 'datetime', 'value' => new \DateTime()]
+            'date_created' => ['type' => 'datetime']
         ];
     }
     

@@ -13,7 +13,7 @@ namespace models;
  * @package models
  */
 
-class users extends \models\ModelData
+class BenutzerDaten extends \models\ModelData
 {
     
 

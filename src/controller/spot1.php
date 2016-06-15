@@ -88,24 +88,38 @@ class spot1 extends main
         }
     }
 
+    /**
+     * testen des Mapper für den Import / Export in / aus einem Model
+     *
+     * @throws \Exception
+     */
     public function mapper()
     {
+//        date_default_timezone_set('Europe/Berlin');
+//
+//        $test = date('Y-m-d H:i:s', time());
+
+        // $test = \Doctrine\DBAL\Types\Type::getTypesMap();
+
         /** @var $spot \Spot\Locator */
         $spot = \Flight::get('spot');
 
         /** @var $mapperTest \mapper\users */
         $mapperUsers = $spot->mapper('tables\users');
 
-        /** @var $modelUsers \models\users */
-        $modelUsers = new \models\users();
+        /** @var $modelBenutzerDaten \models\BenutzerDaten */
+        $modelBenutzerDaten = new \models\BenutzerDaten();
 
-        $modelUsers = $mapperUsers->find(1, $modelUsers);
+        $modelBenutzerDaten = $mapperUsers->findData(9, $modelBenutzerDaten);
 
-        $modelUsers->offsetSet('status', 10);
-        $modelUsers->offsetSet('id', 3);
+        if($modelBenutzerDaten){
+            $modelBenutzerDaten->offsetSet('status', 6);
+            $modelBenutzerDaten->offsetSet('id', 11);
+            $modelBenutzerDaten->offsetSet('date_created', new \DateTime());
 
-        /** @var $mapperTest \mapper\users */
-        $modelUsers = $mapperUsers->set($modelUsers);
+            /** @var $mapperTest \mapper\users */
+            $modelBenutzerDaten = $mapperUsers->setData($modelBenutzerDaten);
+        }
 
         $this->template();
     }

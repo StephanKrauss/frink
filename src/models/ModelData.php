@@ -15,7 +15,7 @@ namespace models;
 
 class ModelData implements \ArrayAccess
 {
-    public $data = [];
+    protected $data = [];
     
     /**
      * existiert die Variable in data[] ?
@@ -58,5 +58,10 @@ class ModelData implements \ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->data[$offset]);
+    }
+
+    public function getAllData()
+    {
+        return $this->data;
     }
 }
