@@ -64,4 +64,14 @@ trait MapperData
 
         return;
     }
+
+    /**
+     * Definierte Felder Doctrine
+     *
+     * @return array
+     */
+    public function getFieldTypes()
+    {
+        return $fieldTypes = \Doctrine\DBAL\Types\Type::getTypesMap();
+    }
 }

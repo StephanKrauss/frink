@@ -95,32 +95,89 @@ class spot1 extends main
      */
     public function mapper()
     {
-//        date_default_timezone_set('Europe/Berlin');
-//
-//        $test = date('Y-m-d H:i:s', time());
-
-        // $test = \Doctrine\DBAL\Types\Type::getTypesMap();
-
-        /** @var $spot \Spot\Locator */
-        $spot = \Flight::get('spot');
-
-        /** @var $mapperTest \mapper\users */
-        $mapperUsers = $spot->mapper('tables\users');
-
-        /** @var $modelBenutzerDaten \models\BenutzerDaten */
-        $modelBenutzerDaten = new \models\BenutzerDaten();
-
-        $modelBenutzerDaten = $mapperUsers->findData(9, $modelBenutzerDaten);
-
-        if($modelBenutzerDaten){
-            $modelBenutzerDaten->offsetSet('status', 6);
-            $modelBenutzerDaten->offsetSet('id', 11);
-            $modelBenutzerDaten->offsetSet('date_created', new \DateTime());
+        try{
+            /** @var $spot \Spot\Locator */
+            $spot = \Flight::get('spot');
 
             /** @var $mapperTest \mapper\users */
-            $modelBenutzerDaten = $mapperUsers->setData($modelBenutzerDaten);
-        }
+            $mapperUsers = $spot->mapper('tables\users');
 
-        $this->template();
+            /** @var $modelBenutzerDaten \models\BenutzerDaten */
+            $modelBenutzerDaten = new \models\BenutzerDaten();
+
+            $modelBenutzerDaten = $mapperUsers->findData(9, $modelBenutzerDaten);
+
+            if($modelBenutzerDaten){
+                $modelBenutzerDaten->offsetSet('status', 6);
+                $modelBenutzerDaten->offsetSet('id', 11);
+                $modelBenutzerDaten->offsetSet('date_created', new \DateTime());
+
+                /** @var $mapperTest \mapper\users */
+                $modelBenutzerDaten = $mapperUsers->setData($modelBenutzerDaten);
+            }
+
+            $this->template();
+        }
+            // eigene Exception
+        catch(\tools\frinkError $e)
+        {
+            throw $e;
+        }
+            // Exception anderer Klassen
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    public function validate()
+    {
+        try{
+            /** @var $spot \Spot\Locator */
+            $spot = \Flight::get('spot');
+
+            /** @var $mapperTest \mapper\users */
+            $mapperUsers = $spot->mapper('tables\users');
+
+            $rows = $mapperUsers->get(11)->toArray();
+
+            // Validator
+            $row = $this->validateCheck($rows);
+
+            $this->template();
+        }
+            // eigene Exception
+        catch(\tools\frinkError $e)
+        {
+            throw $e;
+        }
+            // Exception anderer Klassen
+        catch(\Exception $e){
+            throw $e;
+        }
+    }
+
+    /**
+     * Kontrolle der Daten
+     *
+     * @param array $row
+     * @return array
+     */
+    protected function validateCheck(array $row)
+    {
+        $modelValidator = \models\validator::get_instance();
+
+        $rules = array(
+            'id' => 'required',
+            'username' => 'required',
+            'email' => 'required|valid_email',
+            'status' => 'required'
+        );
+
+        $valid = $modelValidator->validate($row, $rules);
+
+        if($valid !== true)
+            return false;
+        else
+            return $row;
     }
 }

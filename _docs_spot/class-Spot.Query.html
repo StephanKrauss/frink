@@ -284,6 +284,36 @@ since quoting is different per platform</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="reEscapeFrom" id="_reEscapeFrom">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reEscapeFrom">#</a>
+		<code><a href="source-class-Spot.Query.html#139-150" title="Go to source code">reEscapeFrom</a>( )</code>
+
+		<div class="description short">
+			<p>Re-escape from part of query according to new noQuote value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Re-escape from part of query according to new noQuote value</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="expr" id="_expr">
 
 		<td class="attributes"><code>
@@ -835,6 +865,90 @@ since quoting is different per platform</p>
 				<h4>Returns</h4>
 				<div class="list">
 					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseWhereToSQLFragments" id="_parseWhereToSQLFragments">
+
+		<td class="attributes"><code>
+			 private 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseWhereToSQLFragments">#</a>
+		<code><a href="source-class-Spot.Query.html#357-394" title="Go to source code">parseWhereToSQLFragments</a>( <span>array <var>$where</var></span>, <span>boolean <var>$useAlias</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Parse array-syntax WHERE conditions and translate them to DBAL QueryBuilder syntax</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parse array-syntax WHERE conditions and translate them to DBAL QueryBuilder syntax</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>Array of conditions for this clause</dd>
+					<dt><var>$useAlias</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>SQL fragment strings for WHERE clause
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWhereOperatorCallable" id="_getWhereOperatorCallable">
+
+		<td class="attributes"><code>
+			 private 
+
+			callable|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWhereOperatorCallable">#</a>
+		<code><a href="source-class-Spot.Query.html#396-415" title="Go to source code">getWhereOperatorCallable</a>( <span>string <var>$operator</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$operator</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					callable|false
 				</div>
 
 
@@ -1768,6 +1882,282 @@ Called automatically when attribute is used in a 'foreach' loop</p>
 
 
 
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_mapper" id="$_mapper">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#15-18" title="Go to source code"><var>$_mapper</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_mapper" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_entityName" id="$_entityName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#20-23" title="Go to source code"><var>$_entityName</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_entityName" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_tableName" id="$_tableName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#25-28" title="Go to source code"><var>$_tableName</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_tableName" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_queryBuilder" id="$_queryBuilder">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#30-33" title="Go to source code"><var>$_queryBuilder</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_queryBuilder" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_noQuote" id="$_noQuote">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#35-38" title="Go to source code"><var>$_noQuote</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_noQuote" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="with" id="$with">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#40-45" title="Go to source code"><var>$with</var></a>
+
+			<div class="description short">
+				<p>Storage for query properties</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Storage for query properties</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$with" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_data" id="$_data">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#47-52" title="Go to source code"><var>$_data</var></a>
+
+			<div class="description short">
+				<p>Storage for eager-loaded relations</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Storage for eager-loaded relations</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_data" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_customMethods" id="$_customMethods">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#54-59" title="Go to source code"><var>$_customMethods</var></a>
+
+			<div class="description short">
+				<p>Custom methods added by extensions or plugins</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Custom methods added by extensions or plugins</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_customMethods" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_whereOperators" id="$_whereOperators">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#61-87" title="Go to source code"><var>$_whereOperators</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_whereOperators" class="anchor">#</a>
+				<code>[
+    <span class="php-quote">'&lt;'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThan'</span>,
+    <span class="php-quote">':lt'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThan'</span>,
+    <span class="php-quote">'&lt;='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThanOrEqual'</span>,
+    <span class="php-quote">':lte'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThanOrEqual'</span>,
+    <span class="php-quote">'&gt;'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThan'</span>,
+    <span class="php-quote">':gt'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThan'</span>,
+    <span class="php-quote">'&gt;='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThanOrEqual'</span>,
+    <span class="php-quote">':gte'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThanOrEqual'</span>,
+    <span class="php-quote">'~='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\RegExp'</span>,
+    <span class="php-quote">'=~'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\RegExp'</span>,
+    <span class="php-quote">':regex'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\RegExp'</span>,
+    <span class="php-quote">':like'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Like'</span>,
+    <span class="php-quote">':fulltext'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\FullText'</span>,
+    <span class="php-quote">':fulltext_boolean'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\FullTextBoolean'</span>,
+    <span class="php-quote">'in'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\In'</span>,
+    <span class="php-quote">':in'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\In'</span>,
+    <span class="php-quote">'&lt;&gt;'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">'!='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">':ne'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">':not'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">'='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Equals'</span>,
+    <span class="php-quote">':eq'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Equals'</span>,
+]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_whereOperatorObjects" id="$_whereOperatorObjects">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#89-94" title="Go to source code"><var>$_whereOperatorObjects</var></a>
+
+			<div class="description short">
+				<p>Already instantiated operator objects</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Already instantiated operator objects</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_whereOperatorObjects" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 
 

@@ -24,25 +24,28 @@
 
 						</li>
 				<li>
+					<a href="namespace-mapper.html">
+						mapper					</a>
+
+						</li>
+				<li>
 					<a href="namespace-models.html">
 						models					</a>
 
 						</li>
 				<li class="active">
 					<a href="namespace-tables.html">
-						tables<span></span>
-					</a>
-
-						<ul>
-				<li>
-					<a href="namespace-tables.mapper.html">
-						mapper					</a>
+						tables					</a>
 
 						</li>
-							</ul></li>
 				<li>
 					<a href="namespace-tools.html">
 						tools					</a>
+
+						</li>
+				<li>
+					<a href="namespace-traits.html">
+						traits					</a>
 
 						</li>
 			</ul>
@@ -111,6 +114,8 @@ Spot\Entity
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>tables\users</span></b>			
 			
+			 uses 
+					<a href="class-traits.MapperData.html"><span>traits\MapperData</span></a>
 			
 		</dd>
 	</dl>
@@ -128,7 +133,7 @@ Spot\Entity
 		<b>Namespace:</b> <a href="namespace-tables.html">tables</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-tables.users.html#7-28" title="Go to source code">tables/users.php</a>
+			<b>Located at</b> <a href="source-class-tables.users.html#7-32" title="Go to source code">tables/users.php</a>
 		<br>
 	</div>
 
@@ -148,7 +153,7 @@ Spot\Entity
 
 		<td class="name"><div>
 		<a class="anchor" href="#_fields">#</a>
-		<code><a href="source-class-tables.users.html#11-20" title="Go to source code">fields</a>( )</code>
+		<code><a href="source-class-tables.users.html#15-24" title="Go to source code">fields</a>( )</code>
 
 		<div class="description short">
 			
@@ -178,7 +183,7 @@ Spot\Entity
 
 		<td class="name"><div>
 		<a class="anchor" href="#_relations">#</a>
-		<code><a href="source-class-tables.users.html#22-27" title="Go to source code">relations</a>( <span>Spot\MapperInterface <var>$mapper</var></span>, <span>Spot\EntityInterface <var>$entity</var></span> )</code>
+		<code><a href="source-class-tables.users.html#26-31" title="Go to source code">relations</a>( <span>Spot\MapperInterface <var>$mapper</var></span>, <span>Spot\EntityInterface <var>$entity</var></span> )</code>
 
 		<div class="description short">
 			
@@ -199,6 +204,16 @@ Spot\Entity
 	</table>
 
 
+	<table class="summary used">
+	<caption>Methods used from <a href="class-traits.MapperData.html#methods">traits\MapperData</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-traits.MapperData.html#_findData">findData()</a>, 
+			<a href="class-traits.MapperData.html#_getFieldTypes">getFieldTypes()</a>, 
+			<a href="class-traits.MapperData.html#_setData">setData()</a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -218,7 +233,7 @@ Spot\Entity
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-tables.users.html#9" title="Go to source code"><var>$table</var></a>
+				<a href="source-class-tables.users.html#12" title="Go to source code"><var>$table</var></a>
 
 			<div class="description short">
 				
@@ -233,6 +248,31 @@ Spot\Entity
 			<div>
 				<a href="#$table" class="anchor">#</a>
 				<code><span class="php-quote">'users'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="mapper" id="$mapper">
+		<td class="attributes"><code>
+			protected static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-tables.users.html#13" title="Go to source code"><var>$mapper</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$mapper" class="anchor">#</a>
+				<code><span class="php-quote">'mapper\users'</span></code>
 			</div>
 		</td>
 	</tr>
