@@ -1,6 +1,6 @@
 <?php
 	
-	namespace tables\mapper;
+	namespace mapper;
 	use Spot\Mapper;
 	
 	class test extends Mapper

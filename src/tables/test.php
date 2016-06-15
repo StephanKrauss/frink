@@ -17,7 +17,7 @@ use Spot\MapperInterface as Mapper;
 class test extends \Spot\Entity
 {
     protected static $table = 'test';
-	protected static $mapper = 'tables\mapper\test';
+	protected static $mapper = 'mapper\test';
 
     /**
      * Felder der Tabelle 'test'
