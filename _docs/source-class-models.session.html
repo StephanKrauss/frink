@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 
-	<title>File models/session.php</title>
+	<title>File models/session.php | Projekt Frink</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -30,6 +30,18 @@
 
 						</li>
 				<li>
+					<a href="namespace-tables.html">
+						tables<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-tables.mapper.html">
+						mapper					</a>
+
+						</li>
+							</ul></li>
+				<li>
 					<a href="namespace-tools.html">
 						tools					</a>
 
@@ -54,6 +66,7 @@
 				<li><a href="class-controller.pimple.html">controller\pimple</a></li>
 				<li><a href="class-controller.redbean.html">controller\redbean</a></li>
 				<li><a href="class-controller.session.html">controller\session</a></li>
+				<li><a href="class-controller.spot.html">controller\spot</a></li>
 				<li><a href="class-controller.start.html">controller\start</a></li>
 				<li><a href="class-controller.testify.html">controller\testify</a></li>
 				<li><a href="class-controller.validator.html">controller\validator</a></li>
@@ -66,8 +79,17 @@
 				<li><a href="class-models.plugins.html">models\plugins</a></li>
 				<li><a href="class-models.redisko.html">models\redisko</a></li>
 				<li><a href="class-models.session.html">models\session</a></li>
+				<li><a href="class-models.SimpleMail.html">models\SimpleMail</a></li>
 				<li><a href="class-models.Sparrow.html">models\Sparrow</a></li>
 				<li><a href="class-models.validator.html">models\validator</a></li>
+				<li><a href="class-tables.artikel.html">tables\artikel</a></li>
+				<li><a href="class-tables.mapper.test.html">tables\mapper\test</a></li>
+				<li><a href="class-tables.posts.html">tables\posts</a></li>
+				<li><a href="class-tables.profile.html">tables\profile</a></li>
+				<li><a href="class-tables.test.html">tables\test</a></li>
+				<li><a href="class-tables.users.html">tables\users</a></li>
+				<li><a href="class-tools.Auth.html">tools\Auth</a></li>
+				<li><a href="class-tools.DatenbankBenutzer.html">tools\DatenbankBenutzer</a></li>
 				<li><a href="class-tools.errorAuswertung.html">tools\errorAuswertung</a></li>
 				<li><a href="class-tools.redbeanWrapper.html">tools\redbeanWrapper</a></li>
 				<li><a href="class-tools.verbindungen.html">tools\verbindungen</a></li>
@@ -154,7 +176,7 @@
 </span><span id="40" class="l"><a href="#40"> 40: </a>            <span class="php-var">$this</span>-&gt;dbc = <span class="php-var">$pdo</span>;
 </span><span id="41" class="l"><a href="#41"> 41: </a>
 </span><span id="42" class="l"><a href="#42"> 42: </a>            <span class="php-comment">// Tabelle in der die Session gespeichert wird</span>
-</span><span id="43" class="l"><a href="#43"> 43: </a>            <span class="php-var">$this</span>-&gt;table = <span class="php-quote">'user_sessions'</span>;
+</span><span id="43" class="l"><a href="#43"> 43: </a>            <span class="php-var">$this</span>-&gt;table = <span class="php-quote">'users_sessions'</span>;
 </span><span id="44" class="l"><a href="#44"> 44: </a>
 </span><span id="45" class="l"><a href="#45"> 45: </a>            <span class="php-comment">// CONFIG: SALT [free random sequence to increase the session security]</span>
 </span><span id="46" class="l"><a href="#46"> 46: </a>            <span class="php-var">$this</span>-&gt;salt = <span class="php-var">$salz</span>;
@@ -365,18 +387,18 @@
 </span><span id="251" class="l"><a href="#251">251: </a>
 </span><span id="252" class="l"><a href="#252">252: </a>            <span class="php-comment">// Write session data</span>
 </span><span id="253" class="l"><a href="#253">253: </a>            <span class="php-keyword1">try</span>{
-</span><span id="254" class="l"><a href="#254">254: </a>                <span class="php-var">$stmt</span>=<span class="php-var">$this</span>-&gt;dbc-&gt;prepare(
-</span><span id="255" class="l"><a href="#255">255: </a>                    <span class="php-quote">&quot;REPLACE INTO &quot;</span> . <span class="php-var">$this</span>-&gt;table . <span class="php-quote">&quot; ( id, fingerprint, data, access, date ) VALUES ( :id, :fingerprint, :data, :access, :date )&quot;</span>
-</span><span id="256" class="l"><a href="#256">256: </a>                );
-</span><span id="257" class="l"><a href="#257">257: </a>                <span class="php-var">$stmt</span>-&gt;execute(
-</span><span id="258" class="l"><a href="#258">258: </a>                    [
-</span><span id="259" class="l"><a href="#259">259: </a>                        <span class="php-quote">':id'</span>=&gt;<span class="php-var">$id</span>,
-</span><span id="260" class="l"><a href="#260">260: </a>                        <span class="php-quote">':fingerprint'</span>=&gt;<span class="php-var">$this</span>-&gt;fingerprint,
-</span><span id="261" class="l"><a href="#261">261: </a>                        <span class="php-quote">':data'</span>=&gt;<span class="php-var">$data</span>,
-</span><span id="262" class="l"><a href="#262">262: </a>                        <span class="php-quote">':access'</span>=&gt;<span class="php-keyword2">time</span>(),
-</span><span id="263" class="l"><a href="#263">263: </a>                        <span class="php-quote">':date'</span>=&gt;<span class="php-keyword2">date</span>(<span class="php-quote">&quot;Y-m-d&quot;</span>) . <span class="php-quote">&quot; &quot;</span> . <span class="php-keyword2">date</span>(<span class="php-quote">&quot;H:i:s&quot;</span>)
-</span><span id="264" class="l"><a href="#264">264: </a>                    ]
-</span><span id="265" class="l"><a href="#265">265: </a>                );
+</span><span id="254" class="l"><a href="#254">254: </a>                <span class="php-var">$stmt</span> = <span class="php-var">$this</span>-&gt;dbc-&gt;prepare(<span class="php-quote">&quot;REPLACE INTO &quot;</span> . <span class="php-var">$this</span>-&gt;table . <span class="php-quote">&quot; ( id, fingerprint, data, access, date ) VALUES ( :id, :fingerprint, :data, :access, :date )&quot;</span>);
+</span><span id="255" class="l"><a href="#255">255: </a>
+</span><span id="256" class="l"><a href="#256">256: </a>                <span class="php-var">$stmt</span>-&gt;execute(
+</span><span id="257" class="l"><a href="#257">257: </a>                    [
+</span><span id="258" class="l"><a href="#258">258: </a>                        <span class="php-quote">':id'</span>=&gt;<span class="php-var">$id</span>,
+</span><span id="259" class="l"><a href="#259">259: </a>                        <span class="php-quote">':fingerprint'</span>=&gt;<span class="php-var">$this</span>-&gt;fingerprint,
+</span><span id="260" class="l"><a href="#260">260: </a>                        <span class="php-quote">':data'</span>=&gt;<span class="php-var">$data</span>,
+</span><span id="261" class="l"><a href="#261">261: </a>                        <span class="php-quote">':access'</span>=&gt;<span class="php-keyword2">time</span>(),
+</span><span id="262" class="l"><a href="#262">262: </a>                        <span class="php-quote">':date'</span>=&gt;<span class="php-keyword2">date</span>(<span class="php-quote">&quot;Y-m-d&quot;</span>) . <span class="php-quote">&quot; &quot;</span> . <span class="php-keyword2">date</span>(<span class="php-quote">&quot;H:i:s&quot;</span>)
+</span><span id="263" class="l"><a href="#263">263: </a>                    ]
+</span><span id="264" class="l"><a href="#264">264: </a>                );
+</span><span id="265" class="l"><a href="#265">265: </a>
 </span><span id="266" class="l"><a href="#266">266: </a>            } <span class="php-comment">// PDO error handling</span>
 </span><span id="267" class="l"><a href="#267">267: </a>            <span class="php-keyword1">catch</span>(\Exception <span class="php-var">$errMsg</span>){
 </span><span id="268" class="l"><a href="#268">268: </a>                <span class="php-var">$this</span>-&gt;dbc=<span class="php-keyword1">null</span>;
@@ -401,7 +423,7 @@
 </span><span id="287" class="l"><a href="#287">287: </a>
 </span><span id="288" class="l"><a href="#288">288: </a>            <span class="php-comment">// Delete session</span>
 </span><span id="289" class="l"><a href="#289">289: </a>            <span class="php-keyword1">try</span>{
-</span><span id="290" class="l"><a href="#290">290: </a>                <span class="php-var">$stmt</span> = <span class="php-var">$this</span>-&gt;dbc-&gt;prepare(<span class="php-quote">&quot;DELETE FROM user_sessions WHERE id = :id&quot;</span>);
+</span><span id="290" class="l"><a href="#290">290: </a>                <span class="php-var">$stmt</span> = <span class="php-var">$this</span>-&gt;dbc-&gt;prepare(<span class="php-quote">&quot;DELETE FROM sessions WHERE id = :id&quot;</span>);
 </span><span id="291" class="l"><a href="#291">291: </a>                <span class="php-var">$stmt</span>-&gt;execute([<span class="php-quote">':id'</span>=&gt;<span class="php-var">$id</span>]);
 </span><span id="292" class="l"><a href="#292">292: </a>            }
 </span><span id="293" class="l"><a href="#293">293: </a>            <span class="php-comment">// PDO error handling</span>
@@ -509,18 +531,18 @@
 </span><span id="395" class="l"><a href="#395">395: </a>                <span class="php-var">$this</span>-&gt;ua=<span class="php-quote">'unknown'</span>;
 </span><span id="396" class="l"><a href="#396">396: </a>            }
 </span><span id="397" class="l"><a href="#397">397: </a>
-</span><span id="398" class="l"><a href="#398">398: </a>            <span class="php-var">$this</span>-&gt;fingerprint = <span class="php-keyword2">md5</span>(<span class="php-var">$this</span>-&gt;salt . <span class="php-var">$this</span>-&gt;hostname . <span class="php-var">$this</span>-&gt;ipaddr . <span class="php-var">$this</span>-&gt;ua);
+</span><span id="398" class="l"><a href="#398">398: </a>            <span class="php-var">$this</span>-&gt;fingerprint = <span class="php-keyword2">md5</span>(<span class="php-var">$this</span>-&gt;salt . <span class="php-var">$this</span>-&gt;hostname . <span class="php-var">$this</span>-&gt;ipaddr . <span class="php-var">$this</span>-&gt;ua . <span class="php-var">$this</span>-&gt;sessfp);
 </span><span id="399" class="l"><a href="#399">399: </a>
 </span><span id="400" class="l"><a href="#400">400: </a>            <span class="php-keyword1">return</span>;
 </span><span id="401" class="l"><a href="#401">401: </a>        }
 </span><span id="402" class="l"><a href="#402">402: </a>    }</span></code></pre>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Projekt Frink API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
-<script src="resources/combined.js?617392eaaf416030057b5bbdd6664b91f411e287"></script>
-<script src="elementlist.js?0ba5313b5f775043cad4c86f70f22f9b2c3c5ed3"></script>
+<script src="resources/combined.js?5f2ba98c0c78acbe714dfeb409be70411656338b"></script>
+<script src="elementlist.js?9f1feecee17e8579243bdf34cef311b957103ff2"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class models\notNoSql</title>
+	<title>Class models\notNoSql | Projekt Frink</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -29,6 +29,18 @@
 
 						</li>
 				<li>
+					<a href="namespace-tables.html">
+						tables<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-tables.mapper.html">
+						mapper					</a>
+
+						</li>
+							</ul></li>
+				<li>
 					<a href="namespace-tools.html">
 						tools					</a>
 
@@ -51,6 +63,7 @@
 				<li><a href="class-models.plugins.html">plugins</a></li>
 				<li><a href="class-models.redisko.html">redisko</a></li>
 				<li><a href="class-models.session.html">session</a></li>
+				<li><a href="class-models.SimpleMail.html">SimpleMail</a></li>
 				<li><a href="class-models.Sparrow.html">Sparrow</a></li>
 				<li><a href="class-models.validator.html">validator</a></li>
 			</ul>
@@ -308,6 +321,275 @@ may require PHP object returns, in which case this method is offered.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="statement" id="_statement">
+
+		<td class="attributes"><code>
+			 private 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_statement">#</a>
+		<code><a href="source-class-models.notNoSql.html#119-155" title="Go to source code">statement</a>( <span>string <var>$statement</var></span>, <span>string <var>$table</var></span>, <span>string <var>$key</var></span>, <span>string <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Helper method for invoking the correct prepared statement, as well as creating new collections</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Helper method for invoking the correct prepared statement, as well as creating new collections</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statement</var></dt>
+					<dd>or 'put' -- it automatically checks if it's a insert or update statement</dd>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$value</var></dt>
+					<dd>Only applicable for put statements</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>The decoded value on get statements and true/false on put statements
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createStatement" id="_createStatement">
+
+		<td class="attributes"><code>
+			 private 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createStatement">#</a>
+		<code><a href="source-class-models.notNoSql.html#157-173" title="Go to source code">createStatement</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			<p>Creates and remembers a table</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates and remembers a table</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="selectStatement" id="_selectStatement">
+
+		<td class="attributes"><code>
+			 private 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_selectStatement">#</a>
+		<code><a href="source-class-models.notNoSql.html#175-199" title="Go to source code">selectStatement</a>( <span>string <var>$table</var></span>, <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Selects data from a collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Selects data from a collection</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>Decoded json value
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertStatement" id="_insertStatement">
+
+		<td class="attributes"><code>
+			 private 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertStatement">#</a>
+		<code><a href="source-class-models.notNoSql.html#201-213" title="Go to source code">insertStatement</a>( <span>string <var>$table</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Inserts a new row in a collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Inserts a new row in a collection</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$value</var></dt>
+					<dd>goes. Will get transformed into JSON on the fly.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateStatement" id="_updateStatement">
+
+		<td class="attributes"><code>
+			 private 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateStatement">#</a>
+		<code><a href="source-class-models.notNoSql.html#215-227" title="Go to source code">updateStatement</a>( <span>string <var>$table</var></span>, <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Updates a row in a collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Updates a row in a collection</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$value</var></dt>
+					<dd>goes. Will get transformed into JSON on the fly.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape" id="_escape">
+
+		<td class="attributes"><code>
+			 private 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape">#</a>
+		<code><a href="source-class-models.notNoSql.html#229-237" title="Go to source code">escape</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Helper method for sanitizing input</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Helper method for sanitizing input</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unEscape" id="_unEscape">
+
+		<td class="attributes"><code>
+			 private 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unEscape">#</a>
+		<code><a href="source-class-models.notNoSql.html#239-247" title="Go to source code">unEscape</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Helper method for making output human readable</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Helper method for making output human readable</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	</table>
 
 
@@ -396,6 +678,84 @@ may require PHP object returns, in which case this method is offered.</p>
 
 
 
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="db" id="$db">
+		<td class="attributes"><code>
+			private  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.notNoSql.html#35" title="Go to source code"><var>$db</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$db" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="collections" id="$collections">
+		<td class="attributes"><code>
+			private  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.notNoSql.html#36" title="Go to source code"><var>$collections</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$collections" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="jsonDecodePolicy" id="$jsonDecodePolicy">
+		<td class="attributes"><code>
+			private  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.notNoSql.html#37" title="Go to source code"><var>$jsonDecodePolicy</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$jsonDecodePolicy" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 
 
@@ -405,7 +765,7 @@ may require PHP object returns, in which case this method is offered.</p>
 </div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Projekt Frink API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>

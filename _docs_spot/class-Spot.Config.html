@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Spot\Config | Projekt Spot2</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Spot.html">
+						Spot<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Provider.html">
+						Provider					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Query.html">
+						Query<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Query.Operator.html">
+						Operator					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Spot.Relation.html">
+						Relation					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Valitron.html">
+						Valitron					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Spot.Config.html">Config</a></li>
+				<li><a href="class-Spot.Entity.html">Entity</a></li>
+				<li><a href="class-Spot.EventEmitter.html">EventEmitter</a></li>
+				<li><a href="class-Spot.Locator.html">Locator</a></li>
+				<li><a href="class-Spot.Mapper.html">Mapper</a></li>
+				<li><a href="class-Spot.Query.html">Query</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Spot.EntityInterface.html">EntityInterface</a></li>
+				<li><a href="class-Spot.MapperInterface.html">MapperInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Spot.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Spot.html" title="Summary of Spot"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Config</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Spot\Config</span></b>			
+			 implements 
+<span>Serializable</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Spot.html">Spot</a><br>
+		<b>Package:</b> Spot<br>
+
+			<b>Located at</b> <a href="source-class-Spot.Config.html#6-288" title="Go to source code">spot2/lib/Config.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="addConnection" id="_addConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Connection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addConnection">#</a>
+		<code><a href="source-class-Spot.Config.html#14-56" title="Go to source code">addConnection</a>( <span>string <var>$name</var></span>, <span>string <var>$dsn</var></span>, <span>boolean <var>$default</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Add database connection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add database connection</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>Unique name for the connection</dd>
+					<dt><var>$dsn</var></dt>
+					<dd>DSN string for this connection</dd>
+					<dt><var>$default</var></dt>
+					<dd>$defaut Use this connection as the default? The first connection added is automatically set as the default, even if this flag is false.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Connection
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="connection" id="_connection">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Connection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connection">#</a>
+		<code><a href="source-class-Spot.Config.html#58-77" title="Go to source code">connection</a>( <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Get connection by name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get connection by name</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>Unique name of the connection to be returned</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Connection
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="connections" id="_connections">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connections">#</a>
+		<code><a href="source-class-Spot.Config.html#79-87" title="Go to source code">connections</a>( )</code>
+
+		<div class="description short">
+			<p>Get all connections</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get all connections</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Array of connection objects
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="defaultConnection" id="_defaultConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Connection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_defaultConnection">#</a>
+		<code><a href="source-class-Spot.Config.html#89-102" title="Go to source code">defaultConnection</a>( )</code>
+
+		<div class="description short">
+			<p>Get default connection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get default connection</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Connection
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseDsn" id="_parseDsn">
+
+		<td class="attributes"><code>
+			 public static
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseDsn">#</a>
+		<code><a href="source-class-Spot.Config.html#104-274" title="Go to source code">parseDsn</a>( <span>string <var>$dsn</var></span> )</code>
+
+		<div class="description short">
+			<p>Taken from PHPUnit 3.4:</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Taken from PHPUnit 3.4:</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dsn</var></dt>
+					<dd>Data Source Name to be parsed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><p>an associative array with the following keys:
+              + adapter:  Database backend used in PHP (mysql, odbc etc.)
+              + dbsyntax: Database used with regards to SQL syntax etc.
+              + protocol: Communication protocol to use (tcp, unix etc.)
+              + host: Host specification (hostname[:port])
+              + dbname: Database to use on the DBMS server
+              + user: User name for login
+              + password: Password for login</p>
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://github.com/sebastianbergmann/phpunit/blob/3.4/PHPUnit/Util/PDO.php">Returns the Data Source Name as a structure containing the various parts of the DSN.
+
+Additional keys can be added by appending a URI query string to the
+end of the DSN.
+
+The format of the supplied DSN is in its fullest form:
+&lt;code&gt;
+ adapter(dbsyntax)://user:password@protocol+host/database?option=8&amp;another=true
+&lt;/code&gt;
+
+Most variations are allowed:
+&lt;code&gt;
+ adapter://user:password@protocol+host:110//usr/db_file.db?mode=0644
+ adapter://user:password@host/database_name
+ adapter://user:password@host
+ adapter://user@host
+ adapter://host/database
+ adapter://host
+ adapter(dbsyntax)
+ adapter
+&lt;/code&gt;
+
+This function is &#039;borrowed&#039; from PEAR /DB.php .</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serialize" id="_serialize">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serialize">#</a>
+		<code><a href="source-class-Spot.Config.html#276-283" title="Go to source code">serialize</a>( )</code>
+
+		<div class="description short">
+			<p>Default serialization behavior is to not attempt to serialize stored
+adapter connections at all (thanks @TheSavior re: Issue #7)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Default serialization behavior is to not attempt to serialize stored
+adapter connections at all (thanks @TheSavior re: Issue #7)</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>Serializable::serialize()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unserialize" id="_unserialize">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unserialize">#</a>
+		<code><a href="source-class-Spot.Config.html#285-287" title="Go to source code">unserialize</a>( <span> <var>$serialized</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>Serializable::unserialize()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Spot2 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

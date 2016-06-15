@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Spot\Relation\HasManyThrough | Projekt Spot2</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Spot.html">
+						Spot<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Provider.html">
+						Provider					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Query.html">
+						Query<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Query.Operator.html">
+						Operator					</a>
+
+						</li>
+							</ul></li>
+				<li class="active">
+					<a href="namespace-Spot.Relation.html">
+						Relation					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Valitron.html">
+						Valitron					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Spot.Relation.BelongsTo.html">BelongsTo</a></li>
+				<li><a href="class-Spot.Relation.HasMany.html">HasMany</a></li>
+				<li class="active"><a href="class-Spot.Relation.HasManyThrough.html">HasManyThrough</a></li>
+				<li><a href="class-Spot.Relation.HasOne.html">HasOne</a></li>
+				<li><a href="class-Spot.Relation.RelationAbstract.html">RelationAbstract</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Spot.Relation.html" title="Summary of Spot\Relation"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class HasManyThrough</h1>
+
+
+	<div class="description">
+	<p>Relation object for HasMany relation</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Spot.Relation.RelationAbstract.html"><span>Spot\Relation\RelationAbstract</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Spot\Relation\HasManyThrough</span></b>			
+			 implements 
+<span>Countable</span>, 
+			
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Spot.html">Spot</a>\<a href="namespace-Spot.Relation.html">Relation</a><br>
+		<b>Package:</b> Spot<br>
+
+			<b>Located at</b> <a href="source-class-Spot.Relation.HasManyThrough.html#9-237" title="Go to source code">spot2/lib/Relation/HasManyThrough.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#18-31" title="Go to source code">__construct</a>( <span><code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code> <var>$mapper</var></span>, <span> <var>$entityName</var></span>, <span> <var>$throughEntityName</var></span>, <span> <var>$foreignKey</var></span>, <span> <var>$localKey</var></span>, <span> <var>$identityValue</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor function</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor function</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="identityValuesFromCollection" id="_identityValuesFromCollection">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_identityValuesFromCollection">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#33-41" title="Go to source code">identityValuesFromCollection</a>( <span><code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code> <var>$collection</var></span> )</code>
+
+		<div class="description short">
+			<p>Set identity values from given collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set identity values from given collection</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$collection</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="eagerLoadOnCollection" id="_eagerLoadOnCollection">
+
+		<td class="attributes"><code>
+			 public 
+
+			Spot\Collection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_eagerLoadOnCollection">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#69-118" title="Go to source code">eagerLoadOnCollection</a>( <span>string <var>$relationName</var></span>, <span><code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code> <var>$collection</var></span> )</code>
+
+		<div class="description short">
+			<p>Map relation results to original collection of entities</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Map relation results to original collection of entities</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relationName</var></dt>
+					<dd>name</dd>
+					<dt><var>$collection</var></dt>
+					<dd>of original entities to map results of query back to</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					Spot\Collection
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Spot.Relation.RelationAbstract.html#_eagerLoadOnCollection">Spot\Relation\RelationAbstract::eagerLoadOnCollection()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="throughEntityName" id="_throughEntityName">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_throughEntityName">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#120-126" title="Go to source code">throughEntityName</a>( )</code>
+
+		<div class="description short">
+			<p>Get through entity name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get through entity name</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#129-172" title="Go to source code">save</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span>string <var>$relationName</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Save related entities</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Save related entities</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd>Entity to save relation from</dd>
+					<dt><var>$relationName</var></dt>
+					<dd>Name of the relation to save</dd>
+					<dt><var>$options</var></dt>
+					<dd>Options to pass to the mappers</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#175-189" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			<p>SPL Countable function
+Called automatically when attribute is used in a 'count()' function call</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL Countable function
+Called automatically when attribute is used in a 'count()' function call</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>Countable::count()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#191-203" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			<p>SPL IteratorAggregate function
+Called automatically when attribute is used in a 'foreach' loop</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL IteratorAggregate function
+Called automatically when attribute is used in a 'foreach' loop</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>IteratorAggregate::getIterator()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetExists">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#207-212" title="Go to source code">offsetExists</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetExists()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetGet">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#214-219" title="Go to source code">offsetGet</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetGet()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetSet">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#221-230" title="Go to source code">offsetSet</a>( <span> <var>$key</var></span>, <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetSet()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetUnset">#</a>
+		<code><a href="source-class-Spot.Relation.HasManyThrough.html#232-236" title="Go to source code">offsetUnset</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetUnset()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Spot.Relation.RelationAbstract.html#methods">Spot\Relation\RelationAbstract</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Spot.Relation.RelationAbstract.html#___call">__call()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_entityKey">entityKey()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_entityName">entityName()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_execute">execute()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_foreignKey">foreignKey()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_identityValue">identityValue()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_localKey">localKey()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_mapper">mapper()</a>, 
+			<a href="class-Spot.Relation.RelationAbstract.html#_query">query()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Spot2 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
