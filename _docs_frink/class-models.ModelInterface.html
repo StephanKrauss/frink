@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class models\model | Projekt Frink</title>
+	<title>Interface models\ModelInterface | Projekt Frink</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -61,7 +61,7 @@
 				<li><a href="class-models.BenutzerDaten.html">BenutzerDaten</a></li>
 				<li><a href="class-models.config.html">config</a></li>
 				<li><a href="class-models.iniparser.html">iniparser</a></li>
-				<li class="active"><a href="class-models.model.html">model</a></li>
+				<li><a href="class-models.model.html">model</a></li>
 				<li><a href="class-models.ModelData.html">ModelData</a></li>
 				<li><a href="class-models.myCalc.html">myCalc</a></li>
 				<li><a href="class-models.notNoSql.html">notNoSql</a></li>
@@ -75,7 +75,7 @@
 
 			<h3>Interfaces</h3>
 			<ul>
-				<li><a href="class-models.ModelInterface.html">ModelInterface</a></li>
+				<li class="active"><a href="class-models.ModelInterface.html">ModelInterface</a></li>
 			</ul>
 
 
@@ -117,17 +117,21 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class model</h1>
+	<h1>Interface ModelInterface</h1>
 
 
 	<div class="description">
-	<p>Test Model zur Verwendung mit 'testify'</p>
+	<p>Grundinterface der Model mit übernahme des DIC Pimple und <em>'notice'</em> Methode für Observer</p>
 	</div>
 
 
 
 
 
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-models.BenutzerDaten.html">models\BenutzerDaten</a>
+	</div>
 
 
 
@@ -136,13 +140,17 @@
 		
 		
 		<b>Namespace:</b> <a href="namespace-models.html">models</a><br>
-		<b>Package:</b> Model<br>
+		<b>Package:</b> models<br>
 
+				<b>Copyright:</b>
+				Stephan Krauss<br>
 				<b>Author:</b>
 				Stephan Krauß<br>
 				<b>Date:</b>
-				04.05.2016<br>
-			<b>Located at</b> <a href="source-class-models.model.html#6-37" title="Go to source code">models/model.php</a>
+				16.06.2016<br>
+				<b>Lisence:</b>
+				Stephan Krauß<br>
+			<b>Located at</b> <a href="source-class-models.ModelInterface.html#7-23" title="Go to source code">models/ModelInterface.php</a>
 		<br>
 	</div>
 
@@ -162,7 +170,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-models.model.html#18-21" title="Go to source code">__construct</a>( <span> <var>$param</var></span> )</code>
+		<code><a href="source-class-models.ModelInterface.html#19" title="Go to source code">__construct</a>( <span> <var>$pimple</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -180,7 +188,7 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="add" id="_add">
+	<tr data-order="notice" id="_notice">
 
 		<td class="attributes"><code>
 			 public 
@@ -191,68 +199,8 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_add">#</a>
-		<code><a href="source-class-models.model.html#23-26" title="Go to source code">add</a>( <span> <var>$wert1</var></span>, <span> <var>$wert2</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="sub" id="_sub">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_sub">#</a>
-		<code><a href="source-class-models.model.html#28-31" title="Go to source code">sub</a>( <span> <var>$wert1</var></span>, <span> <var>$wert2</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="mult" id="_mult">
-
-		<td class="attributes"><code>
-			 protected 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_mult">#</a>
-		<code><a href="source-class-models.model.html#33-36" title="Go to source code">mult</a>( <span> <var>$wert1</var></span>, <span> <var>$wert2</var></span> )</code>
+		<a class="anchor" href="#_notice">#</a>
+		<code><a href="source-class-models.ModelInterface.html#21" title="Go to source code">notice</a>( <span>array <var>$data</var></span> )</code>
 
 		<div class="description short">
 			
@@ -283,59 +231,6 @@
 
 
 
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="store" id="$store">
-		<td class="attributes"><code>
-			protected  
-			
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-models.model.html#15" title="Go to source code"><var>$store</var></a>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$store" class="anchor">#</a>
-				<code><span class="php-keyword1">null</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="start" id="$start">
-		<td class="attributes"><code>
-			protected  
-			integer
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-models.model.html#16" title="Go to source code"><var>$start</var></a>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$start" class="anchor">#</a>
-				<code><span class="php-num">0</span></code>
-			</div>
-		</td>
-	</tr>
-	</table>
 
 
 

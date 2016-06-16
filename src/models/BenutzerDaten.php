@@ -3,7 +3,7 @@
 namespace models;
 
 /**
- * Model Users
+ * Model Benutzer Daten
  *
  * @author Stephan Krauß
  * @copyright Stephan Krauss
@@ -13,8 +13,31 @@ namespace models;
  * @package models
  */
 
-class BenutzerDaten extends \models\ModelData
+class BenutzerDaten extends \models\ModelData implements \models\ModelInterface
 {
-    
+    protected $pimple;
+
+    /**
+     * Übernahme des Dependency Injection Container
+     *
+     * BenutzerDaten constructor.
+     * @param bool $pimple
+     */
+    public function __construct($pimple = false)
+    {
+        if($pimple)
+            $this->pimple = $pimple;
+    }
+
+    /**
+     * Übernahme der Daten
+     *
+     * @param array $data
+     */
+    public function notice(array $data)
+    {
+        if($data)
+            $this->data = $data;
+    }
 
 }
