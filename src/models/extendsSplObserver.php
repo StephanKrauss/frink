@@ -55,14 +55,14 @@ class extendsSplObserver implements \SplObserver
      * @param $method
      * @param $args
      * @return mixed
-     * @throws Exception
+     * @throws frinkError
      */
     public function __call($method, $args)
     {
         if (method_exists($this->basis, $method))
             return call_user_func_array(array($this->basis, $method), $args);
         else
-            throw new \frinkError(__CLASS__ + " has no method " + $method, 3);
+            throw new frinkError(__CLASS__." has no method ".$method, 3);
     }
 
     /**
@@ -70,14 +70,18 @@ class extendsSplObserver implements \SplObserver
      *
      * @param $attr
      * @return mixed
-     * @throws Exception
+     * @throws frinkError
      */
     public function __get($attr)
     {
-        if (property_exists($this->basis, $attr))
+        // gibt Basis Objekt zurück
+        if($attr == 'basis')
+            return $this->basis;
+        // gibt Property des Basis Objektes zurück
+        elseif (property_exists($this->basis, $attr))
             return $this->basis->$attr;
         else
-            throw new \frinkError(__CLASS__ + " has no property " + $attr, 3);
+            throw new frinkError(__CLASS__." has no property ".$attr, 3);
     }
 
     /**
@@ -86,13 +90,13 @@ class extendsSplObserver implements \SplObserver
      * @param $attr
      * @param $value
      * @return mixed
-     * @throws Exception
+     * @throws frinkError
      */
     public function __set($attr, $value)
     {
         if (property_exists($this->basis, $attr))
             return $this->basis->$attr = $value;
         else
-            throw new \frinkError(__CLASS__ + " has no property " + $attr, 3);
+            throw new frinkError(__CLASS__." has no property ".$attr, 3);
     }
 }

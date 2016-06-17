@@ -15,18 +15,18 @@ use tools\frinkError;
 
 class extendsSplSubject implements \SplSubject
 {
-    protected $basis;
+    public $basis;
     protected $observers = [];
 
     /**
      * fügt einen Observer / Beobachter hinzu
      *
      * @param \SplObserver $observer
-     * @return extendsSplObserver
+     * @return extendsSplSubject
      */
     public function attach(\SplObserver $observer)
     {
-        $this->observers[] = $observer;
+        $this->observers[] =  $observer;
 
         return $this;
     }
@@ -35,7 +35,7 @@ class extendsSplSubject implements \SplSubject
      * entfernt einen Observer / Beobachter
      *
      * @param \SplObserver $observer
-     * @return extendsSplObserver
+     * @return extendsSplSubject
      */
     public function detach(\SplObserver $observer) {
 
@@ -49,12 +49,13 @@ class extendsSplSubject implements \SplSubject
     /**
      * Informiert die Beobachter über eine erfolgte Veränderung mit der Methode 'info'
      *
-     * @return extendsSplObserver
+     * @return extendsSplSubject
      */
-    public function notify() {
+    public function notify()
+    {
         foreach ($this->observers as $observer) {
-            if (method_exists($observer, 'update'))
-                $observer->notify($this);
+            $basis = $observer->basis;
+            $basis->setAllData($this->basis->data)->notify();
         }
 
         return $this;
@@ -64,7 +65,7 @@ class extendsSplSubject implements \SplSubject
      * übernimmt das Basisobjekt
      *
      * @param $object
-     * @return extendsBasis
+     * @return extendsSplSubject
      * @throws frinkError
      */
     public function setBasisClass($object)
@@ -83,14 +84,14 @@ class extendsSplSubject implements \SplSubject
      * @param $method
      * @param $args
      * @return mixed
-     * @throws Exception
+     * @throws frinkError
      */
     public function __call($method, $args)
     {
         if (method_exists($this->basis, $method))
             return call_user_func_array(array($this->basis, $method), $args);
         else
-            throw new \frinkError(__CLASS__ + " has no method " + $method, 3);
+            throw new frinkError(__CLASS__." has no method ".$method, 3);
     }
 
     /**
@@ -98,14 +99,14 @@ class extendsSplSubject implements \SplSubject
      *
      * @param $attr
      * @return mixed
-     * @throws Exception
      */
-    public function __get($attr)
+    public function __get($offset)
     {
-        if (property_exists($this->basis, $attr))
-            return $this->basis->$attr;
-        else
-            throw new \frinkError(__CLASS__ + " has no property " + $attr, 3);
+        // gibt Basis Objekt zurück
+        if($offset == 'basis')
+            return $this->basis;
+        elseif(is_array($this->basis->data) and array_key_exists($offset, $this->basis->data))
+            return $this->basis->offsetGet($offset);
     }
 
     /**
@@ -113,14 +114,9 @@ class extendsSplSubject implements \SplSubject
      *
      * @param $attr
      * @param $value
-     * @return mixed
-     * @throws Exception
      */
-    public function __set($attr, $value)
+    public function __set($offset, $value)
     {
-        if (property_exists($this->basis, $attr))
-            return $this->basis->$attr = $value;
-        else
-            throw new \frinkError(__CLASS__ + " has no property " + $attr, 3);
+        $this->basis->offsetSet($offset, $value);
     }
 }
