@@ -5,7 +5,7 @@ namespace models;
 /**
 * Erweiterung der Model. Organisiert die Datenhaltung und die Verwendung als Subject oder Observer
 *
-* + Methode **notify()** in das allgemeine Model
+* + Methode **notify()** in das allgemeine Model übernehmen
 *
 * @author Stephan Krauß
 * @copyright Stephan Krauss
