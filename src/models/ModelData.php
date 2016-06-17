@@ -54,7 +54,7 @@ class ModelData implements \ArrayAccess
     /**
      * @param mixed $offset
      * @param mixed $value
-     * @return
+     * @return ModelData
      */
     public function offsetSet($offset, $value)
     {
@@ -63,11 +63,17 @@ class ModelData implements \ArrayAccess
         return $this;
     }
 
+    /**
+     * @param mixed $offset
+     */
     public function offsetUnset($offset)
     {
         unset($this->data[$offset]);
     }
 
+    /**
+     * @return array
+     */
     public function getAllData()
     {
         return $this->data;
@@ -75,7 +81,7 @@ class ModelData implements \ArrayAccess
 
     /**
      * @param array $data
-     * @return basis
+     * @return ModelData
      */
     public function setAllData(array $data)
     {
@@ -87,7 +93,7 @@ class ModelData implements \ArrayAccess
     /**
      * Methode für das Observer Pattern
      *
-     * @return basis
+     * @return ModelData
      */
     public function notify()
     {
