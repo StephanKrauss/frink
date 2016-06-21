@@ -10,7 +10,7 @@
 	 * @file modelObserver1.php
 	 * @package models
 	 */
-	class modelObserver1 extends \models\modelBasis1 implements \SplObserver
+	class modelObserver2 extends \models\modelBasis1 implements \SplObserver
 	{
 		/**
 		 * @param \SplSubject $subject

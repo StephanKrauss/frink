@@ -12,14 +12,6 @@
 	 */
 	class modelBasis1 extends \models\ModelData
 	{
-		/**
-		 * Methode für das Observer Pattern
-		 *
-		 * @return ModelData
-		 */
-		public function notify()
-		{
-			return $this;
-		}
+		
 
 	} // end class
