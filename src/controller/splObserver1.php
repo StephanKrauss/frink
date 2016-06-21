@@ -6,7 +6,6 @@
 
 	/**
 	 * Test des Observer Pattern mit der SPL von PHP.
-	 *
 	 * + klassische Schreibweise
 	 * + Verwendung von Traits
 	 * + SplSubject interface
@@ -27,11 +26,8 @@
 		{
 			// Vorbereitung des Pimple Container
 			$models=[
-				'model'=>function() {
-					return new model($this->params);
-				},
-				'myCalc'=>function() {
-					return new myCalc(10);
+				'basis'=>function($pimple) {
+					return new \models\modelBasis($pimple);
 				}
 			];
 
@@ -70,10 +66,28 @@
 		{
 			try{
 
-				$modelBasis1 = new \models\modelBasis1($this->pimple);
-				$modelBasis1['wert1'] = 'wert1';
-				$modelBasis1['wert2'] = 123;
-				$modelBasis1[] = 'blub';
+				// Observer
+				$modelObserver1=new \models\modelObserver1($this->pimple);
+				$modelObserver1['wert1']='observer1';
+				$modelObserver1['wert2']='observer1';
+
+				$modelObserver2=new \models\modelObserver2($this->pimple);
+				$modelObserver2['wert1']='observer2';
+				$modelObserver2['wert2']='observer2';
+				
+				// Subject
+				$modelSubject = new \models\modelSubject($this->pimple);
+				$modelSubject['wert1'] = 'subject';
+				$modelSubject['wert2'] = 'subject';
+
+				// Observer hinzufügen
+				$modelSubject->attach($modelObserver1);
+				$modelSubject->attach($modelObserver2);
+
+				$pimple = $this->pimple;
+				$myCalc = $pimple['basis'];
+
+				$modelSubject->notify();
 
 				// Übergabe an die View
 				$this->template();

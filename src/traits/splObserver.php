@@ -16,7 +16,7 @@
 		{
 			$data=$subject->getAllData();
 			$this->setAllData($data);
-			$this->notify();
+			$this->control();
 		}
 
 	}

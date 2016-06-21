@@ -10,14 +10,8 @@
 	 * @file modelBasis1.php
 	 * @package models
 	 */
-	class modelBasis1 extends \models\ModelData
+	class modelBasis extends \models\ModelData
 	{
-		/**
-		 * zentrale Steuerung des Model
-		 */
-		protected function control()
-		{
-			$test=123;
-		}
+		
 
 	} // end class

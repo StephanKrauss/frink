@@ -18,15 +18,6 @@
 		public function update(\SplSubject $subject)
 		{
 			$data = $subject->getAllData();
-			$this->setAllData($data)->notify();
+			$this->setAllData($data)->control();
 		}
-
-		/**
-		 * mache irgend etwas
-		 */
-		protected function notify()
-		{
-			$test = 123;
-		}
-
 	}
