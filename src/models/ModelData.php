@@ -1,6 +1,7 @@
 <?php
 
 namespace models;
+use \tools\frinkError;
 
 /**
 * Erweiterung der Model. Organisiert die Datenhaltung und die Verwendung als Subject oder Observer
@@ -17,58 +18,19 @@ namespace models;
 
 class ModelData implements \ArrayAccess
 {
+    use \traits\arrayAccess;
+    
     public $data = [];
     protected $pimple;
 
-    public function __construct($pimple)
+    /**
+     * ModelData constructor.
+     *
+     * @param $pimple
+     */
+    public function __construct(\Pimple\Container $pimple)
     {
         $this->pimple = $pimple;
-    }
-
-    /**
-     * existiert die Variable in data[] ?
-     *
-     * @param mixed $offset
-     * @return bool
-     */
-    public function offsetExists($offset)
-    {
-        if($this->data[$offset] === NULL)
-            return false;
-        else
-            return true;
-    }
-
-    /**
-     * @param mixed $offset
-     * @return bool|mixed
-     */
-    public function offsetGet($offset)
-    {
-        if($this->offsetExists($offset))
-            return $this->data[$offset];
-        else
-            return false;
-    }
-
-    /**
-     * @param mixed $offset
-     * @param mixed $value
-     * @return ModelData
-     */
-    public function offsetSet($offset, $value)
-    {
-        $this->data[$offset] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param mixed $offset
-     */
-    public function offsetUnset($offset)
-    {
-        unset($this->data[$offset]);
     }
 
     /**
@@ -86,18 +48,6 @@ class ModelData implements \ArrayAccess
     public function setAllData(array $data)
     {
         $this->data = $data;
-
-        return $this;
-    }
-
-    /**
-     * Methode für das Observer Pattern
-     *
-     * @return ModelData
-     */
-    public function notify()
-    {
-        $test = 123;
 
         return $this;
     }

@@ -66,7 +66,7 @@ class splObserver extends main
         }
     }
 
-    public function subjectObject()
+    public function subjectObserver()
     {
         try{
             // Test - Objekte erstellen
