@@ -5,18 +5,20 @@ namespace controller;
 use tools\frinkError;
 
 /**
- * Test der Creational / Erzeugungs Pattern
+ * Test der Creational / Erzeugungs Pattern mit Traits
  *
- * + Singleton
- * + Factory
+ * + Singleton Trait
+ * + Multiton Trait
+ * + Factory Trait
+ * + Prototype Trait
  *
  * @author Stephan Krauß
  * @copyright Stephan Krauss
  * @lisence Stephan Krauß
- * @date 22.06.2016
+ * @date 17.06.2016
  * @package controller
  */
-class creationalPattern extends main
+class splObjectStorage extends main
 {
     /**
      * erweitern Pimple um spezielle Model und Tools
@@ -34,10 +36,7 @@ class creationalPattern extends main
             'blub' => function ($pimple) {
                 return new \models\modelBlub($pimple);
             },
-            'modelSingletonBasis' => function($pimple){
-                return new \models\modelBasis($pimple);
-            },
-            'modelSingletonFactory' => function($pimple)
+            'modelFactory' => function($pimple)
             {
                 return new \models\modelBasis($pimple);
             }
@@ -46,8 +45,6 @@ class creationalPattern extends main
         parent::pimple($models);
 
         parent::__construct($controllerName, $actionName);
-
-
     }
 
     /**
@@ -77,49 +74,48 @@ class creationalPattern extends main
     }
 
     /**
-     * Verwenden eines Standard Model aus dem DIC als Singleton.
+     * Test des SPL Object Storage
      *
      * + Pimple verwendet jedes Objekt als Singleton
      *
      * @throws \Exception
      * @throws frinkError
      */
-    public function singletonPattern()
+    public function objectStorage()
     {
         try {
-            /** @var $modelBasis1 \models\modelBasis */
-            $modelSingletonBasis1 = $this->pimple['modelSingletonBasis'];
-            $modelSingletonBasis1['bla'] = 'bla';
-            $modelSingletonBasis1['blub'] = 'blub';
+            $objStorage = new \SplObjectStorage();
 
-            $modelSingletonBasis2 = $this->pimple['modelSingletonBasis'];
+            /** @var $obj1 \models\modelBasis */
+            $obj1 = clone $this->pimple['modelFactory'];
+            $obj1['wert1'] = '1-111';
+            $obj1['wert2'] = '1-222';
+            $obj1['wert3'] = '1-333';
+            $test = $obj1->foo();
 
-            // Übergabe an die View
-            $this->template();
-        } // eigene Exception
-        catch (\tools\frinkError $e) {
-            throw $e;
-        } // Exception anderer Klassen
-        catch (\Exception $e) {
-            throw $e;
-        }
-    }
+            $objStorage->attach($obj1);
 
-    /**
-     * Verwenden des Pimple DIC als Factory Pattern
-     *
-     * @throws \Exception
-     * @throws frinkError
-     */
-    public function factoryPattern()
-    {
-        try {
-            /** @var $modelBasisSingleton \models\modelBasis */
-            $modelSingletonFactory1 = clone $this->pimple['modelSingletonFactory'];
-            $modelSingletonFactory1['bla'] = 'bla';
-            $modelSingletonFactory1['blub'] = 'blub';
+            $obj2 = clone $this->pimple['modelFactory'];
+            $obj2['wert1'] = '2-111';
+            $obj2['wert2'] = '2-222';
+            $obj2['wert3'] = '2-333';
 
-            $modelSingletonFactory2 = clone $this->pimple['modelSingletonFactory'];
+            $objStorage->attach($obj2);
+
+            $obj3 = clone $this->pimple['modelFactory'];
+            $obj3['wert1'] = '3-111';
+            $obj3['wert2'] = '3-222';
+            $obj3['wert3'] = '3-333';
+
+            $objStorage->attach($obj3);
+
+            $objStorage->detach($obj2);
+
+            var_dump($objStorage->contains($obj1));
+            var_dump($objStorage->contains($obj2));
+            var_dump($objStorage->contains($obj3));
+
+            var_dump($objStorage);
 
             // Übergabe an die View
             $this->template();
