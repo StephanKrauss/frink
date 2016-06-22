@@ -14,7 +14,7 @@ use \traits\SingletonTrait;
 * @package models
 */
 
-class modelBasisSingleton
+class modelBasisSingleton extends \models\modelBasis
 {
     use \traits\SingletonTrait;
 }

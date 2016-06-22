@@ -28,20 +28,22 @@ class creationalPattern extends main
         // Vorbereitung des Pimple Container
         $models = [
             'basis' => function ($pimple) {
-                unset($pimple['basis']);
                 return new \models\modelBasis($pimple);
             },
             'bla' => function ($pimple) {
-                unset($pimple['bla']);
                 return new \models\modelBla($pimple);
             },
             'blub' => function ($pimple) {
-                unset($pimple['blub']);
                 return new \models\modelBlub($pimple);
             },
-            'basisSingleton' => function($pimple){
-                unset($pimple['basisSingleton']);
-                return \models\modelBasisSingleton::getInstance($pimple);
+            'modelSingletonBasis' => function($pimple){
+                return new \models\modelBasis($pimple);
+            },
+            'modelSingletonFactory' => function($pimple)
+            {
+                $pimple->factory(function($pimple){
+                    return new \models\modelBasis($pimple);
+                });
             }
         ];
 
@@ -79,7 +81,9 @@ class creationalPattern extends main
     }
 
     /**
-     * Verwenden eines Standard Model als Singleton
+     * Verwenden eines Standard Model aus dem DIC als Singleton.
+     *
+     * + Pimple verwendet jedes Objekt als Singleton
      *
      * @throws \Exception
      * @throws frinkError
@@ -87,7 +91,39 @@ class creationalPattern extends main
     public function singletonPattern()
     {
         try {
-            $modelBasisSingleton = $this->pimple['basisSingleton'];
+            /** @var $modelBasis1 \models\modelBasis */
+            $modelSingletonBasis1 = $this->pimple['modelSingletonBasis'];
+            $modelSingletonBasis1['bla'] = 'bla';
+            $modelSingletonBasis1['blub'] = 'blub';
+
+            $modelSingletonBasis2 = $this->pimple['modelSingletonBasis'];
+
+            // Übergabe an die View
+            $this->template();
+        } // eigene Exception
+        catch (\tools\frinkError $e) {
+            throw $e;
+        } // Exception anderer Klassen
+        catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    /**
+     * Verwenden des Pimple DIC als Factory Pattern
+     *
+     * @throws \Exception
+     * @throws frinkError
+     */
+    public function factoryPattern()
+    {
+        try {
+            /** @var $modelBasisSingleton \models\modelBasis */
+            $modelSingletonFactory1 = $this->pimple['modelSingletonFactory'];
+            $modelSingletonFactory1['bla'] = 'bla';
+            $modelSingletonFactory1['blub'] = 'blub';
+
+            $modelSingletonFactory2 = $this->pimple['modelSingletonFactory'];
 
             // Übergabe an die View
             $this->template();

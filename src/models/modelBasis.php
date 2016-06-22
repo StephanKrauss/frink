@@ -12,6 +12,15 @@
 	 */
 	class modelBasis extends \models\ModelData
 	{
+		/**
+		 * Test Funktion foo()
+		 *
+		 * @return string
+		 */
+		public function foo()
+		{
+			return 'foo';
+		}
 		
 
 	} // end class
