@@ -76,7 +76,7 @@ class main
      */
     protected function pimple($values = array())
     {
-        // Datenbanken aus Bootstrap
+        // Datenbanken in Pimple übernehmen aus bootstrap.php
         $defaults = array(
             'notNoSql' => \Flight::get('notnosql'),
             'sparrow' => \Flight::get('sparrow'),
