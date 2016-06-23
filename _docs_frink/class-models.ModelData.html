@@ -65,7 +65,13 @@
 				<li><a href="class-models.extendsSplSubject.html">extendsSplSubject</a></li>
 				<li><a href="class-models.iniparser.html">iniparser</a></li>
 				<li><a href="class-models.model.html">model</a></li>
+				<li><a href="class-models.modelBasis.html">modelBasis</a></li>
+				<li><a href="class-models.modelBasis1.html">modelBasis1</a></li>
+				<li><a href="class-models.modelBasisSingleton.html">modelBasisSingleton</a></li>
 				<li class="active"><a href="class-models.ModelData.html">ModelData</a></li>
+				<li><a href="class-models.modelObserver1.html">modelObserver1</a></li>
+				<li><a href="class-models.modelObserver2.html">modelObserver2</a></li>
+				<li><a href="class-models.modelSubject.html">modelSubject</a></li>
 				<li><a href="class-models.myCalc.html">myCalc</a></li>
 				<li><a href="class-models.notNoSql.html">notNoSql</a></li>
 				<li><a href="class-models.plugins.html">plugins</a></li>
@@ -127,7 +133,7 @@
 	<p>Erweiterung der Model. Organisiert die Datenhaltung und die Verwendung als Subject oder Observer</p>
 
 <ul>
-<li>Methode <strong>notify()</strong> in das allgemeine Model</li>
+<li>Methode <strong>notify()</strong> in das allgemeine Model übernehmen</li>
 </ul>
 	</div>
 
@@ -137,6 +143,8 @@
 			 implements 
 <span>ArrayAccess</span>
 			
+			 uses 
+					<a href="class-traits.arrayAccess.html"><span>traits\arrayAccess</span></a>
 			
 		</dd>
 	</dl>
@@ -144,9 +152,18 @@
 
 	<div>
 		<h4>Direct known subclasses</h4>
-			<a href="class-models.BenutzerDaten.html">models\BenutzerDaten</a>
+			<a href="class-models.BenutzerDaten.html">models\BenutzerDaten</a>, 
+			<a href="class-models.modelBasis.html">models\modelBasis</a>, 
+			<a href="class-models.modelBasis1.html">models\modelBasis1</a>
 	</div>
 
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-models.modelBasisSingleton.html">models\modelBasisSingleton</a>, 
+			<a href="class-models.modelObserver1.html">models\modelObserver1</a>, 
+			<a href="class-models.modelObserver2.html">models\modelObserver2</a>, 
+			<a href="class-models.modelSubject.html">models\modelSubject</a>
+	</div>
 
 
 
@@ -166,7 +183,7 @@
 				17.06.2016<br>
 				<b>Lisence:</b>
 				Stephan Krauß<br>
-			<b>Located at</b> <a href="source-class-models.ModelData.html#6-98" title="Go to source code">models/ModelData.php</a>
+			<b>Located at</b> <a href="source-class-models.ModelData.html#7-54" title="Go to source code">models/ModelData.php</a>
 		<br>
 	</div>
 
@@ -186,178 +203,26 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-models.ModelData.html#23-26" title="Go to source code">__construct</a>( <span> <var>$pimple</var></span> )</code>
+		<code><a href="source-class-models.ModelData.html#26-34" title="Go to source code">__construct</a>( <span>Pimple\Container <var>$pimple</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>ModelData constructor.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="offsetExists" id="_offsetExists">
-
-		<td class="attributes"><code>
-			 public 
-
-			boolean
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_offsetExists">#</a>
-		<code><a href="source-class-models.ModelData.html#28-40" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
-
-		<div class="description short">
-			<p>existiert die Variable in data[] ?</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>existiert die Variable in data[] ?</p>
+			<p>ModelData constructor.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$offset</var></dt>
+					<dt><var>$pimple</var></dt>
 					<dd></dd>
 				</dl></div>
 
-				<h4>Returns</h4>
-				<div class="list">
-					boolean
-				</div>
 
 
 
 
-				<h4>Implementation of</h4>
-				<div class="list"><code>ArrayAccess::offsetExists()</code></div>
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="offsetGet" id="_offsetGet">
-
-		<td class="attributes"><code>
-			 public 
-
-			boolean|mixed
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_offsetGet">#</a>
-		<code><a href="source-class-models.ModelData.html#42-52" title="Go to source code">offsetGet</a>( <span>mixed <var>$offset</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$offset</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					boolean|mixed
-				</div>
-
-
-
-
-				<h4>Implementation of</h4>
-				<div class="list"><code>ArrayAccess::offsetGet()</code></div>
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="offsetSet" id="_offsetSet">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_offsetSet">#</a>
-		<code><a href="source-class-models.ModelData.html#54-64" title="Go to source code">offsetSet</a>( <span>mixed <var>$offset</var></span>, <span>mixed <var>$value</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$offset</var></dt>
-					<dd></dd>
-					<dt><var>$value</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					
-				</div>
-
-
-
-
-				<h4>Implementation of</h4>
-				<div class="list"><code>ArrayAccess::offsetSet()</code></div>
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="offsetUnset" id="_offsetUnset">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_offsetUnset">#</a>
-		<code><a href="source-class-models.ModelData.html#66-69" title="Go to source code">offsetUnset</a>( <span> <var>$offset</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-				<h4>Implementation of</h4>
-				<div class="list"><code>ArrayAccess::offsetUnset()</code></div>
 		</div>
 		</div></td>
 	</tr>
@@ -366,14 +231,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			array
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getAllData">#</a>
-		<code><a href="source-class-models.ModelData.html#71-74" title="Go to source code">getAllData</a>( )</code>
+		<code><a href="source-class-models.ModelData.html#36-42" title="Go to source code">getAllData</a>( )</code>
 
 		<div class="description short">
 			
@@ -384,6 +249,10 @@
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
 
 
 
@@ -396,14 +265,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			basis
+			<code><a href="class-models.ModelData.html">models\ModelData</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setAllData">#</a>
-		<code><a href="source-class-models.ModelData.html#76-85" title="Go to source code">setAllData</a>( <span>array <var>$data</var></span> )</code>
+		<code><a href="source-class-models.ModelData.html#44-53" title="Go to source code">setAllData</a>( <span>array <var>$data</var></span> )</code>
 
 		<div class="description short">
 			
@@ -421,41 +290,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					basis
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="notify" id="_notify">
-
-		<td class="attributes"><code>
-			 public 
-
-			basis
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_notify">#</a>
-		<code><a href="source-class-models.ModelData.html#87-97" title="Go to source code">notify</a>( )</code>
-
-		<div class="description short">
-			<p>Methode für das Observer Pattern</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Methode für das Observer Pattern</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					basis
+					<code><a href="class-models.ModelData.html">models\ModelData</a></code>
 				</div>
 
 
@@ -466,7 +301,29 @@
 	</tr>
 	</table>
 
+	<table class="summary inherited">
+	<caption>Methods inherited from ArrayAccess</caption>
+	<tr>
+		<td><code>
+offsetExists(), 
+offsetGet(), 
+offsetSet(), 
+offsetUnset()
+		</code></td>
+	</tr>
+	</table>
 
+	<table class="summary used">
+	<caption>Methods used from <a href="class-traits.arrayAccess.html#methods">traits\arrayAccess</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-traits.arrayAccess.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-traits.arrayAccess.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-traits.arrayAccess.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-traits.arrayAccess.html#_offsetUnset">offsetUnset()</a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -486,7 +343,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-models.ModelData.html#20" title="Go to source code"><var>$data</var></a>
+				<a href="source-class-models.ModelData.html#23" title="Go to source code"><var>$data</var></a>
 
 			<div class="description short">
 				
@@ -511,7 +368,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-models.ModelData.html#21" title="Go to source code"><var>$pimple</var></a>
+				<a href="source-class-models.ModelData.html#24" title="Go to source code"><var>$pimple</var></a>
 
 			<div class="description short">
 				

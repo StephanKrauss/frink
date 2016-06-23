@@ -60,6 +60,7 @@
 				<li><a href="class-controller.basics.html">basics</a></li>
 				<li><a href="class-controller.bla.html">bla</a></li>
 				<li><a href="class-controller.classExtends.html">classExtends</a></li>
+				<li><a href="class-controller.creationalPattern.html">creationalPattern</a></li>
 				<li><a href="class-controller.error.html">error</a></li>
 				<li><a href="class-controller.exception.html">exception</a></li>
 				<li><a href="class-controller.iniparser.html">iniparser</a></li>
@@ -69,7 +70,9 @@
 				<li><a href="class-controller.pimple.html">pimple</a></li>
 				<li><a href="class-controller.redbean.html">redbean</a></li>
 				<li><a href="class-controller.session.html">session</a></li>
+				<li><a href="class-controller.splObjectStorage.html">splObjectStorage</a></li>
 				<li><a href="class-controller.splObserver.html">splObserver</a></li>
+				<li><a href="class-controller.splObserver1.html">splObserver1</a></li>
 				<li><a href="class-controller.spot.html">spot</a></li>
 				<li><a href="class-controller.spot1.html">spot1</a></li>
 				<li><a href="class-controller.start.html">start</a></li>
@@ -126,21 +129,24 @@
 		<h4>Direct known subclasses</h4>
 			<a href="class-controller.basics.html">controller\basics</a>, 
 			<a href="class-controller.bla.html">controller\bla</a>, 
+			<a href="class-controller.redbean.html">controller\redbean</a>, 
 			<a href="class-controller.session.html">controller\session</a>, 
+			<a href="class-controller.splObjectStorage.html">controller\splObjectStorage</a>, 
 			<a href="class-controller.splObserver.html">controller\splObserver</a>, 
+			<a href="class-controller.splObserver1.html">controller\splObserver1</a>, 
 			<a href="class-controller.spot.html">controller\spot</a>, 
 			<a href="class-controller.spot1.html">controller\spot1</a>, 
 			<a href="class-controller.start.html">controller\start</a>, 
 			<a href="class-controller.testify.html">controller\testify</a>, 
 			<a href="class-controller.validator.html">controller\validator</a>, 
 			<a href="class-controller.classExtends.html">controller\classExtends</a>, 
+			<a href="class-controller.creationalPattern.html">controller\creationalPattern</a>, 
 			<a href="class-controller.error.html">controller\error</a>, 
 			<a href="class-controller.exception.html">controller\exception</a>, 
 			<a href="class-controller.iniparser.html">controller\iniparser</a>, 
 			<a href="class-controller.mail.html">controller\mail</a>, 
 			<a href="class-controller.PhpMd.html">controller\PhpMd</a>, 
-			<a href="class-controller.pimple.html">controller\pimple</a>, 
-			<a href="class-controller.redbean.html">controller\redbean</a>
+			<a href="class-controller.pimple.html">controller\pimple</a>
 	</div>
 
 
@@ -158,7 +164,7 @@
 				Stephan.Krauss<br>
 				<b>Date:</b>
 				21.04.2016<br>
-			<b>Located at</b> <a href="source-class-controller.main.html#9-145" title="Go to source code">controller/main.php</a>
+			<b>Located at</b> <a href="source-class-controller.main.html#9-149" title="Go to source code">controller/main.php</a>
 		<br>
 	</div>
 
@@ -250,7 +256,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_pimple">#</a>
-		<code><a href="source-class-controller.main.html#72-89" title="Go to source code">pimple</a>( <span>array <var>$values</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-controller.main.html#72-93" title="Go to source code">pimple</a>( <span>array <var>$values</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			<p>Übernimmt die benötigten Model / Tool der Klasse sowie der Standardklassen</p>
@@ -285,7 +291,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setData">#</a>
-		<code><a href="source-class-controller.main.html#91-109" title="Go to source code">setData</a>( <span>array <var>$data</var></span> )</code>
+		<code><a href="source-class-controller.main.html#95-113" title="Go to source code">setData</a>( <span>array <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Übernimmt die Parameter des Aufruf</p>
@@ -328,7 +334,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-controller.main.html#111-116" title="Go to source code">__call</a>( <span> <var>$actionName</var></span>, <span> <var>$params</var></span> )</code>
+		<code><a href="source-class-controller.main.html#115-120" title="Go to source code">__call</a>( <span> <var>$actionName</var></span>, <span> <var>$params</var></span> )</code>
 
 		<div class="description short">
 			
@@ -358,7 +364,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sendLoggerMessage">#</a>
-		<code><a href="source-class-controller.main.html#118-134" title="Go to source code">sendLoggerMessage</a>( <span> <var>$message</var></span> )</code>
+		<code><a href="source-class-controller.main.html#122-138" title="Go to source code">sendLoggerMessage</a>( <span> <var>$message</var></span> )</code>
 
 		<div class="description short">
 			<p>Dummy Funktion zum senden einer Message</p>
@@ -393,7 +399,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_startRedbean">#</a>
-		<code><a href="source-class-controller.main.html#136-144" title="Go to source code">startRedbean</a>( )</code>
+		<code><a href="source-class-controller.main.html#140-148" title="Go to source code">startRedbean</a>( )</code>
 
 		<div class="description short">
 			<p>Start Redbean ORM</p>
