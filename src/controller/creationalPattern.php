@@ -19,11 +19,11 @@ use tools\frinkError;
 class creationalPattern extends main
 {
     /**
-     * erweitern Pimple um spezielle Model und Tools
+     * erweitern Pimple um spezielle Model und Params
      */
     public function __construct($controllerName, $actionName)
     {
-        // Vorbereitung des Pimple Container
+        // Vorbereitung des Pimple Container, Singleton Pattern
         $models = [
             'basis' => function ($pimple) {
                 return new \models\modelBasis($pimple);
@@ -34,20 +34,21 @@ class creationalPattern extends main
             'blub' => function ($pimple) {
                 return new \models\modelBlub($pimple);
             },
-            'modelSingletonBasis' => function($pimple){
+            'modelSingletonBasis' => function ($pimple) {
                 return new \models\modelBasis($pimple);
             },
-            'modelSingletonFactory' => function($pimple)
-            {
-                return new \models\modelBasis($pimple);
-            }
+            'param1' => 'param1',
+            'param2' => 'param2'
         ];
 
         parent::pimple($models);
 
+        // Factory Pattern
+        $this->pimple['modelFactoryBasis'] = $this->pimple->factory(function ($pimple) {
+            return new \models\modelBasis($pimple);
+        });
+
         parent::__construct($controllerName, $actionName);
-
-
     }
 
     /**
@@ -114,12 +115,15 @@ class creationalPattern extends main
     public function factoryPattern()
     {
         try {
-            /** @var $modelBasisSingleton \models\modelBasis */
-            $modelSingletonFactory1 = clone $this->pimple['modelSingletonFactory'];
-            $modelSingletonFactory1['bla'] = 'bla';
-            $modelSingletonFactory1['blub'] = 'blub';
+            /** @var $modelBasisFactory1 \models\modelBasis */
+            $modelBasisFactory1 = $this->pimple['modelFactoryBasis'];
+            $modelBasisFactory1['bla'] = 'bla-1';
+            $modelBasisFactory1['blub'] = 'blub-1';
 
-            $modelSingletonFactory2 = clone $this->pimple['modelSingletonFactory'];
+            /** @var $modelBasisFactory2 \models\modelBasis */
+            $modelBasisFactory2 = $this->pimple['modelFactoryBasis'];
+            $modelBasisFactory2['bla'] = 'bla-2';
+            $modelBasisFactory2['blub'] = 'blub-2';
 
             // Übergabe an die View
             $this->template();
