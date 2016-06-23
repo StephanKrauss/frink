@@ -80,7 +80,11 @@ class main
         $defaults = array(
             'notNoSql' => \Flight::get('notnosql'),
             'sparrow' => \Flight::get('sparrow'),
-            'predis' => \Flight::get('predis')
+            'predis' => \Flight::get('predis'),
+            'notNoSql' => \Flight::get('notNoSql'),
+            'pdo' => \Flight::get('pdo'),
+            'redbean' => \Flight::get('redbean'),
+            'spot' => \Flight::get('spot')
         );
 
         $this->pimple = new Container(array_merge($defaults, $values));

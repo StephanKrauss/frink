@@ -42,7 +42,7 @@ class verbindungen
 
         // $redbean = R::getToolBox();
 
-        // Konfiguration ORM
+        // Konfiguration ORM Spot2
         $configSpot = new \Spot\Config();
         $configSpot->addConnection('mysql','mysql://'.$zugangswerte['username'].':'.$zugangswerte['password'].'@localhost/'.$zugangswerte['database']);
 
