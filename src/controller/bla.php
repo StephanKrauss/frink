@@ -1,12 +1,4 @@
 <?php
-/**
-* Bal Blub
-*
-* @author Stephan Krauß , 21.34.2016
-* @copyright Stephan Krauss
-*
-* @subpackage controller | model | tool | trait
-*/
 
 namespace controller;
 

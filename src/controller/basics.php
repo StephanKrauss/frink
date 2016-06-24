@@ -1,12 +1,4 @@
 <?php
-/**
-* Bal Blub
-*
-* @author Stephan Krauß , 21.34.2016
-* @copyright Stephan Krauss
-*
-* @subpackage controller | model | tool | trait
-*/
 
 namespace controller;
 
@@ -42,6 +34,11 @@ class basics extends main
         }
     }
 
+    /**
+     * Test der Closure in Php
+     *
+     * @throws \Exception
+     */
     public function testClosure()
     {
         try{
@@ -72,6 +69,11 @@ class basics extends main
         }
     }
 
+    /**
+     * Test der anonymen Functionen in Php
+     *
+     * @throws \Exception
+     */
     public function testAnonyme()
     {
         try{
@@ -93,6 +95,11 @@ class basics extends main
         }
     }
 
+    /**
+     * setzen von Parametern
+     *
+     * @throws \Exception
+     */
     public function testGetSet()
     {
         try{
@@ -116,6 +123,11 @@ class basics extends main
         }
     }
 
+    /**
+     * Übergabe eines Array an Twig
+     *
+     * @throws \Exception
+     */
     public function testArray()
     {
         try{
@@ -139,5 +151,4 @@ class basics extends main
             throw $e;
         }
     }
-    
 }

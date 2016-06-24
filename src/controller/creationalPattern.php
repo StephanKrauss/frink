@@ -5,7 +5,7 @@ namespace controller;
 use tools\frinkError;
 
 /**
- * Test der Creational / Erzeugungs Pattern
+ * Test der Erzeugungs Pattern unter Nutzung des DI Container Pimple
  *
  * + Singleton
  * + Factory
