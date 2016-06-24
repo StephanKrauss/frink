@@ -75,9 +75,9 @@
 
 ### zu erledigen:
 
-+ Vers. 0.8:
++ Vers. 0.9:
     + Gestaltung von Beispielsseiten mit einem Bootstrap 3 Templat
     	+ Vorlage: SB2 Admin , Bootstrap
 
-+ Vers. 0.9:
++ Vers. 1.0:
 	+ Erstellen der Videotutorials zu **Frink2**
