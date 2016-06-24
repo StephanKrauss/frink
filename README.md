@@ -1,9 +1,9 @@
-# minimalistisches componentenbasiertes Framework
+# minimalistisches componentenbasiertes Framework *'Frink2'*
 ( für die schnelle Entwicklung von Administrations Systemen )
 
 ## Professor John Nerdelbaum Frink, Jr.
 
-
+<img src='http://test.stephankrauss.de/frink_mini.jpg'>
 
 ### Credits:
 
