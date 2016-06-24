@@ -1,18 +1,19 @@
 # minimalistisches componentenbasiertes Framework
-( für die schnelle Entwicklung von Administrationssystemen )
+( für die schnelle Entwicklung von Administrations Systemen )
 
 ## Professor John Nerdelbaum Frink, Jr.
 
+
+
 ### Credits:
 
-+ Flight: mikecao/flight ( MIT )
-+ Twig: twigphp/Twig ( BSD )
-+ <s>Sparrow: mikecao/sparrow ( MIT )</s>
-+ Doctrine: doctrine/doctrine2 ( Doctrine Project )
-+ Underscore: Im0rtality/Underscore ( free )
-+ Predis: nrk/predis ( free )
++ Flight: mikecao/flight ( MIT ) , Basis des Framework
++ Twig: twigphp/Twig ( BSD ) , Template Engine
++ Sparrow: mikecao/sparrow ( MIT ) , simples ORM , Active Record
++ Spot2: vlucas/Spot ( Doctrine Project ) , ORM auf Basis Doctrine DBAL
++ Underscore: Im0rtality/Underscore ( free ) , Php Klone des Javascript Framework
++ Predis: nrk/predis ( free ) , NoSQL Datenbank
 + <s>Testify: marco-fiset/Testify ( GPL )</s>
-+ Firelogger: binaryage/firelogger ( ??? )
 + PhpUnit: phpunit/phpunit ( Creative Commons Attribution 3.0 )
 
 ### erledigt: 
@@ -23,31 +24,33 @@
 
 + Vers. 0.2:
     + einbau NoSQL Redis Client , Predis
-    	+ Redis to Go
+    	+ Test Provider: Redis to Go
 
 + Vers. 0.3:
     + entwickeln Error Controller und Fehlerverhalten festlegen
     	+ registrieren
     	+ korrigieren
     	+ blockieren
-    + darstellen der Fehler im 'Developer - Modus' mittels Firefox / Firelogger
-
-### zu erledigen:
 
 + Vers. 0.4:
 	+ Logsystem
 		+ Registrierung Log Meldungen in einer Datenbank
 
 + Vers. 0.5:
-	+ PhpUnit
+	+ Übernahme des ORM Spot2
 
 + Vers. 0.6:
-	+ Übernahme des Doctrine ORM
+    + einbau Plugins und Filter in den Systemstart
+    	+
 
 + Vers. 0.7:
-    + einbau Plugins und Filter in den Systemstart
-    	+  IDS for PHP
+	+ Übernahme Mailsystem 
+
+### zu erledigen:
 
 + Vers. 0.8:
     + Gestaltung von Beispielsseiten mit einem Bootstrap Templat
     	+ SB Admin 2
+
++ Vers. 0.9:
+	+ Erstellen der Videotutorials zu Frink 2
