@@ -63,6 +63,16 @@
 + Vers. 0.7:
 	+ Übernahme Mailsystem 
 
++ Vers. 0.8
+	+ Verwendung des DI Container Pimple für die Design Pattern
+		+ Singleton
+		+ Factory
+		+ Prototype
+		+ Observer
+	+ Entwicklung Standard Model 
+		+ Übergabe Werte Spot2
+		+ Verwendung SPL Array Access   
+
 ### zu erledigen:
 
 + Vers. 0.8:
