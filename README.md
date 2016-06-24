@@ -11,6 +11,7 @@
 + Twig: twigphp/Twig ( BSD ) , Template Engine
 + Sparrow: mikecao/sparrow ( MIT ) , simples ORM , Active Record
 + Spot2: vlucas/Spot ( Doctrine Project ) , ORM auf Basis Doctrine DBAL
++ <s>Redbean: gabordemooij/redbean ( NEW BSD ) </s> , geht gar nicht 
 + Underscore: Im0rtality/Underscore ( free ) , Php Klone des Javascript Framework
 + Predis: nrk/predis ( free ) , NoSQL Datenbank
 + <s>Testify: marco-fiset/Testify ( GPL )</s> , sehr einfaches Testframework , hat leider keinen *'Runner'*
@@ -56,6 +57,10 @@
 
 + Vers. 0.5:
 	+ Übernahme des ORM Spot2
+		+ Mapper je Tabelle / View
+		+ Generieren von Tabellen aus der Entity
+		+ eigene Methoden im Mapper
+		+ Verwendung von Scopes 
 
 + Vers. 0.6:
     + einbau Plugins und Filter in den Systemstart und in der Parameterkontrolle im Controller    	
