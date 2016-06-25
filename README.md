@@ -20,7 +20,7 @@
 + Validator: Wixel/GUMP ( MIT ) , Klasse zur Validierung und Filterung der Parameter
 + Template Bootstrap 3: [Vorlagen , SB Admin 2](http://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html)
 
-### Dokumemtation und Erläuterung:
+### Dokumentation und Handzettel:
 
 + /_apache , anlegen des virtual Host im Apache
 + /_datenbank , Struktur ( SQLYog ) und SQL Dump
