@@ -12,7 +12,7 @@ use tools\frinkError;
  * @author Stephan Krauß
  * @copyright Stephan Krauss
  * @lisence Stephan Krauß
- * @date 22.06.2016
+ * @date 26.06.2016
  * @package controller
  */
 class creationalPattern1 extends main
@@ -88,13 +88,40 @@ class creationalPattern1 extends main
     {
         try {
 
+
+            // anlegen des Model Car als Factory Pattern, kann im __construct() erfolgen
             $pimple = new \Pimple\Container();
-            $pimple['prototype'] = $this->pimple->factory(function ($pimple) {
+            $pimple['car'] = $this->pimple->factory(function ($pimple) {
                 return new \models\Car($pimple);
             });
-            
-            
-            
+
+            // abrufen des Model aus dem DI Container Pimple und PhpStorm das Model mitteilen
+
+            /** @var $modelCar \models\Car */
+            $modelCar = $pimple['car'];
+
+            // befüllen des Model mit den Eigenschaften des Prototypes
+            $modelCar['engine'] = 'VW Diesel 2.0';
+            $modelCar['gas'] = 'diesel';
+            $modelCar['color'] = 'blau';
+            $modelCar['logo'] = 'Fußball-EM 2016';
+
+            // überprüfen des Prototype
+            // var_dump($modelCar->getAllData());
+
+            // ergibt folgendes Ergebnis
+            // array (size=4)
+              // 'engine' => string 'VW Diesel 2.0' (length=13)
+              // 'gas' => string 'diesel' (length=6)
+              // 'color' => string 'blau' (length=4)
+              // 'logo' => string 'Fussball 2016' (length=13)
+
+            // erstellen einer Kleinserie aus dem Prototype und abstellen der produzierten Fahrzeuge
+            $parkplatz = [];
+
+            for($i=1; $i < 10; $i++) {
+                $parkplatz[$i] = clone $modelCar;
+            }
 
             // Übergabe an die View
             $this->template();
