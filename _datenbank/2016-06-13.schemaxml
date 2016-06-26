@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="latin1" collation="latin1_swedish_ci">test</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="artikel" view="colnames">
+<left>194</left>
+<top>703</top>
+<width>158</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `artikel` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `artikelbeschreibung` int(11) NOT NULL,
+  `erstelltAm` datetime DEFAULT CURRENT_TIMESTAMP,
+  `erstelltDurch` int(5) NOT NULL,
+  `geaendertAm` datetime DEFAULT NULL,
+  `geaendertDurch` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="benutzer" view="colnames">
+<left>268</left>
+<top>189</top>
+<width>97</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `benutzer` (
+  `id` mediumint(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `vorname` varchar(100) NOT NULL,
+  `passwort` varchar(250) NOT NULL,
+  `rolle` tinyint(3) DEFAULT NULL,
+  `email` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `rolle` (`rolle`),
+  CONSTRAINT `benutzer_ibfk_1` FOREIGN KEY (`rolle`) REFERENCES `rollen` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="exception" view="colnames">
+<left>293</left>
+<top>423</top>
+<width>97</width>
+<height>192</height>
+<sql_create_table>CREATE TABLE `exception` (
+  `id` mediumint(5) NOT NULL AUTO_INCREMENT,
+  `message` varchar(250) NOT NULL,
+  `code` mediumint(5) NOT NULL,
+  `file` varchar(250) NOT NULL,
+  `line` mediumint(5) NOT NULL,
+  `trace` text NOT NULL,
+  `session` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="rollen" view="colnames">
+<left>428</left>
+<top>43</top>
+<width>117</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `rollen` (
+  `id` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `bezeichnung` varchar(250) NOT NULL COMMENT 'Name der Rolle',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="navigation" view="colnames">
+<left>607</left>
+<top>224</top>
+<width>88</width>
+<height>124</height>
+<sql_create_table>CREATE TABLE `navigation` (
+  `id` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL COMMENT 'Name des Controller für die Navigation',
+  `rolle_id` tinyint(3) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `rolle_id` (`rolle_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="users_sessions" view="colnames">
+<left>433</left>
+<top>418</top>
+<width>105</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `users_sessions` (
+  `id` varchar(32) NOT NULL DEFAULT '',
+  `fingerprint` varchar(100) DEFAULT NULL,
+  `data` text,
+  `access` int(32) NOT NULL DEFAULT '0',
+  `date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="comments" view="colnames">
+<left>197</left>
+<top>965</top>
+<width>78</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `comments` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="posts" view="colnames">
+<left>312</left>
+<top>962</top>
+<width>114</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `posts` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `title` varchar(250) NOT NULL,
+  `body` text NOT NULL,
+  `status` int(5) DEFAULT '0',
+  `author_id` int(5) NOT NULL,
+  `date_create` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="tags" view="colnames">
+<left>459</left>
+<top>964</top>
+<width>78</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `tags` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="test" view="colnames">
+<left>454</left>
+<top>715</top>
+<width>100</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `test` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `zahl` int(5) DEFAULT NULL,
+  `author_id` tinyint(3) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `test_ibfk_1` (`author_id`),
+  CONSTRAINT `test_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="author" view="colnames">
+<left>674</left>
+<top>722</top>
+<width>78</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `author` (
+  `id` tinyint(3) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    DocumentRoot "c:/xampp1/htdocs/frink/public"
+    ServerName www.frink.de
+	DirectoryIndex index.html index.php
+    ErrorLog "c:/xampp1/apache/logs/frink_err.log"
+    CustomLog "c:/xampp1/apache/logs/frink.log" combined
+    <Directory "c:/xampp1/htdocs/frink/public">
+        Options Indexes FollowSymLinks Includes ExecCGI
+    	Order allow,deny
+    	Allow from all
+    	AllowOverride All
+    </Directory>
+</VirtualHost>

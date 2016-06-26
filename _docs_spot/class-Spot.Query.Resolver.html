@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Spot\Query\Resolver | Projekt Spot2</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Spot.html">
+						Spot<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Provider.html">
+						Provider					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Spot.Query.html">
+						Query<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Query.Operator.html">
+						Operator					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Spot.Relation.html">
+						Relation					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Valitron.html">
+						Valitron					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Spot.Query.Resolver.html">Resolver</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Spot.Query.html" title="Summary of Spot\Query"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Resolver</h1>
+
+
+	<div class="description">
+	<p>Main query resolver</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Spot.html">Spot</a>\<a href="namespace-Spot.Query.html">Query</a><br>
+		<b>Package:</b> Spot<br>
+
+				<b>Author:</b>
+				Vance Lucas <a href="&#x6d;&#97;&#105;l&#x74;&#x6f;&#58;v&#x61;&#x6e;&#99;&#101;&#x40;&#x76;&#97;&#110;&#x63;&#x65;&#108;&#117;&#x63;&#x61;&#115;&#46;&#x63;&#x6f;&#109;">v&#x61;&#x6e;&#99;&#101;&#x40;&#x76;&#97;&#110;&#x63;&#x65;&#108;&#117;&#x63;&#x61;&#115;&#46;&#x63;&#x6f;&#109;</a><br>
+			<b>Located at</b> <a href="source-class-Spot.Query.Resolver.html#9-349" title="Go to source code">spot2/lib/Query/Resolver.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#24-32" title="Go to source code">__construct</a>( <span><code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code> <var>$mapper</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor Method</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor Method</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mapper</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="noQuote" id="_noQuote">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_noQuote">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#34-46" title="Go to source code">noQuote</a>( <span>boolean <var>$noQuote</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Set field and value quoting on/off - maily used for testing output SQL
+since quoting is different per platform</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set field and value quoting on/off - maily used for testing output SQL
+since quoting is different per platform</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$noQuote</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="migrate" id="_migrate">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_migrate">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#48-89" title="Go to source code">migrate</a>( )</code>
+
+		<div class="description short">
+			<p>Migrate table structure changes to database</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Migrate table structure changes to database</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Doctrine\DBAL\Schema\SchemaException<br>
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="migrateCreateSchema" id="_migrateCreateSchema">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Schema\Schema
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_migrateCreateSchema">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#91-130" title="Go to source code">migrateCreateSchema</a>( )</code>
+
+		<div class="description short">
+			<p>Migrate create schema</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Migrate create schema</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Schema\Schema
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read" id="_read">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#132-152" title="Go to source code">read</a>( <span><code><a href="class-Spot.Query.html">Spot\Query</a></code> <var>$query</var></span> )</code>
+
+		<div class="description short">
+			<p>Find records with custom SQL query</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find records with custom SQL query</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query</var></dt>
+					<dd>SQL query to execute</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create" id="_create">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#154-164" title="Go to source code">create</a>( <span>string <var>$table</var></span>, <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Create new row object with set properties</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create new row object with set properties</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd>Table name</dd>
+					<dt><var>$data</var></dt>
+					<dd>Array of data to save in 'field' => 'value' format</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#166-179" title="Go to source code">update</a>( <span>string <var>$table</var></span>, <span>array <var>$data</var></span>, <span>array <var>$where</var></span> )</code>
+
+		<div class="description short">
+			<p>Update</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Update</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd>Table name</dd>
+					<dt><var>$data</var></dt>
+					<dd>Array of data for WHERE clause in 'field' => 'value' format</dd>
+					<dt><var>$where</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataWithFieldAliasMappings" id="_dataWithFieldAliasMappings">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dataWithFieldAliasMappings">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#181-193" title="Go to source code">dataWithFieldAliasMappings</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Taken given field name/value inputs and map them to their aliased names</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Taken given field name/value inputs and map them to their aliased names</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exec" id="_exec">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Driver\Statement|integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exec">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#195-205" title="Go to source code">exec</a>( <span><code><a href="class-Spot.Query.html">Spot\Query</a></code> <var>$query</var></span> )</code>
+
+		<div class="description short">
+			<p>Execute provided query and return result</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Execute provided query and return result</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query</var></dt>
+					<dd>SQL query to execute</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Driver\Statement|integer
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="truncate" id="_truncate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_truncate">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#207-235" title="Go to source code">truncate</a>( <span>string <var>$table</var></span>, <span>boolean <var>$cascade</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Truncate Table</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Truncate Table</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd>Table name</dd>
+					<dt><var>$cascade</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dropTable" id="_dropTable">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dropTable">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#237-254" title="Go to source code">dropTable</a>( <span>string <var>$table</var></span> )</code>
+
+		<div class="description short">
+			<p>Drop Table</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Drop Table</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd>Table name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeIdentifier" id="_escapeIdentifier">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeIdentifier">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#256-269" title="Go to source code">escapeIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
+
+		<div class="description short">
+			<p>Escape/quote identifier</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Escape/quote identifier</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$identifier</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trimSchemaName" id="_trimSchemaName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trimSchemaName">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#271-280" title="Go to source code">trimSchemaName</a>( <span>string <var>$identifier</var></span> )</code>
+
+		<div class="description short">
+			<p>Trim a leading schema name separated by a dot if present</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Trim a leading schema name separated by a dot if present</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$identifier</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addForeignKeys" id="_addForeignKeys">
+
+		<td class="attributes"><code>
+			 protected 
+
+			Doctrine\DBAL\Schema\Table
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addForeignKeys">#</a>
+		<code><a href="source-class-Spot.Query.Resolver.html#282-348" title="Go to source code">addForeignKeys</a>( <span>Doctrine\DBAL\Schema\Table <var>$table</var></span> )</code>
+
+		<div class="description short">
+			<p>Add foreign keys from BelongsTo relations to the table schema</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add foreign keys from BelongsTo relations to the table schema</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Schema\Table
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="mapper" id="$mapper">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.Resolver.html#17-20" title="Go to source code"><var>$mapper</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$mapper" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_noQuote" id="$_noQuote">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.Resolver.html#22" title="Go to source code"><var>$_noQuote</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_noQuote" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Spot2 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

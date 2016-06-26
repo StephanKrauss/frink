@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Spot\Query | Projekt Spot2</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Spot.html">
+						Spot<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Provider.html">
+						Provider					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Query.html">
+						Query<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Query.Operator.html">
+						Operator					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Spot.Relation.html">
+						Relation					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Valitron.html">
+						Valitron					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Spot.Config.html">Config</a></li>
+				<li><a href="class-Spot.Entity.html">Entity</a></li>
+				<li><a href="class-Spot.EventEmitter.html">EventEmitter</a></li>
+				<li><a href="class-Spot.Locator.html">Locator</a></li>
+				<li><a href="class-Spot.Mapper.html">Mapper</a></li>
+				<li class="active"><a href="class-Spot.Query.html">Query</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Spot.EntityInterface.html">EntityInterface</a></li>
+				<li><a href="class-Spot.MapperInterface.html">MapperInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Spot.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Spot.html" title="Summary of Spot"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Query</h1>
+
+
+	<div class="description">
+	<p>Query Object - Used to build adapter-independent queries PHP-style</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Spot\Query</span></b>			
+			 implements 
+<span>Countable</span>, 
+			
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>JsonSerializable</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Spot.html">Spot</a><br>
+		<b>Package:</b> Spot<br>
+
+				<b>Author:</b>
+				Vance Lucas <a href="&#x6d;&#97;&#105;l&#x74;&#x6f;&#58;v&#x61;&#x6e;&#99;&#101;&#x40;&#x76;&#97;&#110;&#x63;&#x65;&#108;&#117;&#x63;&#x61;&#115;&#46;&#x63;&#x6f;&#109;">v&#x61;&#x6e;&#99;&#101;&#x40;&#x76;&#97;&#110;&#x63;&#x65;&#108;&#117;&#x63;&#x61;&#115;&#46;&#x63;&#x6f;&#109;</a><br>
+			<b>Located at</b> <a href="source-class-Spot.Query.html#5-809" title="Go to source code">spot2/lib/Query.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Spot.Query.html#96-112" title="Go to source code">__construct</a>( <span><code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code> <var>$mapper</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor Method</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor Method</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mapper</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="builder" id="_builder">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Query\QueryBuilder
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_builder">#</a>
+		<code><a href="source-class-Spot.Query.html#114-122" title="Go to source code">builder</a>( )</code>
+
+		<div class="description short">
+			<p>Get current Doctrine DBAL query builder object</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get current Doctrine DBAL query builder object</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Query\QueryBuilder
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="noQuote" id="_noQuote">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_noQuote">#</a>
+		<code><a href="source-class-Spot.Query.html#124-137" title="Go to source code">noQuote</a>( <span>boolean <var>$noQuote</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Set field and value quoting on/off - maily used for testing output SQL
+since quoting is different per platform</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set field and value quoting on/off - maily used for testing output SQL
+since quoting is different per platform</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$noQuote</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reEscapeFrom" id="_reEscapeFrom">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reEscapeFrom">#</a>
+		<code><a href="source-class-Spot.Query.html#139-150" title="Go to source code">reEscapeFrom</a>( )</code>
+
+		<div class="description short">
+			<p>Re-escape from part of query according to new noQuote value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Re-escape from part of query according to new noQuote value</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="expr" id="_expr">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Query\Expression\ExpressionBuilder
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_expr">#</a>
+		<code><a href="source-class-Spot.Query.html#152-160" title="Go to source code">expr</a>( )</code>
+
+		<div class="description short">
+			<p>Return DBAL Query builder expression</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return DBAL Query builder expression</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Query\Expression\ExpressionBuilder
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMethod" id="_addMethod">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addMethod">#</a>
+		<code><a href="source-class-Spot.Query.html#162-175" title="Go to source code">addMethod</a>( <span>string <var>$method</var></span>, <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			<p>Add a custom user method via closure or PHP callback</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a custom user method via closure or PHP callback</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd>Method name to add</dd>
+					<dt><var>$callback</var></dt>
+					<dd>Callback or closure that will be executed when missing method call matching $method is made</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					InvalidArgumentException
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addWhereOperator" id="_addWhereOperator">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addWhereOperator">#</a>
+		<code><a href="source-class-Spot.Query.html#177-190" title="Go to source code">addWhereOperator</a>( <span>string <var>$operator</var></span>, <span>callable|string <var>$action</var></span> )</code>
+
+		<div class="description short">
+			<p>Adds a custom type to the type map.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds a custom type to the type map.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$operator</var></dt>
+					<dd></dd>
+					<dt><var>$action</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mapper" id="_mapper">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mapper">#</a>
+		<code><a href="source-class-Spot.Query.html#192-200" title="Go to source code">mapper</a>( )</code>
+
+		<div class="description short">
+			<p>Get current adapter object</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get current adapter object</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="entityName" id="_entityName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_entityName">#</a>
+		<code><a href="source-class-Spot.Query.html#202-210" title="Go to source code">entityName</a>( )</code>
+
+		<div class="description short">
+			<p>Get current entity name query is to be performed on</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get current entity name query is to be performed on</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="select" id="_select">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_select">#</a>
+		<code><a href="source-class-Spot.Query.html#212-222" title="Go to source code">select</a>( )</code>
+
+		<div class="description short">
+			<p>Select (passthrough to DBAL QueryBuilder)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Select (passthrough to DBAL QueryBuilder)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-Spot.Query.html#224-234" title="Go to source code">delete</a>( )</code>
+
+		<div class="description short">
+			<p>Delete (passthrough to DBAL QueryBuilder)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete (passthrough to DBAL QueryBuilder)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="from" id="_from">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_from">#</a>
+		<code><a href="source-class-Spot.Query.html#236-246" title="Go to source code">from</a>( )</code>
+
+		<div class="description short">
+			<p>From (passthrough to DBAL QueryBuilder)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>From (passthrough to DBAL QueryBuilder)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameters" id="_getParameters">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParameters">#</a>
+		<code><a href="source-class-Spot.Query.html#248-256" title="Go to source code">getParameters</a>( )</code>
+
+		<div class="description short">
+			<p>Get all bound query parameters (passthrough to DBAL QueryBuilder)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get all bound query parameters (passthrough to DBAL QueryBuilder)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setParameters" id="_setParameters">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setParameters">#</a>
+		<code><a href="source-class-Spot.Query.html#258-268" title="Go to source code">setParameters</a>( )</code>
+
+		<div class="description short">
+			<p>Set query parameters (passthrough to DBAL QueryBuilder)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set query parameters (passthrough to DBAL QueryBuilder)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="where" id="_where">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_where">#</a>
+		<code><a href="source-class-Spot.Query.html#270-285" title="Go to source code">where</a>( <span>array <var>$where</var></span>, <span>string <var>$type</var> = <span class="php-quote">'AND'</span></span> )</code>
+
+		<div class="description short">
+			<p>WHERE conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>WHERE conditions</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>Array of conditions for this clause</dd>
+					<dt><var>$type</var></dt>
+					<dd>Keyword that will separate each condition - "AND", "OR"</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orWhere" id="_orWhere">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_orWhere">#</a>
+		<code><a href="source-class-Spot.Query.html#287-302" title="Go to source code">orWhere</a>( <span>array <var>$where</var></span>, <span>string <var>$type</var> = <span class="php-quote">'AND'</span></span> )</code>
+
+		<div class="description short">
+			<p>WHERE OR conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>WHERE OR conditions</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>Array of conditions for this clause</dd>
+					<dt><var>$type</var></dt>
+					<dd>Keyword that will separate each condition - "AND", "OR"</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="andWhere" id="_andWhere">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_andWhere">#</a>
+		<code><a href="source-class-Spot.Query.html#304-314" title="Go to source code">andWhere</a>( <span>array <var>$where</var></span>, <span>string <var>$type</var> = <span class="php-quote">'AND'</span></span> )</code>
+
+		<div class="description short">
+			<p>WHERE AND conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>WHERE AND conditions</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>Array of conditions for this clause</dd>
+					<dt><var>$type</var></dt>
+					<dd>Keyword that will separate each condition - "AND", "OR"</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this|Query
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="whereFieldSql" id="_whereFieldSql">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_whereFieldSql">#</a>
+		<code><a href="source-class-Spot.Query.html#316-342" title="Go to source code">whereFieldSql</a>( <span>string <var>$field</var></span>, <span>string <var>$sql</var></span>, <span>array <var>$params</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>WHERE field + raw SQL</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>WHERE field + raw SQL</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd>Field name for SQL statement (will be quoted)</dd>
+					<dt><var>$sql</var></dt>
+					<dd>SQL string to put in WHERE clause</dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="whereSql" id="_whereSql">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_whereSql">#</a>
+		<code><a href="source-class-Spot.Query.html#344-355" title="Go to source code">whereSql</a>( <span>string <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			<p>WHERE conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>WHERE conditions</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>SQL string to put in WHERE clause</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseWhereToSQLFragments" id="_parseWhereToSQLFragments">
+
+		<td class="attributes"><code>
+			 private 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseWhereToSQLFragments">#</a>
+		<code><a href="source-class-Spot.Query.html#357-394" title="Go to source code">parseWhereToSQLFragments</a>( <span>array <var>$where</var></span>, <span>boolean <var>$useAlias</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Parse array-syntax WHERE conditions and translate them to DBAL QueryBuilder syntax</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parse array-syntax WHERE conditions and translate them to DBAL QueryBuilder syntax</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>Array of conditions for this clause</dd>
+					<dt><var>$useAlias</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>SQL fragment strings for WHERE clause
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWhereOperatorCallable" id="_getWhereOperatorCallable">
+
+		<td class="attributes"><code>
+			 private 
+
+			callable|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWhereOperatorCallable">#</a>
+		<code><a href="source-class-Spot.Query.html#396-415" title="Go to source code">getWhereOperatorCallable</a>( <span>string <var>$operator</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$operator</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					callable|false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="with" id="_with">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_with">#</a>
+		<code><a href="source-class-Spot.Query.html#417-432" title="Go to source code">with</a>( <span>mixed|null <var>$relations</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Relations to be eager-loaded</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Relations to be eager-loaded</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relations</var></dt>
+					<dd>Array/string of relation(s) to be loaded.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this|array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="search" id="_search">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_search">#</a>
+		<code><a href="source-class-Spot.Query.html#434-477" title="Go to source code">search</a>( <span>mixed <var>$fields</var></span>, <span>string <var>$query</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Search criteria (FULLTEXT, LIKE, or REGEX, depending on storage engine and driver)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Search criteria (FULLTEXT, LIKE, or REGEX, depending on storage engine and driver)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fields</var></dt>
+					<dd>Single string field or array of field names to use for searching</dd>
+					<dt><var>$query</var></dt>
+					<dd>Search keywords or query</dd>
+					<dt><var>$options</var></dt>
+					<dd>Array of options for search</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="order" id="_order">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_order">#</a>
+		<code><a href="source-class-Spot.Query.html#479-492" title="Go to source code">order</a>( <span>array <var>$order</var></span> )</code>
+
+		<div class="description short">
+			<p>ORDER BY columns</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>ORDER BY columns</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd>Array of field names to use for sorting</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="group" id="_group">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_group">#</a>
+		<code><a href="source-class-Spot.Query.html#494-507" title="Go to source code">group</a>( <span>array <var>$fields</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>GROUP BY clause</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>GROUP BY clause</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fields</var></dt>
+					<dd>Array of field names to use for grouping</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="having" id="_having">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_having">#</a>
+		<code><a href="source-class-Spot.Query.html#509-521" title="Go to source code">having</a>( <span>array <var>$having</var></span>, <span>string <var>$type</var> = <span class="php-quote">'AND'</span></span> )</code>
+
+		<div class="description short">
+			<p>Having clause to filter results by a calculated value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Having clause to filter results by a calculated value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$having</var></dt>
+					<dd>Array (like where) for HAVING statement for filter records by</dd>
+					<dt><var>$type</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="limit" id="_limit">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_limit">#</a>
+		<code><a href="source-class-Spot.Query.html#523-539" title="Go to source code">limit</a>( <span>integer <var>$limit</var></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Limit executed query to specified amount of records
+Implemented at adapter-level for databases that support it</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Limit executed query to specified amount of records
+Implemented at adapter-level for databases that support it</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$limit</var></dt>
+					<dd>Number of records to return</dd>
+					<dt><var>$offset</var></dt>
+					<dd>Record to start at for limited result set</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offset" id="_offset">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offset">#</a>
+		<code><a href="source-class-Spot.Query.html#541-553" title="Go to source code">offset</a>( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Offset executed query to skip specified amount of records
+Implemented at adapter-level for databases that support it</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Offset executed query to skip specified amount of records
+Implemented at adapter-level for databases that support it</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>Record to start at for limited result set</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-class-Spot.Query.html#557-572" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			<p>SPL Countable function
+Called automatically when attribute is used in a 'count()' function call</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL Countable function
+Called automatically when attribute is used in a 'count()' function call</p>
+
+<p>Executes separate query with COUNT(*), and drops and ordering (not
+important for counting)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>Countable::count()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code><a href="source-class-Spot.Query.html#574-586" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			<p>SPL IteratorAggregate function
+Called automatically when attribute is used in a 'foreach' loop</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL IteratorAggregate function
+Called automatically when attribute is used in a 'foreach' loop</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Entity.Collection.html">Spot\Entity\Collection</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>IteratorAggregate::getIterator()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code><a href="source-class-Spot.Query.html#588-600" title="Go to source code">toArray</a>( <span>string|null <var>$keyColumn</var> = <span class="php-keyword1">null</span></span>, <span>string|null <var>$valueColumn</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Convenience function passthrough for Collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Convenience function passthrough for Collection</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keyColumn</var></dt>
+					<dd></dd>
+					<dt><var>$valueColumn</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="jsonSerialize" id="_jsonSerialize">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_jsonSerialize">#</a>
+		<code><a href="source-class-Spot.Query.html#602-610" title="Go to source code">jsonSerialize</a>( )</code>
+
+		<div class="description short">
+			<p>JsonSerializable</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>JsonSerializable</p>
+
+
+
+
+
+				<h4>Inheritdoc</h4>
+				<div class="list">
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>JsonSerializable::jsonSerialize()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="first" id="_first">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_first">#</a>
+		<code><a href="source-class-Spot.Query.html#612-622" title="Go to source code">first</a>( )</code>
+
+		<div class="description short">
+			<p>Return the first entity matched by the query</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the first entity matched by the query</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>Spot_Entity on success, boolean false on failure
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code><a href="source-class-Spot.Query.html#624-633" title="Go to source code">execute</a>( )</code>
+
+		<div class="description short">
+			<p>Execute and return query as a collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Execute and return query as a collection</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>Collection object on success, boolean false on failure
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toSql" id="_toSql">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toSql">#</a>
+		<code><a href="source-class-Spot.Query.html#635-643" title="Go to source code">toSql</a>( )</code>
+
+		<div class="description short">
+			<p>Get raw SQL string from built query</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get raw SQL string from built query</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape" id="_escape">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape">#</a>
+		<code><a href="source-class-Spot.Query.html#645-658" title="Go to source code">escape</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			<p>Escape/quote direct user input</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Escape/quote direct user input</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unescapeIdentifier" id="_unescapeIdentifier">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unescapeIdentifier">#</a>
+		<code><a href="source-class-Spot.Query.html#660-675" title="Go to source code">unescapeIdentifier</a>( <span>string <var>$identifier</var></span> )</code>
+
+		<div class="description short">
+			<p>Removes escape/quote character</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes escape/quote character</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$identifier</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeIdentifier" id="_escapeIdentifier">
+
+		<td class="attributes"><code>
+			 public 
+
+			string|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeIdentifier">#</a>
+		<code><a href="source-class-Spot.Query.html#677-701" title="Go to source code">escapeIdentifier</a>( <span>string|array <var>$identifier</var></span> )</code>
+
+		<div class="description short">
+			<p>Escape/quote identifier</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Escape/quote identifier</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$identifier</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string|array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldWithAlias" id="_fieldWithAlias">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldWithAlias">#</a>
+		<code><a href="source-class-Spot.Query.html#703-721" title="Go to source code">fieldWithAlias</a>( <span>string <var>$field</var></span>, <span>boolean <var>$escaped</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Get field name with table alias appended</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get field name with table alias appended</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$escaped</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetExists">#</a>
+		<code><a href="source-class-Spot.Query.html#723-733" title="Go to source code">offsetExists</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>SPL - ArrayAccess</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL - ArrayAccess</p>
+
+
+
+
+
+				<h4>Inheritdoc</h4>
+				<div class="list">
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetExists()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetGet">#</a>
+		<code><a href="source-class-Spot.Query.html#735-745" title="Go to source code">offsetGet</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>SPL - ArrayAccess</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL - ArrayAccess</p>
+
+
+
+
+
+				<h4>Inheritdoc</h4>
+				<div class="list">
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetGet()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetSet">#</a>
+		<code><a href="source-class-Spot.Query.html#747-760" title="Go to source code">offsetSet</a>( <span> <var>$key</var></span>, <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>SPL - ArrayAccess</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL - ArrayAccess</p>
+
+
+
+
+
+				<h4>Inheritdoc</h4>
+				<div class="list">
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetSet()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetUnset">#</a>
+		<code><a href="source-class-Spot.Query.html#762-771" title="Go to source code">offsetUnset</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>SPL - ArrayAccess</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SPL - ArrayAccess</p>
+
+
+
+
+
+				<h4>Inheritdoc</h4>
+				<div class="list">
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetUnset()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code><a href="source-class-Spot.Query.html#773-808" title="Go to source code">__call</a>( <span>string <var>$method</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			<p>Run user-added callback</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Run user-added callback</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd>Method name called</dd>
+					<dt><var>$args</var></dt>
+					<dd>Array of arguments used in missing method call</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					BadMethodCallException
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ALL_FIELDS" id="ALL_FIELDS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-Spot.Query.html#13" title="Go to source code"><b>ALL_FIELDS</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ALL_FIELDS" class="anchor">#</a>
+				<code><span class="php-quote">'*'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_mapper" id="$_mapper">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#15-18" title="Go to source code"><var>$_mapper</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_mapper" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_entityName" id="$_entityName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#20-23" title="Go to source code"><var>$_entityName</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_entityName" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_tableName" id="$_tableName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#25-28" title="Go to source code"><var>$_tableName</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_tableName" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_queryBuilder" id="$_queryBuilder">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#30-33" title="Go to source code"><var>$_queryBuilder</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_queryBuilder" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_noQuote" id="$_noQuote">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#35-38" title="Go to source code"><var>$_noQuote</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_noQuote" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="with" id="$with">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#40-45" title="Go to source code"><var>$with</var></a>
+
+			<div class="description short">
+				<p>Storage for query properties</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Storage for query properties</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$with" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_data" id="$_data">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#47-52" title="Go to source code"><var>$_data</var></a>
+
+			<div class="description short">
+				<p>Storage for eager-loaded relations</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Storage for eager-loaded relations</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_data" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_customMethods" id="$_customMethods">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#54-59" title="Go to source code"><var>$_customMethods</var></a>
+
+			<div class="description short">
+				<p>Custom methods added by extensions or plugins</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Custom methods added by extensions or plugins</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_customMethods" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_whereOperators" id="$_whereOperators">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#61-87" title="Go to source code"><var>$_whereOperators</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_whereOperators" class="anchor">#</a>
+				<code>[
+    <span class="php-quote">'&lt;'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThan'</span>,
+    <span class="php-quote">':lt'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThan'</span>,
+    <span class="php-quote">'&lt;='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThanOrEqual'</span>,
+    <span class="php-quote">':lte'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\LessThanOrEqual'</span>,
+    <span class="php-quote">'&gt;'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThan'</span>,
+    <span class="php-quote">':gt'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThan'</span>,
+    <span class="php-quote">'&gt;='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThanOrEqual'</span>,
+    <span class="php-quote">':gte'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\GreaterThanOrEqual'</span>,
+    <span class="php-quote">'~='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\RegExp'</span>,
+    <span class="php-quote">'=~'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\RegExp'</span>,
+    <span class="php-quote">':regex'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\RegExp'</span>,
+    <span class="php-quote">':like'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Like'</span>,
+    <span class="php-quote">':fulltext'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\FullText'</span>,
+    <span class="php-quote">':fulltext_boolean'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\FullTextBoolean'</span>,
+    <span class="php-quote">'in'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\In'</span>,
+    <span class="php-quote">':in'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\In'</span>,
+    <span class="php-quote">'&lt;&gt;'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">'!='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">':ne'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">':not'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Not'</span>,
+    <span class="php-quote">'='</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Equals'</span>,
+    <span class="php-quote">':eq'</span> =&gt; <span class="php-quote">'Spot\Query\Operator\Equals'</span>,
+]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_whereOperatorObjects" id="$_whereOperatorObjects">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Query.html#89-94" title="Go to source code"><var>$_whereOperatorObjects</var></a>
+
+			<div class="description short">
+				<p>Already instantiated operator objects</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Already instantiated operator objects</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_whereOperatorObjects" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Spot2 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

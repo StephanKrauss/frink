@@ -202,6 +202,7 @@ class Response {
                 unset($this->headers['Pragma']);
             }
         }
+
         return $this;
     }
 

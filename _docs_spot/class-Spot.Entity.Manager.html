@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Spot\Entity\Manager | Projekt Spot2</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Spot.html">
+						Spot<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Spot.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Provider.html">
+						Provider					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Query.html">
+						Query<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Query.Operator.html">
+						Operator					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Spot.Relation.html">
+						Relation					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Valitron.html">
+						Valitron					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Spot.Entity.Collection.html">Collection</a></li>
+				<li class="active"><a href="class-Spot.Entity.Manager.html">Manager</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Spot.Entity.html" title="Summary of Spot\Entity"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Manager</h1>
+
+
+	<div class="description">
+	<p>Entity Manager for storing information about entities</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Spot.html">Spot</a>\<a href="namespace-Spot.Entity.html">Entity</a><br>
+		<b>Package:</b> Spot\Entity<br>
+
+				<b>Author:</b>
+				Vance Lucas <a href="&#x6d;&#97;&#105;l&#x74;&#x6f;&#58;v&#x61;&#x6e;&#99;&#101;&#x40;&#x76;&#97;&#110;&#x63;&#x65;&#108;&#117;&#x63;&#x61;&#115;&#46;&#x63;&#x6f;&#109;">v&#x61;&#x6e;&#99;&#101;&#x40;&#x76;&#97;&#110;&#x63;&#x65;&#108;&#117;&#x63;&#x61;&#115;&#46;&#x63;&#x6f;&#109;</a><br>
+			<b>Located at</b> <a href="source-class-Spot.Entity.Manager.html#6-412" title="Go to source code">spot2/lib/Entity/Manager.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#69-85" title="Go to source code">__construct</a>( <span>string|<code><a href="class-Spot.Entity.html">Spot\Entity</a></code> <var>$entityName</var></span> )</code>
+
+		<div class="description short">
+			<p>Entity to get information for</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Entity to get information for</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entityName</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fields" id="_fields">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fields">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#87-218" title="Go to source code">fields</a>( )</code>
+
+		<div class="description short">
+			<p>Get formatted fields with all necessary array keys and values.
+Merges defaults with defined field values to ensure all options exist for each field.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get formatted fields with all necessary array keys and values.
+Merges defaults with defined field values to ensure all options exist for each field.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Defined fields plus all defaults for full array of all possible options
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldAliasMappings" id="_fieldAliasMappings">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldAliasMappings">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#220-228" title="Go to source code">fieldAliasMappings</a>( )</code>
+
+		<div class="description short">
+			<p>Field alias mappings (used for lookup)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Field alias mappings (used for lookup)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Field alias => actual column name
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldKeys" id="_fieldKeys">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldKeys">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#230-280" title="Go to source code">fieldKeys</a>( )</code>
+
+		<div class="description short">
+			<p>Groups field keys into names arrays of fields with key name as index</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Groups field keys into names arrays of fields with key name as index</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Key-named associative array of field names in that index
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldsDefined" id="_fieldsDefined">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldsDefined">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#282-294" title="Go to source code">fieldsDefined</a>( )</code>
+
+		<div class="description short">
+			<p>Get field information exactly how it is defined in the class</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get field information exactly how it is defined in the class</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Array of field key => value pairs
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldDefaultValues" id="_fieldDefaultValues">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldDefaultValues">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#296-308" title="Go to source code">fieldDefaultValues</a>( )</code>
+
+		<div class="description short">
+			<p>Get field default values as defined in class field definitions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get field default values as defined in class field definitions</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Array of field key => value pairs
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resetFields" id="_resetFields">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resetFields">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#310-320" title="Go to source code">resetFields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="relations" id="_relations">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_relations">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#322-333" title="Go to source code">relations</a>( )</code>
+
+		<div class="description short">
+			<p>Get defined relations</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get defined relations</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="primaryKeyField" id="_primaryKeyField">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_primaryKeyField">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#335-345" title="Go to source code">primaryKeyField</a>( )</code>
+
+		<div class="description short">
+			<p>Get value of primary key for given row result</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get value of primary key for given row result</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldExists" id="_fieldExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldExists">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#347-356" title="Go to source code">fieldExists</a>( <span>string <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>Check if field exists in defined fields</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if field exists in defined fields</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd>Field name to check for existence</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldType" id="_fieldType">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldType">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#358-369" title="Go to source code">fieldType</a>( <span>string <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>Return field type</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return field type</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd>Field name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>Field type string or boolean false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="table" id="_table">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#371-383" title="Go to source code">table</a>( )</code>
+
+		<div class="description short">
+			<p>Get name of table for given entity class</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get name of table for given entity class</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tableOptions" id="_tableOptions">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tableOptions">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#385-397" title="Go to source code">tableOptions</a>( )</code>
+
+		<div class="description short">
+			<p>Get table options for given entity class</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get table options for given entity class</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mapper" id="_mapper">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mapper">#</a>
+		<code><a href="source-class-Spot.Entity.Manager.html#399-411" title="Go to source code">mapper</a>( )</code>
+
+		<div class="description short">
+			<p>Get name of custom mapper for given entity class</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get name of custom mapper for given entity class</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="entityName" id="$entityName">
+		<td class="attributes"><code>
+			protected  
+			string|<code><a href="class-Spot.Entity.html">Spot\Entity</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#14-17" title="Go to source code"><var>$entityName</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$entityName" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fields" id="$fields">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#19-22" title="Go to source code"><var>$fields</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fields" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fieldAliasMappings" id="$fieldAliasMappings">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#24-27" title="Go to source code"><var>$fieldAliasMappings</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fieldAliasMappings" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fieldsDefined" id="$fieldsDefined">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#29-32" title="Go to source code"><var>$fieldsDefined</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fieldsDefined" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fieldDefaultValues" id="$fieldDefaultValues">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#34-37" title="Go to source code"><var>$fieldDefaultValues</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fieldDefaultValues" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="relations" id="$relations">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#39-42" title="Go to source code"><var>$relations</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$relations" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="scopes" id="$scopes">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#44-47" title="Go to source code"><var>$scopes</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$scopes" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="primaryKeyField" id="$primaryKeyField">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#49-52" title="Go to source code"><var>$primaryKeyField</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$primaryKeyField" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="table" id="$table">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#54-57" title="Go to source code"><var>$table</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$table" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="tableOptions" id="$tableOptions">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#59-62" title="Go to source code"><var>$tableOptions</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$tableOptions" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="mapper" id="$mapper">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Entity.Manager.html#64-67" title="Go to source code"><var>$mapper</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$mapper" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Spot2 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

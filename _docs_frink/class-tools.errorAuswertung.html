@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class tools\errorAuswertung | Projekt Frink</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-controller.html">
+						controller					</a>
+
+						</li>
+				<li>
+					<a href="namespace-mapper.html">
+						mapper					</a>
+
+						</li>
+				<li>
+					<a href="namespace-models.html">
+						models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tables.html">
+						tables					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-tools.html">
+						tools					</a>
+
+						</li>
+				<li>
+					<a href="namespace-traits.html">
+						traits					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-tools.Auth.html">Auth</a></li>
+				<li><a href="class-tools.DatenbankBenutzer.html">DatenbankBenutzer</a></li>
+				<li class="active"><a href="class-tools.errorAuswertung.html">errorAuswertung</a></li>
+				<li><a href="class-tools.redbeanWrapper.html">redbeanWrapper</a></li>
+				<li><a href="class-tools.verbindungen.html">verbindungen</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-tools.frinkError.html">frinkError</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-tools.html" title="Summary of tools"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class errorAuswertung</h1>
+
+
+	<div class="description">
+	<p>Wertet den Inhalt der Exception aus und trägt die Exception in die Tabelle 'exception' ein.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-tools.html">tools</a><br>
+		<b>Package:</b> Tool<br>
+
+				<b>Copyright:</b>
+				Stephan Krauss<br>
+				<b>Author:</b>
+				Stephan Krauss<br>
+				<b>Date:</b>
+				31.05.2016<br>
+				<b>Lisence:</b>
+				MIT<br>
+			<b>Located at</b> <a href="source-class-tools.errorAuswertung.html#6-96" title="Go to source code">tools/errorAuswertung.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="readException" id="_readException">
+
+		<td class="attributes"><code>
+			 public static
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_readException">#</a>
+		<code><a href="source-class-tools.errorAuswertung.html#18-40" title="Go to source code">readException</a>( <span>Exception <var>$exception</var></span> )</code>
+
+		<div class="description short">
+			<p>Übernimmt die Exception und führt die Auswertung durch</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Übernimmt die Exception und führt die Auswertung durch</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$exception</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeException" id="_writeException">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_writeException">#</a>
+		<code><a href="source-class-tools.errorAuswertung.html#42-74" title="Go to source code">writeException</a>( <span>array <var>$error</var></span> )</code>
+
+		<div class="description short">
+			<p>Inhalt der Exception in Tabelle 'exception' eintragen</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Inhalt der Exception in Tabelle 'exception' eintragen</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$error</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mailException" id="_mailException">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mailException">#</a>
+		<code><a href="source-class-tools.errorAuswertung.html#76-95" title="Go to source code">mailException</a>( <span>array <var>$error</var></span> )</code>
+
+		<div class="description short">
+			<p>Meldet Fehlernummer, Datum und Uhrzeit als Mail</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Meldet Fehlernummer, Datum und Uhrzeit als Mail</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$error</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Frink API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

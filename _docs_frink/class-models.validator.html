@@ -1,0 +1,3394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class models\validator | Projekt Frink</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-controller.html">
+						controller					</a>
+
+						</li>
+				<li>
+					<a href="namespace-mapper.html">
+						mapper					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-models.html">
+						models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tables.html">
+						tables					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tools.html">
+						tools					</a>
+
+						</li>
+				<li>
+					<a href="namespace-traits.html">
+						traits					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-models.auth.html">auth</a></li>
+				<li><a href="class-models.BenutzerDaten.html">BenutzerDaten</a></li>
+				<li><a href="class-models.config.html">config</a></li>
+				<li><a href="class-models.extendsBasis.html">extendsBasis</a></li>
+				<li><a href="class-models.extendsSplObserver.html">extendsSplObserver</a></li>
+				<li><a href="class-models.extendsSplSubject.html">extendsSplSubject</a></li>
+				<li><a href="class-models.iniparser.html">iniparser</a></li>
+				<li><a href="class-models.model.html">model</a></li>
+				<li><a href="class-models.modelBasis.html">modelBasis</a></li>
+				<li><a href="class-models.modelBasis1.html">modelBasis1</a></li>
+				<li><a href="class-models.modelBasisSingleton.html">modelBasisSingleton</a></li>
+				<li><a href="class-models.ModelData.html">ModelData</a></li>
+				<li><a href="class-models.modelObserver1.html">modelObserver1</a></li>
+				<li><a href="class-models.modelObserver2.html">modelObserver2</a></li>
+				<li><a href="class-models.modelSubject.html">modelSubject</a></li>
+				<li><a href="class-models.myCalc.html">myCalc</a></li>
+				<li><a href="class-models.notNoSql.html">notNoSql</a></li>
+				<li><a href="class-models.plugins.html">plugins</a></li>
+				<li><a href="class-models.redisko.html">redisko</a></li>
+				<li><a href="class-models.session.html">session</a></li>
+				<li><a href="class-models.SimpleMail.html">SimpleMail</a></li>
+				<li><a href="class-models.Sparrow.html">Sparrow</a></li>
+				<li class="active"><a href="class-models.validator.html">validator</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-models.ModelInterface.html">ModelInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-models.NotNoSQLException.html">NotNoSQLException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-models.html" title="Summary of models"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class validator</h1>
+
+
+	<div class="description">
+	<p>GUMP / validator - A fast, extensible PHP input validation class.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-models.html">models</a><br>
+		
+
+				<b>Copyright:</b>
+				Copyright (c) 2016 wixelhq.com<br>
+				<b>Author:</b>
+				Sean Nieuwoudt (http://twitter.com/SeanNieuwoudt)<br>
+				<b>Version:</b>
+				1.4<br>
+				<b>Link:</b>
+				<a href="http://github.com/Wixel/GUMP">http://github.com/Wixel/GUMP</a><br>
+				<b>Lisence:</b>
+				MIT<br>
+			<b>Located at</b> <a href="source-class-models.validator.html#5-2120" title="Go to source code">models/validator.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="get_instance" id="_get_instance">
+
+		<td class="attributes"><code>
+			 public static
+
+			GUMP
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_instance">#</a>
+		<code><a href="source-class-models.validator.html#40-51" title="Go to source code">get_instance</a>( )</code>
+
+		<div class="description short">
+			<p>Function to create and return previously created instance</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Function to create and return previously created instance</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					GUMP
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_valid" id="_is_valid">
+
+		<td class="attributes"><code>
+			 public static
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_is_valid">#</a>
+		<code><a href="source-class-models.validator.html#73-92" title="Go to source code">is_valid</a>( <span>array <var>$data</var></span>, <span>array <var>$validators</var></span> )</code>
+
+		<div class="description short">
+			<p>Shorthand method for inline validation.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Shorthand method for inline validation.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>The data to be validated</dd>
+					<dt><var>$validators</var></dt>
+					<dd>The GUMP validators</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>True(boolean) or the array of error messages
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_input" id="_filter_input">
+
+		<td class="attributes"><code>
+			 public static
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_input">#</a>
+		<code><a href="source-class-models.validator.html#94-107" title="Go to source code">filter_input</a>( <span>array <var>$data</var></span>, <span>array <var>$filters</var></span> )</code>
+
+		<div class="description short">
+			<p>Shorthand method for running only the data filters.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Shorthand method for running only the data filters.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$filters</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-models.validator.html#109-117" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			<p>Magic method to generate the validation error messages.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Magic method to generate the validation error messages.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="xss_clean" id="_xss_clean">
+
+		<td class="attributes"><code>
+			 public static
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_xss_clean">#</a>
+		<code><a href="source-class-models.validator.html#119-135" title="Go to source code">xss_clean</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Perform XSS clean to prevent cross site scripting.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Perform XSS clean to prevent cross site scripting.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_validator" id="_add_validator">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add_validator">#</a>
+		<code><a href="source-class-models.validator.html#137-158" title="Go to source code">add_validator</a>( <span>string <var>$rule</var></span>, <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			<p>Adds a custom validation rule using a callback function.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds a custom validation rule using a callback function.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rule</var></dt>
+					<dd></dd>
+					<dt><var>$callback</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_filter" id="_add_filter">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add_filter">#</a>
+		<code><a href="source-class-models.validator.html#160-181" title="Go to source code">add_filter</a>( <span>string <var>$rule</var></span>, <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			<p>Adds a custom filter using a callback function.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds a custom filter using a callback function.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rule</var></dt>
+					<dd></dd>
+					<dt><var>$callback</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="field" id="_field">
+
+		<td class="attributes"><code>
+			 public static
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_field">#</a>
+		<code><a href="source-class-models.validator.html#183-202" title="Go to source code">field</a>( <span>mixed <var>$key</var></span>, <span>array <var>$array</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Helper method to extract an element from an array safely</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Helper method to extract an element from an array safely</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$array</var></dt>
+					<dd></dd>
+					<dt><var>$default</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validation_rules" id="_validation_rules">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validation_rules">#</a>
+		<code><a href="source-class-models.validator.html#204-218" title="Go to source code">validation_rules</a>( <span>array <var>$rules</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Getter/Setter for the validation rules.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Getter/Setter for the validation rules.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rules</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_rules" id="_filter_rules">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_rules">#</a>
+		<code><a href="source-class-models.validator.html#220-234" title="Go to source code">filter_rules</a>( <span>array <var>$rules</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Getter/Setter for the filter rules.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Getter/Setter for the filter rules.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rules</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code><a href="source-class-models.validator.html#236-263" title="Go to source code">run</a>( <span>array <var>$data</var></span>, <span>boolean <var>$check_fields</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Run the filtering and validation after each other.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Run the filtering and validation after each other.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$check_fields</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check_fields" id="_check_fields">
+
+		<td class="attributes"><code>
+			 private 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_fields">#</a>
+		<code><a href="source-class-models.validator.html#265-284" title="Go to source code">check_fields</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Ensure that the field counts match the validation rule counts.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Ensure that the field counts match the validation rule counts.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sanitize" id="_sanitize">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sanitize">#</a>
+		<code><a href="source-class-models.validator.html#286-338" title="Go to source code">sanitize</a>( <span>array <var>$input</var></span>, <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$utf8_encode</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Sanitize the input data.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sanitize the input data.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$fields</var></dt>
+					<dd></dd>
+					<dt><var>$utf8_encode</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errors" id="_errors">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errors">#</a>
+		<code><a href="source-class-models.validator.html#340-348" title="Go to source code">errors</a>( )</code>
+
+		<div class="description short">
+			<p>Return the error array from the last validation run.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the error array from the last validation run.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate" id="_validate">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate">#</a>
+		<code><a href="source-class-models.validator.html#350-414" title="Go to source code">validate</a>( <span>array <var>$input</var></span>, <span>array <var>$ruleset</var></span> )</code>
+
+		<div class="description short">
+			<p>Perform data validation against the provided ruleset.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Perform data validation against the provided ruleset.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$ruleset</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shouldRunValidation" id="_shouldRunValidation">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_shouldRunValidation">#</a>
+		<code><a href="source-class-models.validator.html#416-428" title="Go to source code">shouldRunValidation</a>( <span>array <var>$input</var></span>, <span> <var>$rules</var></span>, <span> <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>Overloadable method to invoke validation.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Overloadable method to invoke validation.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$rules</var></dt>
+					<dd></dd>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_field_name" id="_set_field_name">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_field_name">#</a>
+		<code><a href="source-class-models.validator.html#430-439" title="Go to source code">set_field_name</a>( <span>string <var>$field</var></span>, <span>string <var>$readable_name</var></span> )</code>
+
+		<div class="description short">
+			<p>Set a readable name for a specified field names.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set a readable name for a specified field names.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$readable_name</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_field_names" id="_set_field_names">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_field_names">#</a>
+		<code><a href="source-class-models.validator.html#441-458" title="Go to source code">set_field_names</a>( <span>array <var>$array</var></span> )</code>
+
+		<div class="description short">
+			<p>Set readable name for specified fields in an array.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set readable name for specified fields in an array.</p>
+
+<p>Usage:</p>
+
+<p>GUMP::set_field_names(array( "name" => "My Lovely Name", "username" => "My Beloved Username",
+));</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$array</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_readable_errors" id="_get_readable_errors">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_readable_errors">#</a>
+		<code><a href="source-class-models.validator.html#460-593" title="Go to source code">get_readable_errors</a>( <span>boolean <var>$convert_to_string</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$field_class</var> = <span class="php-quote">'gump-field'</span></span>, <span>string <var>$error_class</var> = <span class="php-quote">'gump-error-message'</span></span> )</code>
+
+		<div class="description short">
+			<p>Process the validation errors and return human readable error messages.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process the validation errors and return human readable error messages.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$convert_to_string</var></dt>
+					<dd>= false</dd>
+					<dt><var>$field_class</var></dt>
+					<dd></dd>
+					<dt><var>$error_class</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_errors_array" id="_get_errors_array">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_errors_array">#</a>
+		<code><a href="source-class-models.validator.html#595-704" title="Go to source code">get_errors_array</a>( <span> <var>$convert_to_string</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Process the validation errors and return an array of errors with field names as keys.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process the validation errors and return an array of errors with field names as keys.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$convert_to_string</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>| null (if empty)
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter" id="_filter">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter">#</a>
+		<code><a href="source-class-models.validator.html#706-752" title="Go to source code">filter</a>( <span>array <var>$input</var></span>, <span>array <var>$filterset</var></span> )</code>
+
+		<div class="description short">
+			<p>Filter the input data according to the specified filter set.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Filter the input data according to the specified filter set.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$filterset</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_noise_words" id="_filter_noise_words">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_noise_words">#</a>
+		<code><a href="source-class-models.validator.html#756-785" title="Go to source code">filter_noise_words</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Replace noise words in a string (http://tax.cchgroup.com/help/Avoiding_noise_words_in_your_search.htm).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Replace noise words in a string (http://tax.cchgroup.com/help/Avoiding_noise_words_in_your_search.htm).</p>
+
+<p>Usage: '<index>' => 'noise_words'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_rmpunctuation" id="_filter_rmpunctuation">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_rmpunctuation">#</a>
+		<code><a href="source-class-models.validator.html#787-800" title="Go to source code">filter_rmpunctuation</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Remove all known punctuation from a string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Remove all known punctuation from a string.</p>
+
+<p>Usage: '<index>' => 'rmpunctuataion'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_sanitize_string" id="_filter_sanitize_string">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_sanitize_string">#</a>
+		<code><a href="source-class-models.validator.html#855-868" title="Go to source code">filter_sanitize_string</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sanitize the string by removing any script tags.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sanitize the string by removing any script tags.</p>
+
+<p>Usage: '<index>' => 'sanitize_string'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_urlencode" id="_filter_urlencode">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_urlencode">#</a>
+		<code><a href="source-class-models.validator.html#870-883" title="Go to source code">filter_urlencode</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sanitize the string by urlencoding characters.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sanitize the string by urlencoding characters.</p>
+
+<p>Usage: '<index>' => 'urlencode'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_htmlencode" id="_filter_htmlencode">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_htmlencode">#</a>
+		<code><a href="source-class-models.validator.html#885-898" title="Go to source code">filter_htmlencode</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sanitize the string by converting HTML characters to their HTML entities.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sanitize the string by converting HTML characters to their HTML entities.</p>
+
+<p>Usage: '<index>' => 'htmlencode'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_sanitize_email" id="_filter_sanitize_email">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_sanitize_email">#</a>
+		<code><a href="source-class-models.validator.html#900-913" title="Go to source code">filter_sanitize_email</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sanitize the string by removing illegal characters from emails.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sanitize the string by removing illegal characters from emails.</p>
+
+<p>Usage: '<index>' => 'sanitize_email'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_sanitize_numbers" id="_filter_sanitize_numbers">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_sanitize_numbers">#</a>
+		<code><a href="source-class-models.validator.html#915-926" title="Go to source code">filter_sanitize_numbers</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sanitize the string by removing illegal characters from numbers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sanitize the string by removing illegal characters from numbers.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_basic_tags" id="_filter_basic_tags">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_basic_tags">#</a>
+		<code><a href="source-class-models.validator.html#928-939" title="Go to source code">filter_basic_tags</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Filter out all HTML tags except the defined basic tags.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Filter out all HTML tags except the defined basic tags.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter_whole_number" id="_filter_whole_number">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter_whole_number">#</a>
+		<code><a href="source-class-models.validator.html#941-952" title="Go to source code">filter_whole_number</a>( <span>string <var>$value</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Convert the provided numeric value to a whole number.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Convert the provided numeric value to a whole number.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$params</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_contains" id="_validate_contains">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_contains">#</a>
+		<code><a href="source-class-models.validator.html#957-994" title="Go to source code">validate_contains</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Verify that a value is contained within the pre-defined value set.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Verify that a value is contained within the pre-defined value set.</p>
+
+<p>Usage: '<index>' => 'contains,value value value'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_contains_list" id="_validate_contains_list">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_contains_list">#</a>
+		<code><a href="source-class-models.validator.html#996-1027" title="Go to source code">validate_contains_list</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Verify that a value is contained within the pre-defined value set.
+OUTPUT: will NOT show the list of values.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Verify that a value is contained within the pre-defined value set.
+OUTPUT: will NOT show the list of values.</p>
+
+<p>Usage: '<index>' => 'contains_list,value;value;value'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_doesnt_contain_list" id="_validate_doesnt_contain_list">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_doesnt_contain_list">#</a>
+		<code><a href="source-class-models.validator.html#1029-1058" title="Go to source code">validate_doesnt_contain_list</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Verify that a value is NOT contained within the pre-defined value set.
+OUTPUT: will NOT show the list of values.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Verify that a value is NOT contained within the pre-defined value set.
+OUTPUT: will NOT show the list of values.</p>
+
+<p>Usage: '<index>' => 'doesnt_contain_list,value;value;value'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_required" id="_validate_required">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_required">#</a>
+		<code><a href="source-class-models.validator.html#1060-1083" title="Go to source code">validate_required</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Check if the specified key is present and not empty.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if the specified key is present and not empty.</p>
+
+<p>Usage: '<index>' => 'required'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_email" id="_validate_valid_email">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_email">#</a>
+		<code><a href="source-class-models.validator.html#1085-1110" title="Go to source code">validate_valid_email</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided email is valid.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided email is valid.</p>
+
+<p>Usage: '<index>' => 'valid_email'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_max_len" id="_validate_max_len">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_max_len">#</a>
+		<code><a href="source-class-models.validator.html#1112-1145" title="Go to source code">validate_max_len</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value length is less or equal to a specific value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value length is less or equal to a specific value.</p>
+
+<p>Usage: '<index>' => 'max_len,240'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_min_len" id="_validate_min_len">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_min_len">#</a>
+		<code><a href="source-class-models.validator.html#1147-1180" title="Go to source code">validate_min_len</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value length is more or equal to a specific value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value length is more or equal to a specific value.</p>
+
+<p>Usage: '<index>' => 'min_len,4'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_exact_len" id="_validate_exact_len">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_exact_len">#</a>
+		<code><a href="source-class-models.validator.html#1182-1215" title="Go to source code">validate_exact_len</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value length matches a specific value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value length matches a specific value.</p>
+
+<p>Usage: '<index>' => 'exact_len,5'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_alpha" id="_validate_alpha">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_alpha">#</a>
+		<code><a href="source-class-models.validator.html#1217-1242" title="Go to source code">validate_alpha</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value contains only alpha characters.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value contains only alpha characters.</p>
+
+<p>Usage: '<index>' => 'alpha'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_alpha_numeric" id="_validate_alpha_numeric">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_alpha_numeric">#</a>
+		<code><a href="source-class-models.validator.html#1244-1269" title="Go to source code">validate_alpha_numeric</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value contains only alpha-numeric characters.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value contains only alpha-numeric characters.</p>
+
+<p>Usage: '<index>' => 'alpha_numeric'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_alpha_dash" id="_validate_alpha_dash">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_alpha_dash">#</a>
+		<code><a href="source-class-models.validator.html#1271-1296" title="Go to source code">validate_alpha_dash</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value contains only alpha characters with dashed and underscores.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value contains only alpha characters with dashed and underscores.</p>
+
+<p>Usage: '<index>' => 'alpha_dash'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_alpha_space" id="_validate_alpha_space">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_alpha_space">#</a>
+		<code><a href="source-class-models.validator.html#1298-1323" title="Go to source code">validate_alpha_space</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value contains only alpha numeric characters with spaces.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value contains only alpha numeric characters with spaces.</p>
+
+<p>Usage: '<index>' => 'alpha_space'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_numeric" id="_validate_numeric">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_numeric">#</a>
+		<code><a href="source-class-models.validator.html#1325-1350" title="Go to source code">validate_numeric</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid number or numeric string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid number or numeric string.</p>
+
+<p>Usage: '<index>' => 'numeric'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_integer" id="_validate_integer">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_integer">#</a>
+		<code><a href="source-class-models.validator.html#1352-1377" title="Go to source code">validate_integer</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid integer.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid integer.</p>
+
+<p>Usage: '<index>' => 'integer'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_boolean" id="_validate_boolean">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_boolean">#</a>
+		<code><a href="source-class-models.validator.html#1379-1406" title="Go to source code">validate_boolean</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a PHP accepted boolean.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a PHP accepted boolean.</p>
+
+<p>Usage: '<index>' => 'boolean'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_float" id="_validate_float">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_float">#</a>
+		<code><a href="source-class-models.validator.html#1408-1433" title="Go to source code">validate_float</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid float.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid float.</p>
+
+<p>Usage: '<index>' => 'float'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_url" id="_validate_valid_url">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_url">#</a>
+		<code><a href="source-class-models.validator.html#1435-1460" title="Go to source code">validate_valid_url</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid URL.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid URL.</p>
+
+<p>Usage: '<index>' => 'valid_url'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_url_exists" id="_validate_url_exists">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_url_exists">#</a>
+		<code><a href="source-class-models.validator.html#1462-1504" title="Go to source code">validate_url_exists</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if a URL exists &amp; is accessible.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if a URL exists &amp; is accessible.</p>
+
+<p>Usage: '<index>' => 'url_exists'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_ip" id="_validate_valid_ip">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_ip">#</a>
+		<code><a href="source-class-models.validator.html#1506-1530" title="Go to source code">validate_valid_ip</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid IP address.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid IP address.</p>
+
+<p>Usage: '<index>' => 'valid_ip'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_ipv4" id="_validate_valid_ipv4">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_ipv4">#</a>
+		<code><a href="source-class-models.validator.html#1549-1565" title="Go to source code">validate_valid_ipv4</a>( <span> <var>$field</var></span>, <span> <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_ipv6" id="_validate_valid_ipv6">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_ipv6">#</a>
+		<code><a href="source-class-models.validator.html#1567-1591" title="Go to source code">validate_valid_ipv6</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid IPv6 address.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid IPv6 address.</p>
+
+<p>Usage: '<index>' => 'valid_ipv6'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_cc" id="_validate_valid_cc">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_cc">#</a>
+		<code><a href="source-class-models.validator.html#1593-1646" title="Go to source code">validate_valid_cc</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the input is a valid credit card number.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the input is a valid credit card number.</p>
+
+<p>See: http://stackoverflow.com/questions/174730/what-is-the-best-way-to-validate-a-credit-card-in-php
+Usage: '<index>' => 'valid_cc'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_name" id="_validate_valid_name">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_name">#</a>
+		<code><a href="source-class-models.validator.html#1648-1673" title="Go to source code">validate_valid_name</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the input is a valid human name [Credits to http://github.com/ben-s].</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the input is a valid human name [Credits to http://github.com/ben-s].</p>
+
+<p>See: https://github.com/Wixel/GUMP/issues/5
+Usage: '<index>' => 'valid_name'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_street_address" id="_validate_street_address">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_street_address">#</a>
+		<code><a href="source-class-models.validator.html#1675-1706" title="Go to source code">validate_street_address</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided input is likely to be a street address using weak detection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided input is likely to be a street address using weak detection.</p>
+
+<p>Usage: '<index>' => 'street_address'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_iban" id="_validate_iban">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_iban">#</a>
+		<code><a href="source-class-models.validator.html#1708-1753" title="Go to source code">validate_iban</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid IBAN.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid IBAN.</p>
+
+<p>Usage: '<index>' => 'iban'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_date" id="_validate_date">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_date">#</a>
+		<code><a href="source-class-models.validator.html#1755-1783" title="Go to source code">validate_date</a>( <span>string <var>$field</var></span>, <span>string <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided input is a valid date (ISO 8601).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided input is a valid date (ISO 8601).</p>
+
+<p>Usage: '<index>' => 'date'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd>date ('Y-m-d') or datetime ('Y-m-d H:i:s')</dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_min_age" id="_validate_min_age">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_min_age">#</a>
+		<code><a href="source-class-models.validator.html#1785-1816" title="Go to source code">validate_min_age</a>( <span>string <var>$field</var></span>, <span>string <var>$input</var></span>, <span>string <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided input meets age requirement (ISO 8601).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided input meets age requirement (ISO 8601).</p>
+
+<p>Usage: '<index>' => 'min_age,13'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd>date ('Y-m-d') or datetime ('Y-m-d H:i:s')</dd>
+					<dt><var>$param</var></dt>
+					<dd>int</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_max_numeric" id="_validate_max_numeric">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_max_numeric">#</a>
+		<code><a href="source-class-models.validator.html#1818-1845" title="Go to source code">validate_max_numeric</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided numeric value is lower or equal to a specific value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided numeric value is lower or equal to a specific value.</p>
+
+<p>Usage: '<index>' => 'max_numeric,50'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_min_numeric" id="_validate_min_numeric">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_min_numeric">#</a>
+		<code><a href="source-class-models.validator.html#1847-1873" title="Go to source code">validate_min_numeric</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span>null <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided numeric value is higher or equal to a specific value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided numeric value is higher or equal to a specific value.</p>
+
+<p>Usage: '<index>' => 'min_numeric,1'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_starts" id="_validate_starts">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_starts">#</a>
+		<code><a href="source-class-models.validator.html#1875-1899" title="Go to source code">validate_starts</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value starts with param.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value starts with param.</p>
+
+<p>Usage: '<index>' => 'starts,Z'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_required_file" id="_validate_required_file">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_required_file">#</a>
+		<code><a href="source-class-models.validator.html#1901-1923" title="Go to source code">validate_required_file</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>checks if a file was uploaded.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>checks if a file was uploaded.</p>
+
+<p>Usage: '<index>' => 'required_file'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_extension" id="_validate_extension">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_extension">#</a>
+		<code><a href="source-class-models.validator.html#1925-1956" title="Go to source code">validate_extension</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>check the uploaded file for extension
+for now checks onlt the ext should add mime type check.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>check the uploaded file for extension
+for now checks onlt the ext should add mime type check.</p>
+
+<p>Usage: '<index>' => 'starts,Z'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_equalsfield" id="_validate_equalsfield">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_equalsfield">#</a>
+		<code><a href="source-class-models.validator.html#1958-1985" title="Go to source code">validate_equalsfield</a>( <span>string <var>$field</var></span>, <span>string <var>$input</var></span>, <span>string <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided field value equals current field value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided field value equals current field value.</p>
+
+<p>Usage: '<index>' => 'equalsfield,Z'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd>field to compare with</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_guidv4" id="_validate_guidv4">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_guidv4">#</a>
+		<code><a href="source-class-models.validator.html#1987-2013" title="Go to source code">validate_guidv4</a>( <span>string <var>$field</var></span>, <span>string <var>$input</var></span>, <span>string <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided field value is a valid GUID (v4)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided field value is a valid GUID (v4)</p>
+
+<p>Usage: '<index>' => 'guidv4'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd>field to compare with</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trimScalar" id="_trimScalar">
+
+		<td class="attributes"><code>
+			 private 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trimScalar">#</a>
+		<code><a href="source-class-models.validator.html#2015-2029" title="Go to source code">trimScalar</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Trims whitespace only when the value is a scalar.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Trims whitespace only when the value is a scalar.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_phone_number" id="_validate_phone_number">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_phone_number">#</a>
+		<code><a href="source-class-models.validator.html#2031-2066" title="Go to source code">validate_phone_number</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Determine if the provided value is a valid phone number.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine if the provided value is a valid phone number.</p>
+
+<p>Usage: '<index>' => 'phone_number'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br><p>Examples:</p>
+
+<p>555-555-5555: valid
+5555425555: valid
+555 555 5555: valid
+1(519) 555-4444: valid
+1 (519) 555-4422: valid
+1-555-555-5555: valid
+1-(555)-555-5555: valid</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_regex" id="_validate_regex">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_regex">#</a>
+		<code><a href="source-class-models.validator.html#2068-2093" title="Go to source code">validate_regex</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Custom regex validator.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Custom regex validator.</p>
+
+<p>Usage: '<index>' => 'regex,/your-regex-expression/'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_valid_json_string" id="_validate_valid_json_string">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_valid_json_string">#</a>
+		<code><a href="source-class-models.validator.html#2095-2119" title="Go to source code">validate_valid_json_string</a>( <span>string <var>$field</var></span>, <span>array <var>$input</var></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Json validatior.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Json validatior.</p>
+
+<p>Usage: '<index>' => 'valid_json_string'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+					<dt><var>$input</var></dt>
+					<dd></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="instance" id="$instance">
+		<td class="attributes"><code>
+			protected static 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#18" title="Go to source code"><var>$instance</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$instance" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="validation_rules" id="$validation_rules">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#21" title="Go to source code"><var>$validation_rules</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$validation_rules" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="filter_rules" id="$filter_rules">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#24" title="Go to source code"><var>$filter_rules</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$filter_rules" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="errors" id="$errors">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#27" title="Go to source code"><var>$errors</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$errors" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fields" id="$fields">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#30" title="Go to source code"><var>$fields</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fields" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="validation_methods" id="$validation_methods">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#33" title="Go to source code"><var>$validation_methods</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$validation_methods" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="filter_methods" id="$filter_methods">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#36" title="Go to source code"><var>$filter_methods</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$filter_methods" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="basic_tags" id="$basic_tags">
+		<td class="attributes"><code>
+			public static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#57" title="Go to source code"><var>$basic_tags</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$basic_tags" class="anchor">#</a>
+				<code><span class="php-quote">'&lt;br&gt;&lt;p&gt;&lt;a&gt;&lt;strong&gt;&lt;b&gt;&lt;i&gt;&lt;em&gt;&lt;img&gt;&lt;blockquote&gt;&lt;code&gt;&lt;dd&gt;&lt;dl&gt;&lt;hr&gt;&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;&lt;label&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;&lt;sub&gt;&lt;sup&gt;'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="en_noise_words" id="$en_noise_words">
+		<td class="attributes"><code>
+			public static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#59-66" title="Go to source code"><var>$en_noise_words</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$en_noise_words" class="anchor">#</a>
+				<code><span class="php-quote">&quot;about,after,all,also,an,and,another,any,are,as,at,be,because,been,before,
+                                 being,between,both,but,by,came,can,come,could,did,do,each,for,from,get,
+                                 got,has,had,he,have,her,here,him,himself,his,how,if,in,into,is,it,its,it's,like,
+                                 make,many,me,might,more,most,much,must,my,never,now,of,on,only,or,other,
+                                 our,out,over,said,same,see,should,since,some,still,such,take,than,that,
+                                 the,their,them,then,there,these,they,this,those,through,to,too,under,up,
+                                 very,was,way,we,well,were,what,where,which,while,who,with,would,you,your,a,
+                                 b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,</span><span class="php-var">$</span><span class="php-quote">,1,2,3,4,5,6,7,8,9,0,_&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fieldCharsToRemove" id="$fieldCharsToRemove">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.validator.html#69" title="Go to source code"><var>$fieldCharsToRemove</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fieldCharsToRemove" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(<span class="php-quote">'_'</span>, <span class="php-quote">'-'</span>)</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Frink API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

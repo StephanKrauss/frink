@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Spot\Mapper | Projekt Spot2</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Spot.html">
+						Spot<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Provider.html">
+						Provider					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Spot.Query.html">
+						Query<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Spot.Query.Operator.html">
+						Operator					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Spot.Relation.html">
+						Relation					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Valitron.html">
+						Valitron					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Spot.Config.html">Config</a></li>
+				<li><a href="class-Spot.Entity.html">Entity</a></li>
+				<li><a href="class-Spot.EventEmitter.html">EventEmitter</a></li>
+				<li><a href="class-Spot.Locator.html">Locator</a></li>
+				<li class="active"><a href="class-Spot.Mapper.html">Mapper</a></li>
+				<li><a href="class-Spot.Query.html">Query</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Spot.EntityInterface.html">EntityInterface</a></li>
+				<li><a href="class-Spot.MapperInterface.html">MapperInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Spot.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Spot.html" title="Summary of Spot"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Mapper</h1>
+
+
+	<div class="description">
+	<p>Base DataMapper</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Spot\Mapper</span></b>			
+			 implements 
+				<a href="class-Spot.MapperInterface.html"><span>Spot\MapperInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Spot.html">Spot</a><br>
+		<b>Package:</b> Spot<br>
+
+			<b>Located at</b> <a href="source-class-Spot.Mapper.html#6-1247" title="Go to source code">spot2/lib/Mapper.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Spot.Mapper.html#30-39" title="Go to source code">__construct</a>( <span><code><a href="class-Spot.Locator.html">Spot\Locator</a></code> <var>$locator</var></span>, <span> <var>$entityName</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor Method</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor Method</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#___construct">Spot\MapperInterface::__construct()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="config" id="_config">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Config.html">Spot\Config</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_config">#</a>
+		<code><a href="source-class-Spot.Mapper.html#41-49" title="Go to source code">config</a>( )</code>
+
+		<div class="description short">
+			<p>Get config class from locator</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get config class from locator</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Config.html">Spot\Config</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_config">Spot\MapperInterface::config()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMapper" id="_getMapper">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMapper">#</a>
+		<code><a href="source-class-Spot.Mapper.html#51-60" title="Go to source code">getMapper</a>( <span>string <var>$entityName</var></span> )</code>
+
+		<div class="description short">
+			<p>Get mapper for specified entity</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get mapper for specified entity</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entityName</var></dt>
+					<dd>Name of Entity object to load mapper for</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Mapper.html">Spot\Mapper</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_getMapper">Spot\MapperInterface::getMapper()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="entity" id="_entity">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_entity">#</a>
+		<code><a href="source-class-Spot.Mapper.html#62-70" title="Go to source code">entity</a>( )</code>
+
+		<div class="description short">
+			<p>Get name of the Entity class mapper was instantiated with</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get name of the Entity class mapper was instantiated with</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>$entityName
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_entity">Spot\MapperInterface::entity()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queryClass" id="_queryClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queryClass">#</a>
+		<code><a href="source-class-Spot.Mapper.html#72-80" title="Go to source code">queryClass</a>( )</code>
+
+		<div class="description short">
+			<p>Get query class name to use</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get query class name to use</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_queryClass">Spot\MapperInterface::queryClass()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="collectionClass" id="_collectionClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_collectionClass">#</a>
+		<code><a href="source-class-Spot.Mapper.html#82-90" title="Go to source code">collectionClass</a>( )</code>
+
+		<div class="description short">
+			<p>Get collection class name to use</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get collection class name to use</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_collectionClass">Spot\MapperInterface::collectionClass()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="entityManager" id="_entityManager">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Entity.Manager.html">Spot\Entity\Manager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_entityManager">#</a>
+		<code><a href="source-class-Spot.Mapper.html#92-105" title="Go to source code">entityManager</a>( )</code>
+
+		<div class="description short">
+			<p>Entity manager class for storing information and meta-data about entities</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Entity manager class for storing information and meta-data about entities</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Entity.Manager.html">Spot\Entity\Manager</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_entityManager">Spot\MapperInterface::entityManager()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="eventEmitter" id="_eventEmitter">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.EventEmitter.html">Spot\EventEmitter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_eventEmitter">#</a>
+		<code><a href="source-class-Spot.Mapper.html#107-120" title="Go to source code">eventEmitter</a>( )</code>
+
+		<div class="description short">
+			<p>Event emitter for this mapper</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Event emitter for this mapper</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.EventEmitter.html">Spot\EventEmitter</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_eventEmitter">Spot\MapperInterface::eventEmitter()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadEvents" id="_loadEvents">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadEvents">#</a>
+		<code><a href="source-class-Spot.Mapper.html#122-130" title="Go to source code">loadEvents</a>( )</code>
+
+		<div class="description short">
+			<p>Reset and load Events for mapped entity</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Reset and load Events for mapped entity</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_loadEvents">Spot\MapperInterface::loadEvents()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadRelations" id="_loadRelations">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadRelations">#</a>
+		<code><a href="source-class-Spot.Mapper.html#132-142" title="Go to source code">loadRelations</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span> )</code>
+
+		<div class="description short">
+			<p>Load Relations for mapped entity</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load Relations for mapped entity</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_loadRelations">Spot\MapperInterface::loadRelations()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasMany" id="_hasMany">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasMany">#</a>
+		<code><a href="source-class-Spot.Mapper.html#144-159" title="Go to source code">hasMany</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span> <var>$entityName</var></span>, <span> <var>$foreignKey</var></span>, <span> <var>$localValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Relation: HasMany</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Relation: HasMany</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_hasMany">Spot\MapperInterface::hasMany()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasManyThrough" id="_hasManyThrough">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasManyThrough">#</a>
+		<code><a href="source-class-Spot.Mapper.html#161-180" title="Go to source code">hasManyThrough</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span> <var>$hasManyEntity</var></span>, <span> <var>$throughEntity</var></span>, <span> <var>$selectField</var></span>, <span> <var>$whereField</var></span> )</code>
+
+		<div class="description short">
+			<p>Relation: HasManyThrough</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Relation: HasManyThrough</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_hasManyThrough">Spot\MapperInterface::hasManyThrough()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasOne" id="_hasOne">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasOne">#</a>
+		<code><a href="source-class-Spot.Mapper.html#182-198" title="Go to source code">hasOne</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span> <var>$foreignEntity</var></span>, <span> <var>$foreignKey</var></span> )</code>
+
+		<div class="description short">
+			<p>Relation: HasOne</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Relation: HasOne</p>
+
+<p>HasOne assumes that the foreignKey will be on the foreignEntity.</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_hasOne">Spot\MapperInterface::hasOne()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="belongsTo" id="_belongsTo">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_belongsTo">#</a>
+		<code><a href="source-class-Spot.Mapper.html#200-219" title="Go to source code">belongsTo</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span> <var>$foreignEntity</var></span>, <span> <var>$localKey</var></span> )</code>
+
+		<div class="description short">
+			<p>Relation: BelongsTo</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Relation: BelongsTo</p>
+
+<p>BelongsTo assumes that the localKey will reference the foreignEntity's
+primary key. If this is not the case, you probably want to use the
+'hasOne' relationship instead.</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_belongsTo">Spot\MapperInterface::belongsTo()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepareEntity" id="_prepareEntity">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepareEntity">#</a>
+		<code><a href="source-class-Spot.Mapper.html#221-233" title="Go to source code">prepareEntity</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span> )</code>
+
+		<div class="description short">
+			<p>Prepare entity and load necessary objects on it</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepare entity and load necessary objects on it</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean|null
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_prepareEntity">Spot\MapperInterface::prepareEntity()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resolver" id="_resolver">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resolver">#</a>
+		<code><a href="source-class-Spot.Mapper.html#235-241" title="Go to source code">resolver</a>( )</code>
+
+		<div class="description short">
+			<p>Query resolver class for perparing and executing queries, then returning the results</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Query resolver class for perparing and executing queries, then returning the results</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_resolver">Spot\MapperInterface::resolver()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="table" id="_table">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table">#</a>
+		<code><a href="source-class-Spot.Mapper.html#243-251" title="Go to source code">table</a>( )</code>
+
+		<div class="description short">
+			<p>Get table name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get table name</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Name of table defined on entity class
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_table">Spot\MapperInterface::table()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fields" id="_fields">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fields">#</a>
+		<code><a href="source-class-Spot.Mapper.html#253-263" title="Go to source code">fields</a>( <span>string <var>$entityName</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>Get formatted fields with all neccesary array keys and values.
+Merges defaults with defined field values to ensure all options exist for each field.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get formatted fields with all neccesary array keys and values.
+Merges defaults with defined field values to ensure all options exist for each field.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entityName</var>,…</dt>
+					<dd>Name of the entity class</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Defined fields plus all defaults for full array of all possible options
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_fields">Spot\MapperInterface::fields()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldsDefined" id="_fieldsDefined">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldsDefined">#</a>
+		<code><a href="source-class-Spot.Mapper.html#265-273" title="Go to source code">fieldsDefined</a>( )</code>
+
+		<div class="description short">
+			<p>Get field information exactly how it is defined in the class</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get field information exactly how it is defined in the class</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Defined fields plus all defaults for full array of all possible options
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_fieldsDefined">Spot\MapperInterface::fieldsDefined()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="relations" id="_relations">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_relations">#</a>
+		<code><a href="source-class-Spot.Mapper.html#275-281" title="Go to source code">relations</a>( )</code>
+
+		<div class="description short">
+			<p>Get defined relations</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get defined relations</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_relations">Spot\MapperInterface::relations()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="scopes" id="_scopes">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_scopes">#</a>
+		<code><a href="source-class-Spot.Mapper.html#283-293" title="Go to source code">scopes</a>( )</code>
+
+		<div class="description short">
+			<p>Return scopes defined by this mapper. Scopes are called from the
+Spot\Query object as a sort of in-context dynamic query method</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return scopes defined by this mapper. Scopes are called from the
+Spot\Query object as a sort of in-context dynamic query method</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Array of closures with method name as the key
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_scopes">Spot\MapperInterface::scopes()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="primaryKey" id="_primaryKey">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_primaryKey">#</a>
+		<code><a href="source-class-Spot.Mapper.html#295-309" title="Go to source code">primaryKey</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span> )</code>
+
+		<div class="description short">
+			<p>Get value of primary key for given row result</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get value of primary key for given row result</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd>Instance of an entity to find the primary key of</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_primaryKey">Spot\MapperInterface::primaryKey()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="primaryKeyField" id="_primaryKeyField">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_primaryKeyField">#</a>
+		<code><a href="source-class-Spot.Mapper.html#311-317" title="Go to source code">primaryKeyField</a>( )</code>
+
+		<div class="description short">
+			<p>Get value of primary key for given row result</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get value of primary key for given row result</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_primaryKeyField">Spot\MapperInterface::primaryKeyField()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldExists" id="_fieldExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldExists">#</a>
+		<code><a href="source-class-Spot.Mapper.html#319-327" title="Go to source code">fieldExists</a>( <span>string <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>Check if field exists in defined fields</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if field exists in defined fields</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd>Field name to check for existence</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_fieldExists">Spot\MapperInterface::fieldExists()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldInfo" id="_fieldInfo">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldInfo">#</a>
+		<code><a href="source-class-Spot.Mapper.html#329-341" title="Go to source code">fieldInfo</a>( <span>string <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>Check if field exists in defined fields</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if field exists in defined fields</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd>Field name to check for existence</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_fieldInfo">Spot\MapperInterface::fieldInfo()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fieldType" id="_fieldType">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fieldType">#</a>
+		<code><a href="source-class-Spot.Mapper.html#343-354" title="Go to source code">fieldType</a>( <span>string <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>Return field type</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return field type</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd>Field name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>Field type string or boolean false
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_fieldType">Spot\MapperInterface::fieldType()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="connection" id="_connection">
+
+		<td class="attributes"><code>
+			 public 
+
+			Doctrine\DBAL\Connection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connection">#</a>
+		<code><a href="source-class-Spot.Mapper.html#356-375" title="Go to source code">connection</a>( <span>string <var>$connectionName</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Get connection to use</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get connection to use</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connectionName</var></dt>
+					<dd>Named connection or entity class name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					Doctrine\DBAL\Connection
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_connection">Spot\MapperInterface::connection()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="connectionIs" id="_connectionIs">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connectionIs">#</a>
+		<code><a href="source-class-Spot.Mapper.html#377-386" title="Go to source code">connectionIs</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			<p>Test to see if collection is of the given type</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Test to see if collection is of the given type</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd>type, something like "mysql", "sqlite", "pgsql", etc.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_connectionIs">Spot\MapperInterface::connectionIs()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="collection" id="_collection">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_collection">#</a>
+		<code><a href="source-class-Spot.Mapper.html#388-432" title="Go to source code">collection</a>( <span> <var>$cursor</var></span>, <span> <var>$with</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Create collection from Spot\Query object</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create collection from Spot\Query object</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_collection">Spot\MapperInterface::collection()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="with" id="_with">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_with">#</a>
+		<code><a href="source-class-Spot.Mapper.html#434-485" title="Go to source code">with</a>( <span> <var>$collection</var></span>, <span> <var>$entityName</var></span>, <span> <var>$with</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Eager-load associations for an entire collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Eager-load associations for an entire collection</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-Spot.Mapper.html#487-525" title="Go to source code">get</a>( <span>mixed <var>$identifier</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Get a new entity object, or an existing
+entity from identifiers</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get a new entity object, or an existing
+entity from identifiers</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$identifier</var></dt>
+					<dd>Primary key or array of key/values</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br><p>Depends on input
+                         false If $identifier is scalar and no entity exists</p>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_get">Spot\MapperInterface::get()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="build" id="_build">
+
+		<td class="attributes"><code>
+			 public 
+
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_build">#</a>
+		<code><a href="source-class-Spot.Mapper.html#527-538" title="Go to source code">build</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Get a new entity object, set given data on it</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get a new entity object, set given data on it</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>array of key/values to set on new Entity instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					object<br>Instance of $entityClass with $data set on it
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_build">Spot\MapperInterface::build()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create" id="_create">
+
+		<td class="attributes"><code>
+			 public 
+
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create">#</a>
+		<code><a href="source-class-Spot.Mapper.html#540-555" title="Go to source code">create</a>( <span>array <var>$data</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Get a new entity object, set given data on it, and save it</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get a new entity object, set given data on it, and save it</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>array of key/values to set on new Entity instance</dd>
+					<dt><var>$options</var></dt>
+					<dd>array of save options that will be passed to insert()</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					object<br>Instance of $entityClass with $data set on it
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Spot.Exception.html">Spot\Exception</a></code>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_create">Spot\MapperInterface::create()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-class-Spot.Mapper.html#557-571" title="Go to source code">query</a>( <span>string <var>$sql</var></span>, <span>array <var>$params</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Find records with custom query</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find records with custom query</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>Raw query or SQL to run against the datastore</dd>
+					<dt><var>$params</var></dt>
+					<dd>$conditions Array of binds in column => value pairs to use for prepared statement</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_query">Spot\MapperInterface::query()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="all" id="_all">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_all">#</a>
+		<code><a href="source-class-Spot.Mapper.html#573-581" title="Go to source code">all</a>( )</code>
+
+		<div class="description short">
+			<p>Find all records</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find all records</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_all">Spot\MapperInterface::all()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="where" id="_where">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_where">#</a>
+		<code><a href="source-class-Spot.Mapper.html#583-593" title="Go to source code">where</a>( <span>array <var>$conditions</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Find records with given conditions
+If all parameters are empty, find all records</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find records with given conditions
+If all parameters are empty, find all records</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$conditions</var></dt>
+					<dd>Array of conditions in column => value pairs</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_where">Spot\MapperInterface::where()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="first" id="_first">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_first">#</a>
+		<code><a href="source-class-Spot.Mapper.html#595-614" title="Go to source code">first</a>( <span>array <var>$conditions</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Find first record matching given conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find first record matching given conditions</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$conditions</var></dt>
+					<dd>Array of conditions in column => value pairs</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_first">Spot\MapperInterface::first()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queryBuilder" id="_queryBuilder">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queryBuilder">#</a>
+		<code><a href="source-class-Spot.Mapper.html#616-627" title="Go to source code">queryBuilder</a>( )</code>
+
+		<div class="description short">
+			<p>Begin a new database query - get query builder
+Acts as a kind of factory to get the current adapter's query builder object</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Begin a new database query - get query builder
+Acts as a kind of factory to get the current adapter's query builder object</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_queryBuilder">Spot\MapperInterface::queryBuilder()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="select" id="_select">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_select">#</a>
+		<code><a href="source-class-Spot.Mapper.html#629-643" title="Go to source code">select</a>( <span>string <var>$fields</var> = <span class="php-quote">&quot;*&quot;</span></span>, <span>mixed <var>$fields</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>Begin a new database query - get query builder
+Acts as a kind of factory to get the current adapter's query builder object</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Begin a new database query - get query builder
+Acts as a kind of factory to get the current adapter's query builder object</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fields</var></dt>
+					<dd>$entityName Name of the entity class</dd>
+					<dt><var>$fields</var>,…</dt>
+					<dd>String for single field or array of fields</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.Query.html">Spot\Query</a></code>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_select">Spot\MapperInterface::select()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-Spot.Mapper.html#645-668" title="Go to source code">save</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Save record
+Will update if primary key found, insert if not
+Performs validation automatically before saving record</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Save record
+Will update if primary key found, insert if not
+Performs validation automatically before saving record</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd>Entity object</dd>
+					<dt><var>$options</var></dt>
+					<dd>Array of save options</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_save">Spot\MapperInterface::save()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert">#</a>
+		<code><a href="source-class-Spot.Mapper.html#670-789" title="Go to source code">insert</a>( <span>mixed <var>$entity</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Insert record</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Insert record</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd>Entity object or array of field => value pairs</dd>
+					<dt><var>$options</var></dt>
+					<dd>Array of adapter-specific options</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_insert">Spot\MapperInterface::insert()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code><a href="source-class-Spot.Mapper.html#791-859" title="Go to source code">update</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Update given entity object</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Update given entity object</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd>Entity object</dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>Params</h4>
+				<div class="list">
+						array $options Array of adapter-specific options<br>
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_update">Spot\MapperInterface::update()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="upsert" id="_upsert">
+
+		<td class="attributes"><code>
+			 public 
+
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_upsert">#</a>
+		<code><a href="source-class-Spot.Mapper.html#861-887" title="Go to source code">upsert</a>( <span>array <var>$data</var></span>, <span>array <var>$where</var></span> )</code>
+
+		<div class="description short">
+			<p>Upsert save entity - insert or update on duplicate key. Intended to be
+used in conjunction with fields that are marked 'unique'</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Upsert save entity - insert or update on duplicate key. Intended to be
+used in conjunction with fields that are marked 'unique'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>array of key/values to set on new Entity instance</dd>
+					<dt><var>$where</var></dt>
+					<dd>array of keys to select record by for updating if it already exists</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					object<br>Instance of $entityClass with $data set on it
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_upsert">Spot\MapperInterface::upsert()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveHasRelations" id="_saveHasRelations">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveHasRelations">#</a>
+		<code><a href="source-class-Spot.Mapper.html#889-914" title="Go to source code">saveHasRelations</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Save related entities that have been assigned or loaded (only HasOne, HasMany and HasManyThrough relations)
+See saveBelongsToRelations.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Save related entities that have been assigned or loaded (only HasOne, HasMany and HasManyThrough relations)
+See saveBelongsToRelations.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					InvalidArgumentException
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveBelongsToRelations" id="_saveBelongsToRelations">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveBelongsToRelations">#</a>
+		<code><a href="source-class-Spot.Mapper.html#916-937" title="Go to source code">saveBelongsToRelations</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Save related entities that have been assigned or loaded (only BelongsTo relations)
+See saveHasRelations.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Save related entities that have been assigned or loaded (only BelongsTo relations)
+See saveHasRelations.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-Spot.Mapper.html#939-969" title="Go to source code">delete</a>( <span>mixed <var>$conditions</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Delete items matching given conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete items matching given conditions</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$conditions</var></dt>
+					<dd>Optional array of conditions in column => value pairs</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_delete">Spot\MapperInterface::delete()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="convertToDatabaseValues" id="_convertToDatabaseValues">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_convertToDatabaseValues">#</a>
+		<code><a href="source-class-Spot.Mapper.html#971-989" title="Go to source code">convertToDatabaseValues</a>( <span>string <var>$entityName</var></span>, <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Prepare data to be dumped to the data store</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepare data to be dumped to the data store</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entityName</var></dt>
+					<dd></dd>
+					<dt><var>$data</var></dt>
+					<dd>Key/value pairs of data to store</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="convertToPHPValues" id="_convertToPHPValues">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_convertToPHPValues">#</a>
+		<code><a href="source-class-Spot.Mapper.html#991-1021" title="Go to source code">convertToPHPValues</a>( <span>string <var>$entityName</var></span>, <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieve data from the data store and map it to PHP values</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieve data from the data store and map it to PHP values</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entityName</var></dt>
+					<dd></dd>
+					<dt><var>$data</var></dt>
+					<dd>Key/value pairs of data to store</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="transaction" id="_transaction">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_transaction">#</a>
+		<code><a href="source-class-Spot.Mapper.html#1023-1051" title="Go to source code">transaction</a>( <span>Closure <var>$work</var></span>, <span> <var>$entityName</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Transaction with closure</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Transaction with closure</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_transaction">Spot\MapperInterface::transaction()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="truncateTable" id="_truncateTable">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_truncateTable">#</a>
+		<code><a href="source-class-Spot.Mapper.html#1053-1060" title="Go to source code">truncateTable</a>( <span> <var>$cascade</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Truncate table
+Should delete all rows and reset serial/auto_increment keys</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Truncate table
+Should delete all rows and reset serial/auto_increment keys</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_truncateTable">Spot\MapperInterface::truncateTable()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dropTable" id="_dropTable">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dropTable">#</a>
+		<code><a href="source-class-Spot.Mapper.html#1062-1071" title="Go to source code">dropTable</a>( <span>string <var>$entityName</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>Drop/delete table
+Destructive and dangerous - drops entire data source and all data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Drop/delete table
+Destructive and dangerous - drops entire data source and all data</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entityName</var>,…</dt>
+					<dd>Name of the entity class</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_dropTable">Spot\MapperInterface::dropTable()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="migrate" id="_migrate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_migrate">#</a>
+		<code><a href="source-class-Spot.Mapper.html#1073-1081" title="Go to source code">migrate</a>( <span>string <var>$entityName</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>Migrate table structure changes from model to database</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Migrate table structure changes from model to database</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entityName</var>,…</dt>
+					<dd>Name of the entity class</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_migrate">Spot\MapperInterface::migrate()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate" id="_validate">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate">#</a>
+		<code><a href="source-class-Spot.Mapper.html#1083-1176" title="Go to source code">validate</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span>array <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			<p>Run set validation rules on fields</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Run set validation rules on fields</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Spot.MapperInterface.html#_validate">Spot\MapperInterface::validate()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateRelations" id="_validateRelations">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateRelations">#</a>
+		<code><a href="source-class-Spot.Mapper.html#1178-1215" title="Go to source code">validateRelations</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span> )</code>
+
+		<div class="description short">
+			<p>Validate related entities using relations</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Validate related entities using relations</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateRelatedEntity" id="_validateRelatedEntity">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateRelatedEntity">#</a>
+		<code><a href="source-class-Spot.Mapper.html#1217-1246" title="Go to source code">validateRelatedEntity</a>( <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$relatedEntity</var></span>, <span><code><a href="class-Spot.EntityInterface.html">Spot\EntityInterface</a></code> <var>$entity</var></span>, <span><code><a href="class-Spot.Relation.RelationAbstract.html">Spot\Relation\RelationAbstract</a></code> <var>$relation</var></span> )</code>
+
+		<div class="description short">
+			<p>Validate related entity if it is new or modified only</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Validate related entity if it is new or modified only</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$relatedEntity</var></dt>
+					<dd></dd>
+					<dt><var>$entity</var></dt>
+					<dd></dd>
+					<dt><var>$relation</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Related entity errors
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="locator" id="$locator">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#13" title="Go to source code"><var>$locator</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$locator" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="entityName" id="$entityName">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#14" title="Go to source code"><var>$entityName</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$entityName" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="entityManager" id="$entityManager">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#17" title="Go to source code"><var>$entityManager</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$entityManager" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="eventEmitter" id="$eventEmitter">
+		<td class="attributes"><code>
+			protected static 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#18" title="Go to source code"><var>$eventEmitter</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$eventEmitter" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="withRelations" id="$withRelations">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#21" title="Go to source code"><var>$withRelations</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$withRelations" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_collectionClass" id="$_collectionClass">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#24" title="Go to source code"><var>$_collectionClass</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_collectionClass" class="anchor">#</a>
+				<code><span class="php-quote">'\\Spot\\Entity\\Collection'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_queryClass" id="$_queryClass">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#25" title="Go to source code"><var>$_queryClass</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_queryClass" class="anchor">#</a>
+				<code><span class="php-quote">'\\Spot\\Query'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_hooks" id="$_hooks">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Spot.Mapper.html#28" title="Go to source code"><var>$_hooks</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_hooks" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Spot2 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

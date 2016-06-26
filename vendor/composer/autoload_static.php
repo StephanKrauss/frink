@@ -7,7 +7,6 @@ namespace Composer\Autoload;
 class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'fc73bab8d04e21bcdda37ca319c63800' => __DIR__ . '/..' . '/mikecao/flight/flight/autoload.php',
         '5b7d984aab5ae919d3362ad9588977eb' => __DIR__ . '/..' . '/mikecao/flight/flight/Flight.php',
     );
@@ -23,8 +22,13 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         ),
         'S' => 
         array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\Console\\' => 26,
+            'Spot\\' => 5,
+            'SpotTest\\' => 9,
+            'Sabre\\Event\\' => 12,
+        ),
+        'R' => 
+        array (
+            'RedBeanPHP\\' => 11,
         ),
         'P' => 
         array (
@@ -32,7 +36,6 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         ),
         'D' => 
         array (
-            'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\' => 16,
         ),
@@ -47,21 +50,25 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         array (
             0 => __DIR__ . '/..' . '/bafs/testify/lib/Testify',
         ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
+        'Spot\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+            0 => __DIR__ . '/..' . '/vlucas/spot2/lib',
         ),
-        'Symfony\\Component\\Console\\' => 
+        'SpotTest\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/console',
+            0 => __DIR__ . '/..' . '/vlucas/spot2/tests',
+        ),
+        'Sabre\\Event\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabre/event/lib',
+        ),
+        'RedBeanPHP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gabordemooij/redbean/RedBeanPHP',
         ),
         'Predis\\' => 
         array (
             0 => __DIR__ . '/..' . '/predis/predis/src',
-        ),
-        'Doctrine\\Instantiator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -78,6 +85,13 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
     );
 
     public static $prefixesPsr0 = array (
+        'V' => 
+        array (
+            'Valitron' => 
+            array (
+                0 => __DIR__ . '/..' . '/vlucas/valitron/src',
+            ),
+        ),
         'T' => 
         array (
             'Twig_' => 
@@ -87,9 +101,9 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         ),
         'P' => 
         array (
-            'Psr\\Log\\' => 
+            'Pimple' => 
             array (
-                0 => __DIR__ . '/..' . '/psr/log',
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
             ),
             'Parsedown' => 
             array (
@@ -98,10 +112,6 @@ class ComposerStaticInit6ddf1c3fb8cd77f10690bd1b9a9e7d16
         ),
         'D' => 
         array (
-            'Doctrine\\ORM\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/orm/lib',
-            ),
             'Doctrine\\DBAL\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/dbal/lib',

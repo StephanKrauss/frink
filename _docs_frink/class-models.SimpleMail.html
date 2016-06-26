@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class models\SimpleMail | Projekt Frink</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-controller.html">
+						controller					</a>
+
+						</li>
+				<li>
+					<a href="namespace-mapper.html">
+						mapper					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-models.html">
+						models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tables.html">
+						tables					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tools.html">
+						tools					</a>
+
+						</li>
+				<li>
+					<a href="namespace-traits.html">
+						traits					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-models.auth.html">auth</a></li>
+				<li><a href="class-models.BenutzerDaten.html">BenutzerDaten</a></li>
+				<li><a href="class-models.config.html">config</a></li>
+				<li><a href="class-models.extendsBasis.html">extendsBasis</a></li>
+				<li><a href="class-models.extendsSplObserver.html">extendsSplObserver</a></li>
+				<li><a href="class-models.extendsSplSubject.html">extendsSplSubject</a></li>
+				<li><a href="class-models.iniparser.html">iniparser</a></li>
+				<li><a href="class-models.model.html">model</a></li>
+				<li><a href="class-models.modelBasis.html">modelBasis</a></li>
+				<li><a href="class-models.modelBasis1.html">modelBasis1</a></li>
+				<li><a href="class-models.modelBasisSingleton.html">modelBasisSingleton</a></li>
+				<li><a href="class-models.ModelData.html">ModelData</a></li>
+				<li><a href="class-models.modelObserver1.html">modelObserver1</a></li>
+				<li><a href="class-models.modelObserver2.html">modelObserver2</a></li>
+				<li><a href="class-models.modelSubject.html">modelSubject</a></li>
+				<li><a href="class-models.myCalc.html">myCalc</a></li>
+				<li><a href="class-models.notNoSql.html">notNoSql</a></li>
+				<li><a href="class-models.plugins.html">plugins</a></li>
+				<li><a href="class-models.redisko.html">redisko</a></li>
+				<li><a href="class-models.session.html">session</a></li>
+				<li class="active"><a href="class-models.SimpleMail.html">SimpleMail</a></li>
+				<li><a href="class-models.Sparrow.html">Sparrow</a></li>
+				<li><a href="class-models.validator.html">validator</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-models.ModelInterface.html">ModelInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-models.NotNoSQLException.html">NotNoSQLException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-models.html" title="Summary of models"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SimpleMail</h1>
+
+
+	<div class="description">
+	<p>Simple Mail class.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-models.html">models</a><br>
+		<b>Package:</b> SimpleMail<br>
+
+				<b>Category:</b>
+				SimpleMail<br>
+				<b>Copyright:</b>
+				2009 - 2014 Eoghan O'Brien<br>
+				<b>License:</b>
+				<a href="http://github.com/eoghanobrien/php-simple-mail/LICENCE.txt">MIT</a><br>
+				<b>Author:</b>
+				Eoghan O'Brien <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#101;&#111;&#x67;h&#97;&#x6e;&#x40;&#101;&#111;&#x67;h&#97;&#x6e;&#x6f;&#98;&#114;&#x69;&#x65;&#110;&#x2e;&#x63;&#111;&#109;">&#101;&#111;&#x67;h&#97;&#x6e;&#x40;&#101;&#111;&#x67;h&#97;&#x6e;&#x6f;&#98;&#114;&#x69;&#x65;&#110;&#x2e;&#x63;&#111;&#109;</a><br>
+				<b>Version:</b>
+				1.4<br>
+				<b>Link:</b>
+				<a href="http://github.com/eoghanobrien/php-simple-mail">http://github.com/eoghanobrien/php-simple-mail</a><br>
+			<b>Located at</b> <a href="source-class-models.SimpleMail.html#25-633" title="Go to source code">models/SimpleMail.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-models.SimpleMail.html#79-87" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			<p>__construct</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>__construct</p>
+
+<p>Resets the class properties.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reset" id="_reset">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reset">#</a>
+		<code><a href="source-class-models.SimpleMail.html#89-107" title="Go to source code">reset</a>( )</code>
+
+		<div class="description short">
+			<p>reset</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>reset</p>
+
+<p>Resets all properties to initial state.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTo" id="_setTo">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTo">#</a>
+		<code><a href="source-class-models.SimpleMail.html#109-121" title="Go to source code">setTo</a>( <span>string <var>$email</var></span>, <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>setTo</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>setTo</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd>The email address to send to.</dd>
+					<dt><var>$name</var></dt>
+					<dd>The name of the person to send to.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTo" id="_getTo">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTo">#</a>
+		<code><a href="source-class-models.SimpleMail.html#123-133" title="Go to source code">getTo</a>( )</code>
+
+		<div class="description short">
+			<p>getTo</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getTo</p>
+
+<p>Return an array of formatted To addresses.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSubject" id="_setSubject">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSubject">#</a>
+		<code><a href="source-class-models.SimpleMail.html#135-148" title="Go to source code">setSubject</a>( <span>string <var>$subject</var></span> )</code>
+
+		<div class="description short">
+			<p>setSubject</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>setSubject</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd>The email subject</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSubject" id="_getSubject">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSubject">#</a>
+		<code><a href="source-class-models.SimpleMail.html#150-158" title="Go to source code">getSubject</a>( )</code>
+
+		<div class="description short">
+			<p>getSubject function.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getSubject function.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMessage" id="_setMessage">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMessage">#</a>
+		<code><a href="source-class-models.SimpleMail.html#160-171" title="Go to source code">setMessage</a>( <span>string <var>$message</var></span> )</code>
+
+		<div class="description short">
+			<p>setMessage</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>setMessage</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$message</var></dt>
+					<dd>The message to send.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMessage" id="_getMessage">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMessage">#</a>
+		<code><a href="source-class-models.SimpleMail.html#173-181" title="Go to source code">getMessage</a>( )</code>
+
+		<div class="description short">
+			<p>getMessage</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getMessage</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addAttachment" id="_addAttachment">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addAttachment">#</a>
+		<code><a href="source-class-models.SimpleMail.html#183-200" title="Go to source code">addAttachment</a>( <span>string <var>$path</var></span>, <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>addAttachment</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>addAttachment</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd>The file path to the attachment.</dd>
+					<dt><var>$filename</var></dt>
+					<dd>The filename of the attachment when emailed.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAttachmentData" id="_getAttachmentData">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAttachmentData">#</a>
+		<code><a href="source-class-models.SimpleMail.html#202-216" title="Go to source code">getAttachmentData</a>( <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			<p>getAttachmentData</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getAttachmentData</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd>The path to the attachment file.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFrom" id="_setFrom">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFrom">#</a>
+		<code><a href="source-class-models.SimpleMail.html#218-230" title="Go to source code">setFrom</a>( <span>string <var>$email</var></span>, <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>setFrom</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>setFrom</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd>The email to send as from.</dd>
+					<dt><var>$name</var></dt>
+					<dd>The name to send as from.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMailHeader" id="_addMailHeader">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addMailHeader">#</a>
+		<code><a href="source-class-models.SimpleMail.html#232-246" title="Go to source code">addMailHeader</a>( <span>string <var>$header</var></span>, <span>string <var>$email</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>addMailHeader</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>addMailHeader</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd>The header to add.</dd>
+					<dt><var>$email</var></dt>
+					<dd>The email to add.</dd>
+					<dt><var>$name</var></dt>
+					<dd>The name to add.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addGenericHeader" id="_addGenericHeader">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addGenericHeader">#</a>
+		<code><a href="source-class-models.SimpleMail.html#248-264" title="Go to source code">addGenericHeader</a>( <span>string <var>$header</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>addGenericHeader</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>addGenericHeader</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$header</var></dt>
+					<dd>The generic header to add.</dd>
+					<dt><var>$value</var></dt>
+					<dd>The value of the header.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaders" id="_getHeaders">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaders">#</a>
+		<code><a href="source-class-models.SimpleMail.html#266-276" title="Go to source code">getHeaders</a>( )</code>
+
+		<div class="description short">
+			<p>getHeaders</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getHeaders</p>
+
+<p>Return the headers registered so far as an array.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setParameters" id="_setParameters">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setParameters">#</a>
+		<code><a href="source-class-models.SimpleMail.html#278-291" title="Go to source code">setParameters</a>( <span>string <var>$additionalParameters</var></span> )</code>
+
+		<div class="description short">
+			<p>setAdditionalParameters</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>setAdditionalParameters</p>
+
+<p>Such as "-fyouremail@yourserver.com</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$additionalParameters</var></dt>
+					<dd>The addition mail parameter.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameters" id="_getParameters">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParameters">#</a>
+		<code><a href="source-class-models.SimpleMail.html#293-301" title="Go to source code">getParameters</a>( )</code>
+
+		<div class="description short">
+			<p>getAdditionalParameters</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getAdditionalParameters</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setWrap" id="_setWrap">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setWrap">#</a>
+		<code><a href="source-class-models.SimpleMail.html#303-318" title="Go to source code">setWrap</a>( <span>integer <var>$wrap</var> = <span class="php-num">78</span></span> )</code>
+
+		<div class="description short">
+			<p>setWrap</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>setWrap</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$wrap</var></dt>
+					<dd>The number of characters at which the message will wrap.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-models.SimpleMail.html">models\SimpleMail</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWrap" id="_getWrap">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWrap">#</a>
+		<code><a href="source-class-models.SimpleMail.html#320-328" title="Go to source code">getWrap</a>( )</code>
+
+		<div class="description short">
+			<p>getWrap</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getWrap</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasAttachments" id="_hasAttachments">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasAttachments">#</a>
+		<code><a href="source-class-models.SimpleMail.html#330-340" title="Go to source code">hasAttachments</a>( )</code>
+
+		<div class="description short">
+			<p>hasAttachments</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>hasAttachments</p>
+
+<p>Checks if the email has any registered attachments.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="assembleAttachmentHeaders" id="_assembleAttachmentHeaders">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_assembleAttachmentHeaders">#</a>
+		<code><a href="source-class-models.SimpleMail.html#342-354" title="Go to source code">assembleAttachmentHeaders</a>( )</code>
+
+		<div class="description short">
+			<p>assembleAttachment</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>assembleAttachment</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="assembleAttachmentBody" id="_assembleAttachmentBody">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_assembleAttachmentBody">#</a>
+		<code><a href="source-class-models.SimpleMail.html#356-378" title="Go to source code">assembleAttachmentBody</a>( )</code>
+
+		<div class="description short">
+			<p>assembleAttachmentBody</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>assembleAttachmentBody</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAttachmentMimeTemplate" id="_getAttachmentMimeTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAttachmentMimeTemplate">#</a>
+		<code><a href="source-class-models.SimpleMail.html#380-403" title="Go to source code">getAttachmentMimeTemplate</a>( <span>array <var>$attachment</var></span>, <span>string <var>$uid</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>getAttachmentMimeTemplate</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getAttachmentMimeTemplate</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attachment</var></dt>
+					<dd>An array containing 'file' and 'data' keys.</dd>
+					<dt><var>$uid</var>,…</dt>
+					<dd>A unique identifier for the boundary.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="send" id="_send">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_send">#</a>
+		<code><a href="source-class-models.SimpleMail.html#405-430" title="Go to source code">send</a>( )</code>
+
+		<div class="description short">
+			<p>send</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>send</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					RuntimeException<br>on no 'To: ' address to send to.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="debug" id="_debug">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_debug">#</a>
+		<code><a href="source-class-models.SimpleMail.html#432-440" title="Go to source code">debug</a>( )</code>
+
+		<div class="description short">
+			<p>debug</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>debug</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-models.SimpleMail.html#442-450" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			<p>magic __toString function</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>magic __toString function</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatHeader" id="_formatHeader">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_formatHeader">#</a>
+		<code><a href="source-class-models.SimpleMail.html#452-471" title="Go to source code">formatHeader</a>( <span>string <var>$email</var></span>, <span>string <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>formatHeader</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>formatHeader</p>
+
+<p>Formats a display address for emails according to RFC2822 e.g.
+Name <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;:&#x61;&#100;&#100;&#x72;&#x65;&#115;s&#x40;&#100;&#111;&#x6d;&#x61;&#105;&#110;&#x2e;&#x74;&#108;&#x64;">&#x61;&#100;&#100;&#x72;&#x65;&#115;s&#x40;&#100;&#111;&#x6d;&#x61;&#105;&#110;&#x2e;&#x74;&#108;&#x64;</a></p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd>The email address.</dd>
+					<dt><var>$name</var></dt>
+					<dd>The display name.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="encodeUtf8" id="_encodeUtf8">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encodeUtf8">#</a>
+		<code><a href="source-class-models.SimpleMail.html#473-487" title="Go to source code">encodeUtf8</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>encodeUtf8</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>encodeUtf8</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>The value to encode.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="encodeUtf8Word" id="_encodeUtf8Word">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encodeUtf8Word">#</a>
+		<code><a href="source-class-models.SimpleMail.html#489-499" title="Go to source code">encodeUtf8Word</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>encodeUtf8Word</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>encodeUtf8Word</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>The word to encode.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="encodeUtf8Words" id="_encodeUtf8Words">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encodeUtf8Words">#</a>
+		<code><a href="source-class-models.SimpleMail.html#501-516" title="Go to source code">encodeUtf8Words</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>encodeUtf8Words</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>encodeUtf8Words</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>The words to encode.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterEmail" id="_filterEmail">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterEmail">#</a>
+		<code><a href="source-class-models.SimpleMail.html#518-542" title="Go to source code">filterEmail</a>( <span>string <var>$email</var></span> )</code>
+
+		<div class="description short">
+			<p>filterEmail</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>filterEmail</p>
+
+<p>Removes any carriage return, line feed, tab, double quote, comma
+and angle bracket characters before sanitizing the email address.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd>The email to filter.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterName" id="_filterName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterName">#</a>
+		<code><a href="source-class-models.SimpleMail.html#544-571" title="Go to source code">filterName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>filterName</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>filterName</p>
+
+<p>Removes any carriage return, line feed or tab characters. Replaces
+double quotes with single quotes and angle brackets with square
+brackets, before sanitizing the string and stripping out html tags.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>The name to filter.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filterOther" id="_filterOther">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filterOther">#</a>
+		<code><a href="source-class-models.SimpleMail.html#573-586" title="Go to source code">filterOther</a>( <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>filterOther</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>filterOther</p>
+
+<p>Removes ASCII control characters including any carriage return, line
+feed or tab characters.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>The data to filter.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeadersForSend" id="_getHeadersForSend">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeadersForSend">#</a>
+		<code><a href="source-class-models.SimpleMail.html#588-599" title="Go to source code">getHeadersForSend</a>( )</code>
+
+		<div class="description short">
+			<p>getHeadersForSend</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getHeadersForSend</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getToForSend" id="_getToForSend">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getToForSend">#</a>
+		<code><a href="source-class-models.SimpleMail.html#601-612" title="Go to source code">getToForSend</a>( )</code>
+
+		<div class="description short">
+			<p>getToForSend</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getToForSend</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUniqueId" id="_getUniqueId">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUniqueId">#</a>
+		<code><a href="source-class-models.SimpleMail.html#614-622" title="Go to source code">getUniqueId</a>( )</code>
+
+		<div class="description short">
+			<p>getUniqueId</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getUniqueId</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWrapMessage" id="_getWrapMessage">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWrapMessage">#</a>
+		<code><a href="source-class-models.SimpleMail.html#624-632" title="Go to source code">getWrapMessage</a>( )</code>
+
+		<div class="description short">
+			<p>getWrapMessage</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>getWrapMessage</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_wrap" id="$_wrap">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#38-41" title="Go to source code"><var>$_wrap</var></a>
+
+			<div class="description short">
+				<p>$_wrap</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_wrap</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_wrap" class="anchor">#</a>
+				<code><span class="php-num">78</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_to" id="$_to">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#43-46" title="Go to source code"><var>$_to</var></a>
+
+			<div class="description short">
+				<p>$_to</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_to</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_to" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_subject" id="$_subject">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#48-51" title="Go to source code"><var>$_subject</var></a>
+
+			<div class="description short">
+				<p>$_subject</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_subject</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_subject" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_message" id="$_message">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#53-56" title="Go to source code"><var>$_message</var></a>
+
+			<div class="description short">
+				<p>$_message</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_message</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_message" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_headers" id="$_headers">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#58-61" title="Go to source code"><var>$_headers</var></a>
+
+			<div class="description short">
+				<p>$_headers</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_headers</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_headers" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_params" id="$_params">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#63-66" title="Go to source code"><var>$_params</var></a>
+
+			<div class="description short">
+				<p>$_parameters</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_parameters</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_params" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_attachments" id="$_attachments">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#68-71" title="Go to source code"><var>$_attachments</var></a>
+
+			<div class="description short">
+				<p>$_attachments</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_attachments</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_attachments" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_uid" id="$_uid">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.SimpleMail.html#73-76" title="Go to source code"><var>$_uid</var></a>
+
+			<div class="description short">
+				<p>$_uid</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_uid</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_uid" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Frink API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class models\session | Projekt Frink</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-controller.html">
+						controller					</a>
+
+						</li>
+				<li>
+					<a href="namespace-mapper.html">
+						mapper					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-models.html">
+						models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tables.html">
+						tables					</a>
+
+						</li>
+				<li>
+					<a href="namespace-tools.html">
+						tools					</a>
+
+						</li>
+				<li>
+					<a href="namespace-traits.html">
+						traits					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-models.auth.html">auth</a></li>
+				<li><a href="class-models.BenutzerDaten.html">BenutzerDaten</a></li>
+				<li><a href="class-models.config.html">config</a></li>
+				<li><a href="class-models.extendsBasis.html">extendsBasis</a></li>
+				<li><a href="class-models.extendsSplObserver.html">extendsSplObserver</a></li>
+				<li><a href="class-models.extendsSplSubject.html">extendsSplSubject</a></li>
+				<li><a href="class-models.iniparser.html">iniparser</a></li>
+				<li><a href="class-models.model.html">model</a></li>
+				<li><a href="class-models.modelBasis.html">modelBasis</a></li>
+				<li><a href="class-models.modelBasis1.html">modelBasis1</a></li>
+				<li><a href="class-models.modelBasisSingleton.html">modelBasisSingleton</a></li>
+				<li><a href="class-models.ModelData.html">ModelData</a></li>
+				<li><a href="class-models.modelObserver1.html">modelObserver1</a></li>
+				<li><a href="class-models.modelObserver2.html">modelObserver2</a></li>
+				<li><a href="class-models.modelSubject.html">modelSubject</a></li>
+				<li><a href="class-models.myCalc.html">myCalc</a></li>
+				<li><a href="class-models.notNoSql.html">notNoSql</a></li>
+				<li><a href="class-models.plugins.html">plugins</a></li>
+				<li><a href="class-models.redisko.html">redisko</a></li>
+				<li class="active"><a href="class-models.session.html">session</a></li>
+				<li><a href="class-models.SimpleMail.html">SimpleMail</a></li>
+				<li><a href="class-models.Sparrow.html">Sparrow</a></li>
+				<li><a href="class-models.validator.html">validator</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-models.ModelInterface.html">ModelInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-models.NotNoSQLException.html">NotNoSQLException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-models.html" title="Summary of models"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class session</h1>
+
+
+	<div class="description">
+	<p>Title: Class 'Session' (class_session.inc.php)
+Version: 1.2
+Copyright: (c) 2012 Volker Rubach - All rights reserved
+Description: This class provide a secure session handler with
+PDO connection to a MySQL database.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-models.html">models</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-models.session.html#17-402" title="Go to source code">models/session.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-models.session.html#32-117" title="Go to source code">__construct</a>( <span> <var>$pdo</var></span>, <span> <var>$salz</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pdo</var></dt>
+					<dd></dd>
+					<dt><var>$salz</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="open" id="_open">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_open">#</a>
+		<code><a href="source-class-models.session.html#119-156" title="Go to source code">open</a>( )</code>
+
+		<div class="description short">
+			<p>Vergleicht den gespeicherten Fingerprint mit dem aktuellen Fingerprint</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Vergleicht den gespeicherten Fingerprint mit dem aktuellen Fingerprint</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+
+			function
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-models.session.html#158-168" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			<p>schliesst die Datenbank</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>schliesst die Datenbank</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					function<br>[Boolen => True / False]
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read" id="_read">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-models.session.html#170-201" title="Go to source code">read</a>( <span> <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Read session</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Read session</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>=> Session ID]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$data [String => Session data / Empty}
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="readCompleteSession" id="_readCompleteSession">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_readCompleteSession">#</a>
+		<code><a href="source-class-models.session.html#203-232" title="Go to source code">readCompleteSession</a>( )</code>
+
+		<div class="description short">
+			<p>liest den Inhalt einer Session</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>liest den Inhalt einer Session</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			 public 
+
+			function
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-models.session.html#234-274" title="Go to source code">write</a>( <span> <var>$id</var></span>, <span> <var>$data</var></span>, <span> <var>$id</var>,…</span>, <span> <var>$fingerprint</var>,…</span>, <span> <var>$data</var>,…</span>, <span> <var>$access</var>,…</span>, <span> <var>$date</var>,…</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd></dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$id</var>,…</dt>
+					<dd>=> Session ID]</dd>
+					<dt><var>$fingerprint</var>,…</dt>
+					<dd>=> Fingerprint to prevent session hijacking]</dd>
+					<dt><var>$data</var>,…</dt>
+					<dd>=> Session data]</dd>
+					<dt><var>$access</var>,…</dt>
+					<dd>=> Unix timestamp]</dd>
+					<dt><var>$date</var>,…</dt>
+					<dd>=> Human readable timestamp]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					function<br>[Boolen => True / False]<br>
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="destroy" id="_destroy">
+
+		<td class="attributes"><code>
+			 public 
+
+			function
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_destroy">#</a>
+		<code><a href="source-class-models.session.html#276-301" title="Go to source code">destroy</a>( <span> <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>löscht die Session</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>löscht die Session</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>=> Session ID]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					function<br>[Boolen => True / False]
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="destroyHijacked" id="_destroyHijacked">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_destroyHijacked">#</a>
+		<code><a href="source-class-models.session.html#303-341" title="Go to source code">destroyHijacked</a>( <span> <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Destroy HIJACKED session absolutely</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Destroy HIJACKED session absolutely</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>=> Session ID]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clean" id="_clean">
+
+		<td class="attributes"><code>
+			 public 
+
+			function
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clean">#</a>
+		<code><a href="source-class-models.session.html#343-367" title="Go to source code">clean</a>( <span> <var>$max</var></span> )</code>
+
+		<div class="description short">
+			<p>Clean session wenn maximale Zeit überschritten</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clean session wenn maximale Zeit überschritten</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$max</var></dt>
+					<dd>=> session.gc_maxlifetime]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					function<br>[Boolen => True / False]
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="security" id="_security">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_security">#</a>
+		<code><a href="source-class-models.session.html#369-401" title="Go to source code">security</a>( <span> <var>$salt</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>SECURITY [Create 'fingerprint']</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SECURITY [Create 'fingerprint']</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$salt</var>,…</dt>
+					<dd>=> Free random sequence to increase the session security]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$fingerprint [String => Composite chain of values [hashed with MD5]
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="fingerprint" id="$fingerprint">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.session.html#26" title="Go to source code"><var>$fingerprint</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fingerprint" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="dbc" id="$dbc">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.session.html#27" title="Go to source code"><var>$dbc</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$dbc" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="table" id="$table">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.session.html#28" title="Go to source code"><var>$table</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$table" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="salt" id="$salt">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.session.html#29" title="Go to source code"><var>$salt</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$salt" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="domain" id="$domain">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-models.session.html#30" title="Go to source code"><var>$domain</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$domain" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Projekt Frink API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
