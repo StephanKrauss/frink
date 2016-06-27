@@ -22,30 +22,14 @@ class structuralPattern extends main
      */
     public function __construct($controllerName, $actionName)
     {
-        // Vorbereitung des Pimple Container, Singleton Pattern
+        // Vorbereitung des Pimple Container, Singleton Pattern !
         $models = [
-            'basis' => function ($pimple) {
-                return new \models\modelBasis($pimple);
-            },
-            'bla' => function ($pimple) {
-                return new \models\modelBla($pimple);
-            },
-            'blub' => function ($pimple) {
-                return new \models\modelBlub($pimple);
-            },
-            'modelSingletonBasis' => function ($pimple) {
-                return new \models\modelBasis($pimple);
-            },
-            'param1' => 'param1',
-            'param2' => 'param2'
+            'torteMitDekoration' => function ($pimple) {
+                return new \models\TorteMitDekoration($pimple);
+            }
         ];
 
         parent::pimple($models);
-
-        // Factory Pattern
-        $this->pimple['modelFactoryBasis'] = $this->pimple->factory(function ($pimple) {
-            return new \models\modelBasis($pimple);
-        });
 
         parent::__construct($controllerName, $actionName);
     }
@@ -77,7 +61,7 @@ class structuralPattern extends main
     }
 
     /**
-     * Verwenden eines Standard Model aus dem DIC als Singleton.
+     * Vorbereitung eines Dekoration Pattern mit dem Beispiel einer Torte
      *
      * + Pimple verwendet jedes Objekt als Singleton
      *
@@ -87,18 +71,76 @@ class structuralPattern extends main
     public function decorationPattern()
     {
         try {
+            // Dekorieren der Torte
+            $this->torteVorbereiten();
 
+            // Geburtstagsfeier
+            $this->Geburtstagsfeier();
 
-
-
-            // Übergabe an die View
             $this->template();
-        } // eigene Exception
+        }
+            // eigene Exception
         catch (\tools\frinkError $e) {
             throw $e;
         } // Exception anderer Klassen
         catch (\Exception $e) {
             throw $e;
         }
+    }
+
+    /**
+     * Vorbereiten der Geburtstagstorte
+     *
+     * @throws frinkError
+     */
+    protected function torteVorbereiten()
+    {
+        // PhpStorm mitteilen welches Model verwendet wird
+        /** @var $torteMitDekoration \models\TorteMitDekoration */
+        $torteMitDekoration = $this->pimple['torteMitDekoration'];
+
+        // dynamisches hinzufügen von Methoden
+        $torteMitDekoration->addMethod('kerzen', function(){
+            return 'Kerzen verwenden';
+        });
+
+        $torteMitDekoration->addMethod('anzuenden', function(){
+            return 'Kerzen anzuenden';
+        });
+
+        $torteMitDekoration->addMethod('auspusten', function (){
+            return 'Kerzen auspusten';
+        });
+
+        // die Torte in den Kühlschrank stellen
+        $this->pimple['torteMitDekorationUndKerzen'] = $torteMitDekoration;
+
+        return;
+    }
+
+    /**
+     * Verwendung eines Dekoration Pattern am Beispiel einer Torte während einer Geburtstagsfeier
+     *
+     */
+    protected function Geburtstagsfeier()
+    {
+        // Torte aus dem Kühlschrank holen
+
+        /** @var $torteMitDekorationUndKerzen \models\TorteMitDekoration */
+        $torteMitDekorationUndKerzen = $this->pimple['torteMitDekorationUndKerzen'];
+
+        // Kerzen aufstecken
+        $test = $torteMitDekorationUndKerzen->kerzen();
+
+        // Kerzen anzünden
+        $test = $torteMitDekorationUndKerzen->anzuenden();
+
+        // Kerzen auspusten
+        $test = $torteMitDekorationUndKerzen->auspusten();
+
+        // Den Frauen klar machen das die Torte zu viele Kalorien hat :-)
+        $test = $torteMitDekorationUndKerzen->hasKalorien();
+
+        return;
     }
 }
