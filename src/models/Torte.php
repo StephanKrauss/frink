@@ -15,7 +15,7 @@ namespace models;
 * @package models
 */
 
-class Torte extends \models\modelBasis
+class Torte extends \models\ModelData
 {
     /**
      *
