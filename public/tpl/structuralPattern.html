@@ -1,0 +1,12 @@
+{% extends masterTemplate %}
+
+{% block content %}
+    <h2 align="center" style="color: green;">Parent Template 'Design Pattern mit Pimple, Decoration'</h2>
+
+    {% embed "bla_superuser.html" %}{% endembed %}
+
+    {{ testClosure }} <br>
+    {{ test.bla.wert2 }}
+
+
+{% endblock %}

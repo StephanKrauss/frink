@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class controller\splObserver | Projekt Frink</title>
+	<title>Class controller\creationalPattern1 | Projekt Frink</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -61,7 +61,7 @@
 				<li><a href="class-controller.bla.html">bla</a></li>
 				<li><a href="class-controller.classExtends.html">classExtends</a></li>
 				<li><a href="class-controller.creationalPattern.html">creationalPattern</a></li>
-				<li><a href="class-controller.creationalPattern1.html">creationalPattern1</a></li>
+				<li class="active"><a href="class-controller.creationalPattern1.html">creationalPattern1</a></li>
 				<li><a href="class-controller.error.html">error</a></li>
 				<li><a href="class-controller.exception.html">exception</a></li>
 				<li><a href="class-controller.iniparser.html">iniparser</a></li>
@@ -72,7 +72,7 @@
 				<li><a href="class-controller.redbean.html">redbean</a></li>
 				<li><a href="class-controller.session.html">session</a></li>
 				<li><a href="class-controller.splObjectStorage.html">splObjectStorage</a></li>
-				<li class="active"><a href="class-controller.splObserver.html">splObserver</a></li>
+				<li><a href="class-controller.splObserver.html">splObserver</a></li>
 				<li><a href="class-controller.splObserver1.html">splObserver1</a></li>
 				<li><a href="class-controller.spot.html">spot</a></li>
 				<li><a href="class-controller.spot1.html">spot1</a></li>
@@ -117,15 +117,14 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class splObserver</h1>
+	<h1>Class creationalPattern1</h1>
 
 
 	<div class="description">
-	<p>Test des Observer Pattern mit der SPL von PHP</p>
+	<p>Test der Erzeugungs Pattern unter Nutzung des DI Container Pimple</p>
 
 <ul>
-<li>SplSubject interface</li>
-<li>SplObserver</li>
+<li>Prototype</li>
 </ul>
 	</div>
 
@@ -138,7 +137,7 @@
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>controller\splObserver</span></b>			
+<b><span>controller\creationalPattern1</span></b>			
 			
 			
 		</dd>
@@ -162,10 +161,10 @@
 				<b>Author:</b>
 				Stephan Krauß<br>
 				<b>Date:</b>
-				17.06.2016<br>
+				26.06.2016<br>
 				<b>Lisence:</b>
 				Stephan Krauß<br>
-			<b>Located at</b> <a href="source-class-controller.splObserver.html#8-128" title="Go to source code">controller/splObserver.php</a>
+			<b>Located at</b> <a href="source-class-controller.creationalPattern1.html#7-136" title="Go to source code">controller/creationalPattern1.php</a>
 		<br>
 	</div>
 
@@ -185,14 +184,14 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-controller.splObserver.html#23-41" title="Go to source code">__construct</a>( <span> <var>$controllerName</var></span>, <span> <var>$actionName</var></span> )</code>
+		<code><a href="source-class-controller.creationalPattern1.html#20-51" title="Go to source code">__construct</a>( <span> <var>$controllerName</var></span>, <span> <var>$actionName</var></span> )</code>
 
 		<div class="description short">
-			<p>erweitern Pimple um spezielle Model und Tools</p>
+			<p>erweitern Pimple um spezielle Model und Params</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>erweitern Pimple um spezielle Model und Tools</p>
+			<p>erweitern Pimple um spezielle Model und Params</p>
 
 
 				<h4>Parameters</h4>
@@ -224,7 +223,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_template">#</a>
-		<code><a href="source-class-controller.splObserver.html#43-67" title="Go to source code">template</a>( )</code>
+		<code><a href="source-class-controller.creationalPattern1.html#53-77" title="Go to source code">template</a>( )</code>
 
 		<div class="description short">
 			<p>Laden des Parent Template und Subtemplate des Baustein</p>
@@ -242,7 +241,7 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="subjectObserver" id="_subjectObserver">
+	<tr data-order="prototypePattern" id="_prototypePattern">
 
 		<td class="attributes"><code>
 			 public 
@@ -253,19 +252,28 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_subjectObserver">#</a>
-		<code><a href="source-class-controller.splObserver.html#69-127" title="Go to source code">subjectObserver</a>( )</code>
+		<a class="anchor" href="#_prototypePattern">#</a>
+		<code><a href="source-class-controller.creationalPattern1.html#79-135" title="Go to source code">prototypePattern</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Verwenden eines Standard Model aus dem DIC als Singleton.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Verwenden eines Standard Model aus dem DIC als Singleton.</p>
+
+<ul>
+<li>Pimple verwendet jedes Objekt als Singleton</li>
+</ul>
 
 
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>
+					<code><a href="class-tools.frinkError.html">tools\frinkError</a></code>
+				</div>
 
 
 
