@@ -24,8 +24,17 @@ class behavorialPattern extends main
     {
         // Vorbereitung des Pimple Container, Singleton Pattern !
         $models = [
-            'torteMitDekoration' => function ($pimple) {
-                return new \models\TorteMitDekoration($pimple);
+            'hund' => function ($pimple) {
+                return new \models\hund($pimple);
+            },
+            'knurrenderHund' => function ($pimple){
+                return new \models\knurrenderHund();
+            },
+            'bellenderHund' => function ($pimple){
+                return new \models\bellenderHund();
+            },
+            'randalierenderHund' => function ($pimple){
+                return new \models\randalierenderHund();
             }
         ];
 
@@ -61,7 +70,7 @@ class behavorialPattern extends main
     }
 
     /**
-     * Vorbereitung eines Strategie Pattern mit dem Beispiel eines Gartengrundstückes
+     * Vorbereitung eines Strategie Pattern mit dem Beispiel eines Hundes im Gartengrundstück
      *
      * + Pimple verwendet jedes Objekt als Singleton
      *
@@ -71,7 +80,24 @@ class behavorialPattern extends main
     public function strategyPattern()
     {
         try {
+            
+            /** @var $modelHund \models\hund */
+            $modelHund = $this->pimple['hund'];
 
+            // Katze ist am Gartenzaun
+            $modelHund['abstandZumGartenzaun'] = 0;
+            $modelHund->reaktion();
+            $reaktion = $modelHund['reaktionHund'];
+
+            // Katze ist im Garten
+            $modelHund['abstandZumGartenzaun'] = 5;
+            $modelHund->reaktion();
+            $reaktion = $modelHund['reaktionHund'];
+
+            // Katze ist am Gartenhaus
+            $modelHund['abstandZumGartenzaun'] = 11;
+            $modelHund->reaktion();
+            $reaktion = $modelHund['reaktionHund'];
 
             $this->template();
         }
