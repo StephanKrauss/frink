@@ -20,7 +20,7 @@
 + Validator: Wixel/GUMP ( MIT ) , Klasse zur Validierung und Filterung der Parameter
 + Template Bootstrap 3: [Vorlagen , SB Admin 2](http://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html)
 
-### Dokumemtation und Erläuterung:
+### Dokumentation und Handzettel:
 
 + /_apache , anlegen des virtual Host im Apache
 + /_datenbank , Struktur ( SQLYog ) und SQL Dump
@@ -78,11 +78,16 @@
 		+ Übergabe Werte Spot2
 		+ Verwendung SPL Array Access   
 
-### zu erledigen:
-
 + Vers. 0.9:
     + Gestaltung von Beispielsseiten mit einem Bootstrap 3 Templat
     	+ Vorlage: SB2 Admin , Bootstrap
 
+### zu erledigen:
+
+
+
 + Vers. 1.0:
-	+ Erstellen der Videotutorials zu **Frink2**
+	+ erstellen Login und Navigation
+
++ Vers. 1.1:
+	+ auskoppeln einzelner Bausteine für die Verwendung auf einem Tablet **'App Programmierung'** 
