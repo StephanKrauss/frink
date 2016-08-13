@@ -1,0 +1,12 @@
+/** Offset einer Row nach oben **/
+@media (min-width: 992px) {
+    .voffset9 { margin-top: 300px; }
+}
+
+@media (max-width: 990px) {
+    .voffset9 { margin-top: 200px; }
+}
+
+@media (max-width: 768px) {
+    .voffset9 { margin-top: 100px; }
+}

@@ -24,8 +24,6 @@ class start extends main
     public function index()
     {
         try{
-            $test = 123;
-
             $output = array(
                 'bausteine' => 'start'
             );

@@ -19,6 +19,8 @@ class bla extends main
      */
     public function index()
     {
+        $test = 123;
+
         try{
             $outputTemplate = array(
                 'masterTemplate' => 'main.html',
