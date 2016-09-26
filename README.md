@@ -81,13 +81,16 @@
 + Vers. 0.9:
     + Gestaltung von Beispielsseiten mit einem Bootstrap 3 Templat
     	+ Vorlage: SB2 Admin , Bootstrap
+    	
++ Vers. 1.0
+    + Mehrsprachigkeit mit **'gettext'**	
 
 ### zu erledigen:
 
 
 
-+ Vers. 1.0:
++ Vers. 1.1:
 	+ erstellen Login und Navigation
 
-+ Vers. 1.1:
++ Vers. 1.2:
 	+ auskoppeln einzelner Bausteine für die Verwendung auf einem Tablet **'App Programmierung'** 
