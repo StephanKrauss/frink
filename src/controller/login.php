@@ -44,8 +44,7 @@ class login extends main
             $modelSession = \Flight::get('session');
 
             $outputTemplate = array(
-                'masterTemplate' => 'main.html',
-                'templateSuperuser' => 'bla_superuser.html'
+                'masterTemplate' => 'main.html'
             );
 
             $config = \Flight::get('config');
@@ -66,6 +65,8 @@ class login extends main
     public function index()
     {
         try{
+            $test = 123;
+
             $outputTemplate = array(
                 'masterTemplate' => 'main.html'
             );

@@ -25,17 +25,20 @@
     startTwig();
 
     // Controller
-    include_once('../src/Controller/start.php');
-    $controller = new \controller\start('start', 'index');
+    include_once('../src/Controller/login.php');
+    $controller = new \controller\start('login', 'index');
 
     // Startroutinen des Controller
     startController($controller, 'index');
 });
 
 // Aufruf Baustein, mit Anzeigesprache
-\Flight::route('/@controller/@action(/*)',function($controller, $action)
+\Flight::route('/@controller(/@action)(/*)',function($controller, $action)
 {
     try{
+        // Request
+        $request = \Flight::request();
+
         if($action == null)
             $action = 'index';
 
@@ -56,14 +59,15 @@
         \Flight::set('redbean',$redbean);
         \Flight::set('spot', $spot);
 
-        // Session
-        sessionStart();
-
-        // Fake !!!
-        /** @var $session \models\session */
+        // Kontrolle der Anmeldung
         $session = \Flight::get('session');
-        $session->write('benutzerId', 3);
-        $session->write('rolleId', 7);
+//        if(empty($session->read('benutzerId')) and empty($session->read('rolleId')) ){
+//
+//            $test = $session->read('benutzerId');
+//
+//            $session->write('benutzerId', 3);
+//            $session->write('rolleId', 7);
+//        }
 
         // Authentifikation Nutzung Controller
         if( $controller != 'start' )
@@ -74,9 +78,6 @@
 
          // Twig
         startTwig();
-
-        // Request
-        $request = \Flight::request();
 
         // ermitteln der übergebenen Parameter
         $data = ermittelnStartParams($request);
