@@ -27,18 +27,18 @@
 <body>
 <div class="container">
     <div class="row">
-        <form class="form-horizontal voffset9" method="post" action="/login/index/">
+        <form class="form-horizontal voffset9" method="post" action="/login/check/">
             <div class="form-group">
-                <label class="col-md-3 col-sm-3 col-xs-3 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 control-label" for="benutzer">Benutzer:</label>
+                <label class="col-md-3 col-sm-3 col-xs-3 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 control-label" for="benutzer">Mailadresse:</label>
                 <div class="col-md-4 col-sm-4 col-xs-7">
-                    <input placeholder="Benutzerkennung" class="form-control" name="benutzer" id="benutzer" type="text" required pattern="[A-Za-z0-9]{3,10}">
+                    <input placeholder="Mailadresse" class="form-control" name="benutzer" id="benutzer" type="email" required>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-md-3 col-sm-3 col-xs-3 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 control-label" for="kennung">Passwort:</label>
+                <label class="col-md-3 col-sm-3 col-xs-3 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 control-label" for="passwort">Passwort:</label>
                 <div class="col-md-4 col-sm-4 col-xs-7">
-                    <input placeholder="Passwort" class="form-control" type="password" name="kennung" id="kennung" required pattern="[A-Za-z0-9]{3,10}">
+                    <input placeholder="Passwort min. 8 Zeichen" class="form-control" type="password" name="passwort" id="passwort" required pattern="[A-Za-z0-9]{8,20}">
                 </div>
             </div>
 
@@ -47,11 +47,6 @@
                     <button class="btn btn-success" name="senden">anmelden</button>
                 </div>
             </div>
-        </form>
-
-        <form method="post" action="/login/index/">
-            <input type="text" name="bla">
-            <input type="submit" name="senden" value="senden">
         </form>
 
     </div>

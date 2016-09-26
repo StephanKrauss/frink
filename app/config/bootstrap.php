@@ -60,21 +60,27 @@
         \Flight::set('spot', $spot);
 
         // Kontrolle der Anmeldung
-        $session = \Flight::get('session');
-//        if(empty($session->read('benutzerId')) and empty($session->read('rolleId')) ){
-//
-//            $test = $session->read('benutzerId');
-//
-//            $session->write('benutzerId', 3);
-//            $session->write('rolleId', 7);
-//        }
+        if(\Flight::get('session'))
+            $session = \Flight::get('session');
+        else
+            $session = null;
+
+        if( (is_null($session)) or ((empty($session->read('benutzerId'))) and (empty($session->read('rolleId')))) )
+        {
+            $controller = 'login';
+
+            // Kontrolle der Anmeldung
+            if($action != 'check')
+                $action = 'index';
+        }
 
         // Authentifikation Nutzung Controller
-        if( $controller != 'start' )
+        if( $controller != 'login' )
             \tools\Auth::checkAccessController(\Flight::get('session'), \Flight::get('pdo'), $controller);
 
         // schreibt Benutzer in Datenbank
-        \tools\DatenbankBenutzer::benutzer(\Flight::get('session'), \Flight::get('pdo'));
+        if(!is_null($session))
+            \tools\DatenbankBenutzer::benutzer(\Flight::get('session'), \Flight::get('pdo'));
 
          // Twig
         startTwig();

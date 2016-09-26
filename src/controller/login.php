@@ -7,6 +7,8 @@
  */
 
 namespace controller;
+use Spot\Exception;
+use tools\errorAuswertung;
 
 /**
  * darstellen der leeren Seite des Template
@@ -60,13 +62,11 @@ class login extends main
     }
 
     /**
-     * Laden des Parent Template und Subtemplate des Baustein
+     * Laden des Parent Template und Subtemplate des Baustein, Formular der Anmeldung
      */
     public function index()
     {
         try{
-            $test = 123;
-
             $outputTemplate = array(
                 'masterTemplate' => 'main.html'
             );
@@ -76,5 +76,64 @@ class login extends main
         catch(\Exception $e){
             throw $e;
         }
+    }
+
+    /**
+     * überprüft die Anmeldung
+     *
+     * @throws Exception
+     */
+    public function check()
+    {
+        try{
+            // check login params
+            $this->checkLoginParams();
+
+            /** @var $datenbank \models\Sparrow */
+            $datenbank = \Flight::get('sparrow');
+
+            // schreiben Benutzer-ID und Rolle-ID in die Session
+
+
+
+
+
+
+
+        }
+        catch(Exception $e)
+        {
+            throw $e;
+        }
+    }
+
+    /**
+     * Kontrolle der Login Parameter
+     *
+     * @throws \tools\frinkError
+     */
+    protected function checkLoginParams()
+    {
+        /** @var $modelValidator \models\validator */
+        $modelValidator = \models\validator::get_instance();
+
+        unset($this->params['senden']);
+
+        // Validator
+        $modelValidator->validation_rules(array(
+            'benutzer' => 'required|valid_email',
+            'passwort' => 'required|min_len,8'
+        ));
+
+        // Filter
+        $modelValidator->filter_rules(array(
+            'benutzer' => 'trim|sanitize_email',
+            'passwort' => 'trim'
+        ));
+
+        $params = $modelValidator->run($this->params);
+
+        if ($params === false)
+            throw new \tools\frinkError('Parameter Login falsch', 3);
     }
 }

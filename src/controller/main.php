@@ -54,7 +54,7 @@ class main
 
         // Startparameter
         $this->request = \Flight::request();
-        $this->params = \Flight::get('params');
+        $this->params = \Flight::get('params')->getData();
     }
 
     /**

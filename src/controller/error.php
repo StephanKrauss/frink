@@ -29,6 +29,8 @@ class error extends main
             // Debug Modus anzeigen
             if($config['debugBlock']['debug'])
             {
+                echo '<h3>Debug Modus !!!</h3>';
+
                 foreach($error as $key => $value){
                     echo $key.': '.nl2br($value).'<br>';
                 }
@@ -38,7 +40,7 @@ class error extends main
                 $error = \tools\errorAuswertung::writeException($error);
                 \tools\errorAuswertung::mailException($error);
 
-                \Flight::redirect('/start/index');
+                \Flight::redirect('/login/index');
             }
 
 

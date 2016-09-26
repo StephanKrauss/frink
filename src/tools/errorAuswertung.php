@@ -24,17 +24,23 @@ class errorAuswertung
 	 */
 	public static function readException(\Exception $exception)
 	{
-		$modelSession = \Flight::get('session');
-		$completeSession = $modelSession->readCompleteSession();
+
 
 		$error = array(
 			'message' => $exception->getMessage(),
 			'code' => $exception->getCode(),
 			'file' => $exception->getFile(),
 			'line' => $exception->getLine(),
-			'trace' => $exception->getTraceAsString(),
-			'session' => json_encode($completeSession)
+			'trace' => $exception->getTraceAsString()
 		);
+
+        // wenn Session vorhanden
+        if(\Flight::get('session')){
+            $modelSession = \Flight::get('session');
+            $completeSession = $modelSession->readCompleteSession();
+
+            $error['session'] = json_encode($completeSession);
+        }
 
 		return $error;
 	}
