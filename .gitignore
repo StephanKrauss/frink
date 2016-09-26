@@ -1,3 +1,4 @@
 .git/
 .idea/
 vendor/bin/
+public/cache/
